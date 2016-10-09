@@ -53,15 +53,15 @@ public class Book implements IBook {
 	@Override
 	public String toString() {
 		stringbilder = new StringBuilder();
-		stringbilder.append(" Название:  ");
+		stringbilder.append(" Name:  ");
 		stringbilder.append(getName());
 		stringbilder.append(" ");
-		stringbilder.append(" Писатель: ");
+		stringbilder.append(" Writer: ");
 		stringbilder.append(getWriter());
 		stringbilder.append(" ");
-		stringbilder.append("Количество страниц: ");
+		stringbilder.append("Quantity pages: ");
 		stringbilder.append(getMemberOfPages());
-		stringbilder.append("  У  кого находится ");
+		stringbilder.append("  Who is ");
 		stringbilder.append(lastNamePerson);
 		return stringbilder.toString();
 	}

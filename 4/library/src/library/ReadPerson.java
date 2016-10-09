@@ -41,7 +41,7 @@ public class ReadPerson implements IPerson {
 
 	@Override
 	public void printBookPerson() {
-		System.out.println("Список книг у читателя с фамилией  " + getLastName());
+		System.out.println("List of books the reader with the name  " + getLastName());
 		for (IBook books : book) {
 			System.out.println(books);
 		}
@@ -57,10 +57,10 @@ public class ReadPerson implements IPerson {
 	@Override
 	public String toString() {
 		stringbilder = new StringBuilder();
-		stringbilder.append(" Фамилия:  ");
+		stringbilder.append(" LasName:  ");
 		stringbilder.append(getLastName());
 		stringbilder.append(" ");
-		stringbilder.append(" Имя:  ");
+		stringbilder.append(" FirstName:  ");
 		stringbilder.append(firstname);
 		return stringbilder.toString();
 	}

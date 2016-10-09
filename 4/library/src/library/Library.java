@@ -11,11 +11,11 @@ public class Library {
 	}
 
 	public void printOll() {
-		System.out.println("Книги библиотеки: ");
+		System.out.println("Books library: ");
 		for (IBook books : this.books) {
 			System.out.println(books.toString());
 		}
-		System.out.println("Читатели библиотеки: ");
+		System.out.println("ReadPerson library: ");
 		for (IPerson persons : this.person) {
 			System.out.println(persons.toString());
 		}
@@ -43,9 +43,9 @@ public class Library {
 
 	public String whereBook(IBook book) {
 		stringbilder = new StringBuilder();
-		stringbilder.append("Книга с названием:");
+		stringbilder.append("Book with name:");
 		stringbilder.append(book.getName());
-		stringbilder.append(" находится у читателя с фамилией :");
+		stringbilder.append(" It is the reader with the name :");
 		stringbilder.append(book.lastNamePerson());
 		return stringbilder.toString();
 	}

@@ -16,9 +16,9 @@ public class Runner {
 		stock.addProduct(safe, 2);
 		stock.addProduct(desk, 3);
 		stock.addProduct(fridge, 4);
-		System.out.println("Товары которые хранятся на складе:");
+		System.out.println("Goods stored in the warehouse:");
 		System.out.println(stock);
-		System.out.println("Общий вес товаров, хранимый на складе (кг)");
+		System.out.println("The total weight of goods stored in the warehouse (kg)");
 		System.out.println(stock.getWeightProduct());
 
 	}
