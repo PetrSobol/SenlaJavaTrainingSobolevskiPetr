@@ -1,12 +1,13 @@
 package library;
 
+import java.util.Arrays;
+
 public class ReadPerson implements IPerson {
 	private String lastname;
 	private String firstname;
 	private StringBuilder stringbilder;
 	private Integer dimensionBook = 0;
-	private Integer dimension=2;
-	private IBook book[] = new Book[dimension];
+	private IBook book[] = new Book[0];
 
 	public ReadPerson() {
 
@@ -52,10 +53,11 @@ public class ReadPerson implements IPerson {
 
 	@Override
 	public void addBookPerson(IBook book) {
-
+		IBook book2[] = Arrays.copyOf(this.book, this.book.length + 1);
+		this.book = Arrays.copyOf(book2, book2.length);
 		this.book[dimensionBook] = book;
 		dimensionBook++;
-	
+
 	}
 
 	@Override

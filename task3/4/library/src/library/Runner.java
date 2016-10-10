@@ -12,7 +12,7 @@ public class Runner {
 		ReadPerson person1 = new ReadPerson("Semenov", "Igor");
 		ReadPerson person2 = new ReadPerson("Kunec", "Pavel");
 		ReadPerson person3 = new ReadPerson("Roslikov", "Aleksandr");
-		Library library = new Library(5, 3);
+		Library library = new Library();
 		// add a book to the library
 		library.addBooksLibrary(bookchamberofsecrets);
 		library.addBooksLibrary(bookenemy);
@@ -29,6 +29,7 @@ public class Runner {
 		// write a book on the reader
 		library.givesPersonBook(person1, bookchamberofsecrets);
 		library.givesPersonBook(person1, bookenemy);
+		library.givesPersonBook(person1,bookhouse );
 
 		// watch what books the reader on his hands
 		library.printBookPerson(person1);

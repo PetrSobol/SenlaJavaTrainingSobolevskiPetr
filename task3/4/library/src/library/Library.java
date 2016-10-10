@@ -1,17 +1,13 @@
 package library;
 
-public class Library {
-	private IBook books[];
-	private IPerson person[];
-	private StringBuilder stringbilder;
-	private Integer dimensionReadPerson=0;
-	private Integer dimensionBooks=0;
-	
+import java.util.Arrays;
 
-	public Library(Integer qualityBooks, Integer qualityPerson) {
-		this.books = new Book[qualityBooks];
-		this.person = new ReadPerson[qualityPerson];
-	}
+public class Library {
+	private IBook books[] = new Book[0];
+	private IPerson person[] = new ReadPerson[0];
+	private StringBuilder stringbilder;
+	private Integer dimensionReadPerson = 0;
+	private Integer dimensionBooks = 0;
 
 	public void printOll() {
 		System.out.println("Books library: ");
@@ -25,12 +21,16 @@ public class Library {
 	}
 
 	public void addReadPersonLibrary(IPerson persons) {
+		IPerson person2[] = Arrays.copyOf(this.person, this.person.length + 1);
+		this.person = Arrays.copyOf(person2, person2.length);
 		this.person[dimensionReadPerson] = persons;
 		dimensionReadPerson++;
 
 	}
 
 	public void addBooksLibrary(IBook book) {
+		IBook book2[] = Arrays.copyOf(this.books, this.books.length + 1);
+		this.books = Arrays.copyOf(book2, book2.length);
 		this.books[dimensionBooks] = book;
 		dimensionBooks++;
 
