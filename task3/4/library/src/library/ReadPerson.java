@@ -1,19 +1,22 @@
 package library;
 
+import java.util.Arrays;
+
 public class ReadPerson implements IPerson {
 	private String lastname;
 	private String firstname;
 	private StringBuilder stringbilder;
-	private IBook book[];
+	private Integer dimensionBook = 0;
+	private IBook book[] = new Book[0];
 
 	public ReadPerson() {
 
 	}
 
-	public ReadPerson(String lastname, String firstname, Integer quantity) {
+	public ReadPerson(String lastname, String firstname) {
 		this.lastname = lastname;
 		this.firstname = firstname;
-		this.book = new Book[quantity];
+
 	}
 
 	@Override
@@ -49,8 +52,11 @@ public class ReadPerson implements IPerson {
 	}
 
 	@Override
-	public void addBookPerson(IBook book, Integer quantity) {
-		this.book[quantity] = book;
+	public void addBookPerson(IBook book) {
+		IBook book2[] = Arrays.copyOf(this.book, this.book.length + 1);
+		this.book = Arrays.copyOf(book2, book2.length);
+		this.book[dimensionBook] = book;
+		dimensionBook++;
 
 	}
 

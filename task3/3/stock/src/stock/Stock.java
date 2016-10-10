@@ -1,5 +1,7 @@
 package stock;
 
+import java.util.Arrays;
+
 import istock.IProduct;
 import istock.IStock;
 import product.Product;
@@ -7,9 +9,10 @@ import product.Product;
 public class Stock implements IStock {
 	private String name;
 	private Integer weight = 0;
-	private IProduct product[] = new Product[5];
+	private IProduct product[] = new Product[0];
 	private StringBuilder builder;
 	private Integer quantity=1;
+	private Integer dimension=0;
 
 	@Override
 	public String getNameStock() {
@@ -23,9 +26,12 @@ public class Stock implements IStock {
 	}
 
 	@Override
-	public void addProduct(IProduct product, Integer i) {
-		this.product[i] = product;
+	public void addProduct(IProduct product) {
+		IProduct product2[] = Arrays.copyOf(this.product, this.product.length + 1);
+		this.product = Arrays.copyOf(product2, product2.length);
+		this.product[dimension] = product;
 		this.weight += product.getWeightProduct();
+		dimension++;
 	}
 
 	@Override

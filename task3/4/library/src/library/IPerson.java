@@ -9,7 +9,7 @@ public interface IPerson {
 
 	public void setFirstName(String firstname);
 	public void printBookPerson();
-	public void addBookPerson(IBook book,Integer quantity);
+	public void addBookPerson(IBook book);
 
 	
 }
