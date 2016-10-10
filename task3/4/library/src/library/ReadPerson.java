@@ -4,16 +4,18 @@ public class ReadPerson implements IPerson {
 	private String lastname;
 	private String firstname;
 	private StringBuilder stringbilder;
-	private IBook book[];
+	private Integer dimensionBook = 0;
+	private Integer dimension=2;
+	private IBook book[] = new Book[dimension];
 
 	public ReadPerson() {
 
 	}
 
-	public ReadPerson(String lastname, String firstname, Integer quantity) {
+	public ReadPerson(String lastname, String firstname) {
 		this.lastname = lastname;
 		this.firstname = firstname;
-		this.book = new Book[quantity];
+
 	}
 
 	@Override
@@ -49,9 +51,11 @@ public class ReadPerson implements IPerson {
 	}
 
 	@Override
-	public void addBookPerson(IBook book, Integer quantity) {
-		this.book[quantity] = book;
+	public void addBookPerson(IBook book) {
 
+		this.book[dimensionBook] = book;
+		dimensionBook++;
+	
 	}
 
 	@Override

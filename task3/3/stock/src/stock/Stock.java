@@ -10,6 +10,7 @@ public class Stock implements IStock {
 	private IProduct product[] = new Product[5];
 	private StringBuilder builder;
 	private Integer quantity=1;
+	private Integer dimension=0;
 
 	@Override
 	public String getNameStock() {
@@ -23,9 +24,10 @@ public class Stock implements IStock {
 	}
 
 	@Override
-	public void addProduct(IProduct product, Integer i) {
-		this.product[i] = product;
+	public void addProduct(IProduct product) {
+		this.product[dimension] = product;
 		this.weight += product.getWeightProduct();
+		dimension++;
 	}
 
 	@Override

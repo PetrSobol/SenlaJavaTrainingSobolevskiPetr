@@ -5,7 +5,7 @@ public interface IStock {
 
 	public void setNameStock(String namestock);
 
-	public void addProduct(IProduct product,Integer i );
+	public void addProduct(IProduct product );
 
 	public Integer getWeightProduct();
 }

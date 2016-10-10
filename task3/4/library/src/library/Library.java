@@ -4,6 +4,9 @@ public class Library {
 	private IBook books[];
 	private IPerson person[];
 	private StringBuilder stringbilder;
+	private Integer dimensionReadPerson=0;
+	private Integer dimensionBooks=0;
+	
 
 	public Library(Integer qualityBooks, Integer qualityPerson) {
 		this.books = new Book[qualityBooks];
@@ -21,18 +24,20 @@ public class Library {
 		}
 	}
 
-	public void addReadPersonLibrary(IPerson persons, Integer number) {
-		this.person[number] = persons;
+	public void addReadPersonLibrary(IPerson persons) {
+		this.person[dimensionReadPerson] = persons;
+		dimensionReadPerson++;
 
 	}
 
-	public void addBooksLibrary(IBook book, Integer number) {
-		this.books[number] = book;
+	public void addBooksLibrary(IBook book) {
+		this.books[dimensionBooks] = book;
+		dimensionBooks++;
 
 	}
 
-	public void givesPersonBook(IPerson person, IBook book, Integer quantity) {
-		person.addBookPerson(book, quantity);
+	public void givesPersonBook(IPerson person, IBook book) {
+		person.addBookPerson(book);
 		book.setLastNamePerson(person.getLastName());
 
 	}
