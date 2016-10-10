@@ -18,7 +18,7 @@ public class AssemblyLine implements IAssemblyLine {
 	@Override
 	public IProduct assembleProduct(IProduct product) {
 		product.installFirstPart(linestepbody.buildProductPart());
-		product.installSecondPart(linestepmotor.buildProductPart());
+		product.installSecondPart(linestepchassis.buildProductPart());
 		product.installThirdPart(linestepmotor.buildProductPart());
 		System.out.println("The assembly car......");
 		System.out.println(".....Mission Complete");
