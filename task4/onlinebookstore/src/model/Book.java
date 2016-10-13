@@ -59,7 +59,7 @@ public class Book {
 		stringbuilder.append(getWriter());
 		stringbuilder.append("  Price book: ");
 		stringbuilder.append(getPrice());
-		stringbuilder.append("  Number of pages: ");
+		stringbuilder.append("  Year of publishing: ");
 		stringbuilder.append(getQuantityPages());
 		return stringbuilder.toString();
 	}

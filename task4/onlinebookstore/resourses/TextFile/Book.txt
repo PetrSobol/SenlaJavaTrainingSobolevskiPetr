@@ -1,0 +1,13 @@
+﻿Catch-22,Joseph Heller,211,1992
+Invisible Man,Ralph Ellison,821,1998
+The Catcher in the Rye,J. D. Salinger,221,2014
+To The Lighthouse,Virginia Woolf,621,1987
+Lolita,Vladimir Nabokov,251,1956
+The Grapes of Wrath,John Steinbeck,121,2016
+The Great Gatsby,F. Scott Fitzgerald,212,2016
+Cien años de soledad,Gabriel José de la Concordia,821,2013
+The lord of the rings,Tolkin,215,1999
+Xobbit,Tolkin,25,1997
+Harry Potter,Rolling,21,1998
+Catch-22,Joseph Heller,211,1996
+Anvisible Man,Ralph Ellison,821,1995

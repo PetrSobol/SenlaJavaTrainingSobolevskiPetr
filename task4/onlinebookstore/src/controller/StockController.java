@@ -11,7 +11,7 @@ public class StockController {
 
 	public void printListBookOll() {
 		List<Book> listbook = stock.getListBookStock();
-		if (listbook.size() != 0) {
+		if (listbook != null) {
 			for (Book books : listbook) {
 				System.out.println(books.printInfoBook());
 			}
@@ -32,9 +32,23 @@ public class StockController {
 
 	}
 
-	public void writeNewBook(Book book, BookController bookcontroller) {
+	public Book searchBook(String namebook) {
+		if (stock.getBooksCatalog() != null) {
 
-		if (bookcontroller.searchBook(book)) {
+			for (Book books : stock.getBooksCatalog()) {
+				if (books.getName().equals(namebook)) {
+					return books;
+				}
+			}
+
+		}
+		return null;
+	}
+
+	public void writeNewBook(String name) {
+
+		Book book = searchBook(name);
+		if (book != null) {
 			if(!serachBookStock(book)){
 				stringbuilder = new StringBuilder();
 				stringbuilder.append(book.getName());
@@ -46,12 +60,15 @@ public class StockController {
 				stringbuilder.append(book.getQuantityPages());
 				String array[] = new String[1];
 				array[0] = stringbuilder.toString();
-				stock.writeBookStock(array);
-			}else{
-				System.out.println("This book use on stock");
-			}
+				stock.writeBook(array);
+				System.out.println("Книга успешно добавленна");
 			} else {
-			System.out.println("This book is not in the catalog!!!First add the book to the catalog");
+				System.out.println("Такая книга уже есть на складе");
+			}
+			
+		} else {
+			System.out.println("Такой книги нет в каталоге ");
 		}
+
 	}
 }

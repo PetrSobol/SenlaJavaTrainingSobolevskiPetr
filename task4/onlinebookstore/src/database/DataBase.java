@@ -3,10 +3,10 @@ package database;
 import com.danco.training.TextFileWorker;
 
 public class DataBase {
-	private String wayBook = "G:/SENLA/task4/TextFile/book.txt";
-	private String wayCustomer = "G:/SENLA/task4/TextFile/Customer.txt";
-	private String wayOrder = "G:/SENLA/task4/TextFile/Order.txt";
-	private String wayStock = "G:/SENLA/task4/TextFile/Stock.txt";
+	private String wayBook = "G:/SENLA/task4/onlinebookstore/resourses/TextFile/book.txt";
+	private String wayCustomer = "G:/SENLA/task4/onlinebookstore/resourses/TextFile//Customer.txt";
+	private String wayOrder = "G:/SENLA/task4/onlinebookstore/resourses/TextFile//Order.txt";
+	private String wayStock = "G:/SENLA/task4/onlinebookstore/resourses/TextFile//Stock.txt";
 	private TextFileWorker textBook = new TextFileWorker(wayBook);
 	private TextFileWorker textCustomer = new TextFileWorker(wayCustomer);
 	private TextFileWorker textOrder = new TextFileWorker(wayOrder);
