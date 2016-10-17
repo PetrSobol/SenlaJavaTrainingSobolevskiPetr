@@ -19,10 +19,10 @@ import sort.SortPriceOrder;
 import sort.SortStageOrder;
 
 public class OnlineBook {
-	private static final String QUANTITY_ORDER = "Количество выполненных заказов за промежуток времени ";
-	private static final String SORT_DATE_TO_DATE = "Сортировка по алфовиту";
-	private static final String SORT_PRICE_DATE = "Сортировка по цене";
-	private static final String COMPANY = "Компания заработала денег - ";
+	private static final String QUANTITY_ORDER = "Number of completed orders in the time interval ";
+	private static final String SORT_DATE_TO_DATE = "Sort by alfovitu";
+	private static final String SORT_PRICE_DATE = "Shop by Price";
+	private static final String COMPANY = "The company earned money -";
 	private static final String BOOK_DELETE_SUCCES = "Book delete succes";
 	private static final String BOOK_ADD_SUCCES = "Book add succes";
 	private DataBases dataBases = new DataBases();

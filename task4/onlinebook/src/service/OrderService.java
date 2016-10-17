@@ -12,8 +12,8 @@ import model.Order;
 
 public class OrderService {
 	private static final String FINISH_ORDER = "finish order";
-	private static final String NO_ORDERS_IN_SYSTEM = "ТАКОГО_ЗАКАЗА_В_СИСТЕМЕ_НЕТ";
-	private static final String NO_ORDER = "Такая книга уже заказана, больше на складе нет";
+	private static final String NO_ORDERS_IN_SYSTEM = "No order in system";
+	private static final String NO_ORDER = "This book has already ordered more stock no";
 	private static final String MESSAGE1 = "there is Stock";
 	private static final String MESSAGE2 = "sales";
 	private OrderDao orderdao;
