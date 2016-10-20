@@ -12,33 +12,29 @@ public class Order {
 	private static final String NAME_BOOK = " Name book: ";
 	private static final String CUSTOMER_FIRSTNAME_ORDER = " Customer firstname order ";
 	private static final String CUSTOMER_LASTNAME_ORDER = " Customer lastname order: ";
-	private static final String ID_NUMBER = "Id number: ";
 	private SimpleDateFormat simple = new SimpleDateFormat("dd.MM.yyyy");
-	private Integer idNumberOrder;
+	private String idNumberOrder;
 	private String lastname;
 	private String firstname;
-	private String nameBook;
 	private Integer price;
 	private Date date;
 	private Date dateFinishOrder;
 	private String stage;
-
+	private Book book;
 	public Order() {
-
 	}
-
-	public Order(Integer id, String lastname, String firstname, String namebook, Integer price, Date date) throws ParseException {
+	public Order(String id, String lastname, String firstname, Book book,  Date date) throws ParseException {
 		this.idNumberOrder = id;
 		this.lastname = lastname;
 		this.firstname = firstname;
-		this.nameBook = namebook;
-		this.price = price;
+		this.book=book;
 		this.date = date;
 		this.dateFinishOrder=simple.parse("10.10.2000");
 		this.stage="no finish order";
+		this.price=book.getPrice();
 	}
 
-	public Integer getIdNumberOrder() {
+	public String getIdNumberOrder() {
 		return idNumberOrder;
 	}
 
@@ -50,16 +46,13 @@ public class Order {
 		return firstname;
 	}
 
-	public Integer getPrice() {
-		return price;
-	}
 
 	public String getDate() {
 		return simple.format(date);
 	}
 	
 	
-	public void setIdNumberOrder(Integer idNumberOrder) {
+	public void setIdNumberOrder(String idNumberOrder) {
 		this.idNumberOrder = idNumberOrder;
 	}
 
@@ -67,26 +60,19 @@ public class Order {
 		this.lastname = lastname;
 	}
 
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
+	public Integer getPrice() {
+		return price;
 	}
-
 	public void setPrice(Integer price) {
 		this.price = price;
 	}
-
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
 	public void setDate(String date) throws ParseException {
 		this.date = simple.parse(date);
 	}
 	
-	public String getNameBook() {
-		return nameBook;
-	}
-
-	public void setNameBook(String nameBook) {
-		this.nameBook = nameBook;
-	}
-
 	public String getDateFinishOrder() {
 		return simple.format(dateFinishOrder);
 	}
@@ -108,16 +94,23 @@ public class Order {
 	public Date dateFinishOrder() {
 		return dateFinishOrder;
 	}
+	
+	public Book getBook() {
+		return book;
+	}
+
+	public void setBook(Book book) {
+		this.book = book;
+	}
+
 	public String printInfoOrderOll() {
 		StringBuilder stringbuilder = new StringBuilder();
-		stringbuilder.append(ID_NUMBER);
-		stringbuilder.append(getIdNumberOrder());
 		stringbuilder.append(CUSTOMER_LASTNAME_ORDER);
 		stringbuilder.append(getLastname());
 		stringbuilder.append(CUSTOMER_FIRSTNAME_ORDER);
 		stringbuilder.append(getFirstname());
 		stringbuilder.append(NAME_BOOK);
-		stringbuilder.append(getNameBook());
+		stringbuilder.append(book.getName());
 		stringbuilder.append(PRICE2);
 		stringbuilder.append(getPrice());
 		stringbuilder.append(DATE_ORDER);
