@@ -1,2 +1,2 @@
-java -jar program.jar 
+java -cp onlinebook.jar controller.Runner
 pause

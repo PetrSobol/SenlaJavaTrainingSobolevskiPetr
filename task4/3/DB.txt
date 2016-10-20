@@ -1,0 +1,13 @@
+1,Catch-22,Joseph Heller, ,211,1996,there is Stock
+1,Anvisible Man,Ralph Ellison, ,821,1995,there is Stock
+1,SCreen,Doel,,27,12,there is Stock
+1,One in room,Tolkin,56ddc873-9e4b-4f6b-a974-0523955367ce,231,1995,sales
+1,Moby-Dick or The Whale,Herman Melville,,256,2014,there is Stock
+1,The Great Gatsby,F. Scott Fitzgerald,,216,2016,there is Stock
+1,Ulysses,James Joyce,,156,2015,there is Stock
+1,To The Lighthouse,Virginia Woolf,,25,1999,there is Stock
+1,Pale Fire,Vladimir Nabokov,,26,2014,there is Stock
+1,Madame Bovary,Gustave Flaubert,,25,2015,there is Stock
+1,Great Expectations,Herman Melville,,356,2013,there is Stock
+1,Things Fall Apart,Chinua Achebe,,156,2012,there is Stock
+2,56ddc873-9e4b-4f6b-a974-0523955367ce,Sobolevski,Petr,One in room,231,19.10.2016,19.10.2016,finish order

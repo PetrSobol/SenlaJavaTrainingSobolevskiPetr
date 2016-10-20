@@ -44,7 +44,7 @@ public class Converter {
 			string.append(",");
 			string.append(order.getFirstname());
 			string.append(",");
-			string.append(order.getNameBook());
+			string.append(order.getBook().getName());
 			string.append(",");
 			string.append(order.getPrice());
 			string.append(",");
@@ -73,6 +73,8 @@ public class Converter {
 			string.append(",");
 			string.append(book.getWriter());
 			string.append(",");
+			string.append(book.getId());
+			string.append(",");
 			string.append(book.getPrice());
 			string.append(",");
 			string.append(book.getQuantityPages());
@@ -97,11 +99,14 @@ public class Converter {
 				for (int j = 1; j < wordString.length; j++) {
 					if (j == 1) {
 						book.setName(wordString[j]);
-					} else if (j == 2) {
+						
+					}else if (j == 2) {
 						book.setWriter(wordString[j]);
 					} else if (j == 3) {
-						book.setPrice(getTranslateNumber(wordString[j]));
+						book.setId(wordString[j]);
 					} else if (j == 4) {
+						book.setPrice(getTranslateNumber(wordString[j]));
+					} else if (j == 5) {
 						book.setQuantityPages(getTranslateNumber(wordString[j]));
 					} else {
 						book.setStage(wordString[j]);
@@ -125,13 +130,13 @@ public class Converter {
 				Order order = new Order();
 				for (int j = 1; j < wordString.length; j++) {
 					if (j == 1) {
-						order.setIdNumberOrder(getTranslateNumber(wordString[j]));
+						order.setIdNumberOrder((wordString[j]));
 					} else if (j == 2) {
 						order.setLastname(wordString[j]);
 					} else if (j == 3) {
 						order.setFirstname(wordString[j]);
 					} else if (j == 4) {
-						order.setNameBook(wordString[j]);
+						order.setBook(new Book(wordString[j]));
 					} else if (j == 5) {
 						order.setPrice(getTranslateNumber(wordString[j]));
 					} else if (j == 6) {
