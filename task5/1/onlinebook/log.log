@@ -1,0 +1,5 @@
+окт 21, 2016 11:23:29 AM loger.Loger writeToLoger
+SEVERE: First error
+java.text.ParseException
+	at controller.Runner.main(Runner.java:58)
+
