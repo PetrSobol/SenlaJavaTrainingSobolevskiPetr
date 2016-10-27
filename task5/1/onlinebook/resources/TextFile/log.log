@@ -1,0 +1,30 @@
+окт 21, 2016 11:27:14 AM loger.Loger writeToLoger
+SEVERE: First error
+java.text.ParseException
+	at controller.Runner.main(Runner.java:58)
+
+окт 21, 2016 11:27:34 AM loger.Loger writeToLoger
+SEVERE: First error
+java.text.ParseException
+	at controller.Runner.main(Runner.java:58)
+
+окт 21, 2016 11:27:36 AM loger.Loger writeToLoger
+SEVERE: First error
+java.text.ParseException
+	at controller.Runner.main(Runner.java:58)
+
+окт 21, 2016 11:42:19 AM loger.Loger writeToLoger
+SEVERE: First error
+java.text.ParseException
+	at controller.Runner.main(Runner.java:58)
+
+окт 21, 2016 11:42:43 AM loger.Loger writeToLoger
+SEVERE: First error
+java.text.ParseException
+	at controller.Runner.main(Runner.java:58)
+
+окт 22, 2016 2:13:24 PM loger.Loger writeToLoger
+SEVERE: First error
+java.text.ParseException
+	at controller.Runner.main(Runner.java:58)
+
