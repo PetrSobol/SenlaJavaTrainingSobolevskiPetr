@@ -13,12 +13,14 @@ import model.Order;
 public class Converter {
 	private SimpleDateFormat simpledate = new SimpleDateFormat("dd.MM.yyyy");
 
+	// convert string to integer
 	private Integer getTranslateNumber(String numberstring) {
 		String withoutProbellov = numberstring.replaceAll(" ", "");
 		Integer numberInteger = Integer.parseInt(withoutProbellov);
 		return numberInteger;
 	}
 
+	// merge two array
 	private <T> T[] anAssociation(T[] A, T[] B) {
 		int a = A.length;
 		int b = B.length;
@@ -28,12 +30,14 @@ public class Converter {
 		return C;
 	}
 
+	// merge two list
 	public String[] getOllArray(List<Order> listorder, List<Book> listbook) {
 		String[] array = anAssociation(getArrayBook(listbook), getArrayOrder(listorder));
 		return array;
 
 	}
 
+	// convert list Orders to string array
 	private String[] getArrayOrder(List<Order> listorder) {
 		int index = 0;
 		String[] array = new String[listorder.size()];
@@ -65,6 +69,7 @@ public class Converter {
 
 	}
 
+	// convert list Books to String array
 	private String[] getArrayBook(List<Book> listbook) {
 		int index = 0;
 		String[] array = new String[listbook.size()];
@@ -92,6 +97,7 @@ public class Converter {
 		return array;
 	}
 
+	// convert string array to list Books
 	public List<Book> getListBook(List<Book> listbook, String[] array) {
 		listbook = new ArrayList<Book>();
 		String[] masBook = array;
@@ -124,6 +130,7 @@ public class Converter {
 		return listbook;
 	}
 
+	// convert string array to list Order
 	public List<Order> getListOrder(List<Order> listorder, String[] array) throws ParseException {
 		listorder = new ArrayList<Order>();
 		String[] masBook = array;
@@ -158,11 +165,13 @@ public class Converter {
 		return listorder;
 	}
 
+	// convert string to date
 	private Date convertStringToDate(String datestring) throws ParseException {
 		Date date = simpledate.parse(datestring);
 		return date;
 	}
 
+	// convert date to string
 	private String convertDateToString(Date date) {
 		String datestring = simpledate.format(date);
 		return datestring;

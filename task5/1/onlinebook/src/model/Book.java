@@ -1,15 +1,21 @@
 package model;
 
 public class Book {
-
+	// name book
 	private String name;
+	// id book
 	private String id;
+	// name writer book
 	private String writer;
+	// price book
 	private Integer price;
+	// year book done
 	private Integer quantityPages;
+	// whether there is stock
 	private String stage;
 	private Order order;
-    public Book() {
+
+	public Book() {
 		super();
 	}
 
@@ -20,7 +26,7 @@ public class Book {
 		this.writer = writer;
 		this.price = price;
 		this.quantityPages = quantityPages;
-		this.stage = "there is Stock";
+		this.stage = StageBook.THERE_IS_STOCK.toString();
 	}
 
 	public Book(String name) {
@@ -82,6 +88,5 @@ public class Book {
 	public void setStage(String stage) {
 		this.stage = stage;
 	}
-	
 
 }

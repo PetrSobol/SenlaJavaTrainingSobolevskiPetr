@@ -2,18 +2,19 @@ package controller;
 
 import java.text.ParseException;
 
-import loger.Loger;
-
+import loger.WriteLoger;
+import model.StageBook;
 
 public class Runner {
 
 	public static void main(String[] args) {
-        Loger loger=new Loger(Runner.class.getName());
+		
+		
 		OnlineBook onlineBook;
 
 		try {
 			onlineBook = new OnlineBook();
-			//onlineBook.addOrder("Sidorenko", "Oleg", "SCreen");
+			// onlineBook.addOrder("Sidorenko", "Oleg", "SCreen");
 			onlineBook.printBookAll();
 			/*
 			 * onlineBook.addNewBook("Moby-Dick or The Whale",
@@ -49,15 +50,19 @@ public class Runner {
 			onlineBook.printListBook(onlineBook.sortBookDate());
 			System.out.println("Sort by name");
 			onlineBook.printListBook(onlineBook.sortBookName());
-            System.out.println("See date to date");
-            onlineBook.printListOrder(onlineBook.sortOrderDateToDate("10.10.2016", "18.10.2016"));
-			
+			System.out.println("See date to date");
+			onlineBook.printListOrder(onlineBook.sortOrderDateToDate("10.10.2016", "18.10.2016"));
+
 			System.out.println("All orders");
 			onlineBook.printOrderAll();
 			onlineBook.saveToDataBases();
-			} catch (ParseException e) {
-			loger.writeToLoger("First error", e);
-			}
+			System.out.println(StageBook.THERE_IS_STOCK.toString());
+			
+			throw new ParseException(null, 0);
+		} catch (ParseException e) {
+			WriteLoger.getLogger(Runner.class.getName()).info(e);
+
+		}
 
 	}
 
