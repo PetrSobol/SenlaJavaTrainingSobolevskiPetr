@@ -8,19 +8,18 @@ import java.util.UUID;
 import dao.OrderDao;
 import model.Book;
 import model.Order;
+import model.StageBook;
 
 public class OrderService {
-	private static final String FINISH_ORDER = "finish order";
-	private static final String NO_ORDERS_IN_SYSTEM = "SUCH AN ORDER IN NO";
-	private static final String NO_ORDER = "This book has already ordered more stock not";
-	private static final String MESSAGE1 = "there is Stock";
-	private static final String MESSAGE2 = "sales";
 	private OrderDao orderdao;
 	private BookService bookservice;
+
 	public OrderService(OrderDao orderdao, BookService bookservice) {
 		this.orderdao = orderdao;
-		this.bookservice=bookservice;
-			}
+		this.bookservice = bookservice;
+	}
+
+	// search book by name and return Book
 	private Book searchBook(String name) {
 
 		for (Book book : bookservice.getListBook()) {
@@ -31,30 +30,31 @@ public class OrderService {
 		return null;
 	}
 
+	// close order to databases
 	public void closeOrder(String lastname, String firstname) {
 		Date date = new Date();
 		for (Order order : orderdao.getListOrder()) {
 			if (order.getLastname().equals(lastname) && order.getFirstname().equals(firstname)) {
 				order.setDateFinishOrder(date);
-				order.setStage(FINISH_ORDER);
+				order.setStage(StageBook.FINISH_ORDER.toString());
 			}
 		}
 	}
 
-	public void createNewOrder(String lastname, String firstname, String nameBook) throws ParseException {
+	// return true if order there is no to databases
+	public Boolean createNewOrder(String lastname, String firstname, String nameBook) throws ParseException {
 		Date date = new Date();
 		String number = UUID.randomUUID().toString();
 		Book book = searchBook(nameBook);
-		if (book != null && book.getStage().equals(MESSAGE1)) {
-			Order order = new Order(number, lastname, firstname, book,  date);
+		if (book != null && book.getStage().equals(StageBook.THERE_IS_STOCK.toString())) {
+			Order order = new Order(number, lastname, firstname, book, date);
 			addOrder(order);
 			book.setOrder(order);
-			book.setStage(MESSAGE2);
+			book.setStage(StageBook.SALES.toString());
 			book.setId(number);
-			
-		} else {
-			System.out.println(NO_ORDER);
+			return true;
 		}
+		return false;
 	}
 
 	public List<Order> getListOrderClock(String date1, String date2) throws ParseException {
@@ -68,19 +68,22 @@ public class OrderService {
 	private void addOrder(Order order) {
 		orderdao.getListOrder().add(order);
 	}
-    public List<Order> getListOrder(){
-    	List<Order> listorder=orderdao.getListOrder();
-    	return listorder;
-    }
-	public void deleteOrder(String nameorder) {
+
+	public List<Order> getListOrder() {
+		List<Order> listorder = orderdao.getListOrder();
+		return listorder;
+	}
+
+	// return true if book there is yes to databases
+	public Boolean deleteOrder(String nameorder) {
 		if (orderdao.searchOrderIndex(nameorder) != orderdao.getListOrder().size()) {
 			String sales = orderdao.searchOrder(nameorder).getBook().getName();
 			Book book = searchBook(sales);
-			book.setStage(MESSAGE1);
+			book.setStage(StageBook.THERE_IS_STOCK.toString());
 			book.setId("");
 			orderdao.getListOrder().remove(orderdao.searchOrder(nameorder));
-		} else {
-			System.out.println(NO_ORDERS_IN_SYSTEM);
+			return true;
 		}
+		return false;
 	}
 }

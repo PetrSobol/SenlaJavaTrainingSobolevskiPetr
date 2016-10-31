@@ -20,14 +20,10 @@ import sort.SortDateOrder;
 import sort.SortPriceOrder;
 import sort.SortStageOrder;
 
-public class OnlineBook  {
-	private static final String QUANTITY_ORDER = "Number of completed orders in the time interval";
-	private static final String COMPANY = "The company earned money -";
-	private static final String BOOK_DELETE_SUCCES = "Book delete sucess";
-	private static final String BOOK_ADD_SUCCES = "Book add succes";
+public class OnlineBook {
 	private DataBases dataBases = new DataBases();
 	private Converter converter = new Converter();
-	private PrintInformationModel printinformation=new PrintInformationModel();
+	private PrintInformationModel printinformation = new PrintInformationModel();
 	private BookService bookService;
 	private OrderService orderservice;
 
@@ -38,34 +34,48 @@ public class OnlineBook  {
 		this.orderservice = new OrderService(orderdao, this.bookService);
 	}
 
-	public void addOrder(String lastname, String firstname, String namebook) throws ParseException {
-		orderservice.createNewOrder(lastname, firstname, namebook);
+	// return true if order add succes
+	public Boolean addOrder(String lastname, String firstname, String namebook) throws ParseException {
+		if (orderservice.createNewOrder(lastname, firstname, namebook)) {
+			return true;
+		}
+		return false;
+
 	}
 
+	// add new book to databases
 	public void addNewBook(String name, String writer, Integer price, Integer quantity) {
 		bookService.addBook(new Book(name, writer, price, quantity));
-		System.out.println(BOOK_ADD_SUCCES);
-	}
+		}
 
+	// close order in databases
 	public void closeOrder(String lastname, String firstname) {
 		orderservice.closeOrder(lastname, firstname);
 	}
 
+	// delete book in databases
 	public void deleteBook(String name) {
 		bookService.deleteBook(name);
-		System.out.println(BOOK_DELETE_SUCCES);
+		}
+
+	// return true if delete order sucess 
+	public Boolean deleteOrder(String name) {
+		if (orderservice.deleteOrder(name)) {
+			return true;
+		}
+
+		return false;
+		
 	}
 
-	public void deleteOrder(String name) {
-		orderservice.deleteOrder(name);
-	}
-
+	// sort list books by name
 	public List<Book> sortBookName() {
 		List<Book> listbook = bookService.getListBook();
 		Collections.sort(listbook, new SortBookName());
 		return listbook;
 	}
 
+	// sort list books by price
 	public List<Book> sortBookPrice() {
 		List<Book> listbook = bookService.getListBook();
 		Collections.sort(listbook, new SortBookPrice());
@@ -73,6 +83,7 @@ public class OnlineBook  {
 
 	}
 
+	// sort list books by dates
 	public List<Book> sortBookDate() {
 		List<Book> listbook = bookService.getListBook();
 		Collections.sort(listbook, new SortBookDate());
@@ -80,6 +91,7 @@ public class OnlineBook  {
 
 	}
 
+	/// sort list books by where is the stock
 	public List<Book> sortBookStage() {
 		List<Book> listbook = bookService.getListBook();
 		Collections.sort(listbook, new SortBookStock());
@@ -104,54 +116,55 @@ public class OnlineBook  {
 		return listbook;
 	}
 
+	// save changes in databases
 	public void saveToDataBases() {
 		dataBases.writeFileDB(converter.getOllArray(orderservice.getListOrder(), bookService.getListBook()));
 	}
-    
-	
-	public List<Order> sortOrderDateToDate(String date1,String date2) throws ParseException{
+
+	public List<Order> sortOrderDateToDate(String date1, String date2) throws ParseException {
 		List<Order> listorder = orderservice.getListOrderClock(date1, date2);
-		Collections.sort(listorder,new SortDateOrder() );
+		Collections.sort(listorder, new SortDateOrder());
 		return listorder;
 	}
-	public List<Order> sortOrderDateToPrice(String date1,String date2) throws ParseException{
+
+	public List<Order> sortOrderDateToPrice(String date1, String date2) throws ParseException {
 		List<Order> listorder = orderservice.getListOrderClock(date1, date2);
-		Collections.sort(listorder,new SortPriceOrder() );
+		Collections.sort(listorder, new SortPriceOrder());
 		return listorder;
 	}
-	
-	
-	public void printOrderPriceToOrder(String date1, String date2) throws ParseException {
+
+	public Integer printOrderPriceToOrder(String date1, String date2) throws ParseException {
 		List<Order> listorder = orderservice.getListOrderClock(date1, date2);
 		Integer priceOll = 0;
 		for (Order order : listorder) {
 			priceOll += order.getPrice();
 		}
 
-		System.out.println(COMPANY + priceOll);
+		return priceOll;
 	}
 
-	public void printOrderFinish(String date1, String date2) throws ParseException {
+	public Integer  printOrderFinish(String date1, String date2) throws ParseException {
 		List<Order> listorder = orderservice.getListOrderClock(date1, date2);
 		Integer orderOll = 0;
 		for (Order order : listorder) {
 			orderOll++;
 		}
 
-		System.out.println(QUANTITY_ORDER + orderOll);
+		return orderOll;
 	}
-    
-	public  void printListOrder(List<Order> listorder){
-		for(Order order:listorder){
-			System.out.println(printinformation.printInfoOrderOll(order));	
+
+	public void printListOrder(List<Order> listorder) {
+		for (Order order : listorder) {
+			System.out.println(printinformation.printInfoOrderOll(order));
 		}
+	}
+
+	public void printListBook(List<Book> listbook) {
+		for (Book book : listbook) {
+			System.out.println(printinformation.printInfoBook(book));
 		}
-	public void printListBook(List<Book> listbook){
-		for(Book book:listbook){
-			System.out.println(printinformation.printInfoBook(book));	
-		}
-		}
-	
+	}
+
 	public void printOrderAll() {
 		if (orderservice.getListOrder() != null) {
 			for (Order order : orderservice.getListOrder()) {
@@ -168,8 +181,5 @@ public class OnlineBook  {
 		}
 
 	}
-
-	
-	
 
 }

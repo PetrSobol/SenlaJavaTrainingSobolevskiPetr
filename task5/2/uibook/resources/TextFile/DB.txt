@@ -7,7 +7,7 @@
 1,Pale Fire,Vladimir Nabokov,,26,2014,THERE_IS_STOCK
 1,SCreen,Doel,8120c2a9-9bcf-4794-99be-67948b96be25,27,12,SALES
 1,The Great Gatsby,F. Scott Fitzgerald,6e584f46-6c39-43e3-a26d-112898cea80d,216,2016,SALES
-1,Things Fall Apart,Chinua Achebe,,156,2012,THERE_IS_STOCK
+1,Things Fall Apart,Chinua Achebe,8343d62e-4dc3-44c4-ae88-a56059f4c7d3,156,2012,SALES
 1,To The Lighthouse,Virginia Woolf,8eabaf48-9176-43bd-afa6-b9bc985e4916,25,1999,SALES
 1,Ulysses,James Joyce,c50dfc40-5b53-4cbc-a539-bb8cb85ed657,156,2015,SALES
 2,56ddc873-9e4b-4f6b-a974-0523955367ce,Sobolevski,Petr,One in room,231,14.10.2016,19.10.2016,FINISH_ORDER
@@ -17,3 +17,4 @@
 2,6e584f46-6c39-43e3-a26d-112898cea80d,Sidorov,Vasia,The Great Gatsby,216,19.10.2016,19.10.2016,FINISH_ORDER
 2,c50dfc40-5b53-4cbc-a539-bb8cb85ed657,Smonov,Vadim,Ulysses,156,19.10.2016,10.10.2000,NO_FINISH_ORDER
 2,8120c2a9-9bcf-4794-99be-67948b96be25,Sidorenko,Oleg,SCreen,27,21.10.2016,21.10.2016,NO_FINISH_ORDER
+2,8343d62e-4dc3-44c4-ae88-a56059f4c7d3,Fedosevich,Ania,Things Fall Apart,156,30.10.2016,30.10.2016,NO_FINISH_ORDER

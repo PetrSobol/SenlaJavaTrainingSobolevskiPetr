@@ -19,6 +19,7 @@ public class OrderDao {
 		return listorder;
 	}
 
+	// search order by name and return order
 	public Order searchOrder(String name) {
 
 		for (Order order : listorder) {
@@ -32,6 +33,7 @@ public class OrderDao {
 
 	}
 
+	// search order by index and return index order
 	public int searchOrderIndex(String name) {
 		int number = 0;
 		for (Order order : listorder) {
@@ -47,6 +49,7 @@ public class OrderDao {
 
 	}
 
+	// search list orders in range date
 	public List<Order> listorderclock(String date1, String date2) throws ParseException {
 		SimpleDateFormat simple = new SimpleDateFormat("dd.MM.yyyy");
 		List<Order> listorderclock = new ArrayList<Order>();

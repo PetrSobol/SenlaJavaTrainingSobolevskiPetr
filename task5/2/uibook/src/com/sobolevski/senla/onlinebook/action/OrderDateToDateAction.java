@@ -1,0 +1,28 @@
+package com.sobolevski.senla.onlinebook.action;
+
+import java.text.ParseException;
+import java.util.Scanner;
+
+import loger.WriteLoger;
+import com.sobolevski.senla.onlinebook.operationmenu.SingleTonOnlineBook;
+
+public class OrderDateToDateAction implements IAction {
+	private Scanner scaner;
+
+	@Override
+	public void process() {
+		scaner = new Scanner(System.in);
+		System.out.println("Date one?(dd.MM.yyyy)");
+		String date1 = scaner.nextLine();
+		System.out.println("Date two ?(dd.MM.yyyy)");
+		String date2 = scaner.nextLine();
+		try {
+			SingleTonOnlineBook.getInstance().getOnlineBook().printListOrder(
+					SingleTonOnlineBook.getInstance().getOnlineBook().sortOrderDateToDate(date1, date2));
+		} catch (ParseException e) {
+			WriteLoger.getLogger(OrderDateToDateAction.class.getName()).error(e);
+		}
+
+	}
+
+}
