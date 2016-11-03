@@ -2,25 +2,34 @@ package com.sobolevski.senla.onlinebook.action;
 
 import java.util.Scanner;
 
-import com.sobolevski.senla.onlinebook.operationmenu.SingleTonOnlineBook;
+import com.sobolevski.senla.onlinebook.operationmenu.Print;
+import com.sobolevski.senla.onlinebook.operationmenu.ScannerBox;
+
+import controller.OnlineBook;
 
 public class AddNewBookAction implements IAction {
-	private static final String BOOK_ADD_SUCESS = "Book add sucess";
+	private Print print = new Print();
+	private ScannerBox scanerbox = new ScannerBox();
 	private Scanner scaner;
 
 	@Override
 	public void process() {
 		scaner = new Scanner(System.in);
-		System.out.println("Name book?");
-		String name = scaner.nextLine();
-		System.out.println("Writer book?");
-		String writer = scaner.nextLine();
-		System.out.println("Price?");
-		Integer price = Integer.parseInt(scaner.nextLine());
-		System.out.println("Year? #yyyy#");
-		Integer quantity = Integer.parseInt(scaner.nextLine());
-		SingleTonOnlineBook.getInstance().getOnlineBook().addNewBook(name, writer, price, quantity);
-		System.out.println(BOOK_ADD_SUCESS);
+		print.addbookName();
+		String name = scanerbox.getWord(scaner);
+		print.addbookWriter();
+		String writer = scanerbox.getWord(scaner);
+		print.addbookPrice();
+		Integer price = scanerbox.getNumber(scaner);
+		print.addbookYear();
+		Integer quantity = scanerbox.getNumber(scaner);
+		if (name != null && writer!=  null && price != null && quantity != null) {
+			OnlineBook.getInstance().addNewBook(name, writer, price, quantity);
+			print.printFinishOperation();
+		}else{
+			print.printNoFinishOperation();
+		}
+
 	}
 
 }

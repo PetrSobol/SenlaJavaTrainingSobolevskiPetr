@@ -7,9 +7,11 @@ import com.sobolevski.senla.onlinebook.action.IAction;
 
 
 public class Menu implements IMenu {
+	//name menu field
 	private String title;
+	//number menu
 	private Integer id;
-	private List<IMenu> listmenu;
+    private List<IMenu> listmenu;
 	private IAction action;
 
 	public Menu(String title, Integer id) {
