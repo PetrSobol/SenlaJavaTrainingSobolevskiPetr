@@ -36,7 +36,6 @@ public class OnlineBook {
 		OrderDao orderdao = new OrderDao(converter.getListOrder(new ArrayList<Order>(), dataBases.readFileDB()));
 		this.bookService = new BookService(bookdao);
 		this.orderservice = new OrderService(orderdao, this.bookService);
-		PropertyConfigurator.configure("resources/ log4j.properties");
 	}
 
 	public static OnlineBook getInstance(){
