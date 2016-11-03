@@ -3,34 +3,37 @@ package com.sobolevski.senla.onlinebook.action;
 import java.text.ParseException;
 import java.util.Scanner;
 
-import loger.WriteLoger;
-import com.sobolevski.senla.onlinebook.operationmenu.SingleTonOnlineBook;
+import org.apache.log4j.Logger;
+
+import com.sobolevski.senla.onlinebook.operationmenu.Print;
+import com.sobolevski.senla.onlinebook.operationmenu.ScannerBox;
+
+import controller.OnlineBook;
 
 public class AddNewOrderAction implements IAction {
-	private static final String THIS_BOOK_HAS_ALREADY_ORDERED_MORE_STOCK_NOT = "This book has already ordered more stock not";
-	private static final String ORDER_SUCCES = "Order succes";
+	private ScannerBox scanerbox = new ScannerBox();
+	private Print print = new Print();
+	private Logger log = Logger.getLogger(AddNewOrderAction.class.getName());
 	private Scanner scaner;
 
 	@Override
 	public void process() {
 		scaner = new Scanner(System.in);
-		System.out.println("Your lastname?");
-		String lastname = scaner.nextLine();
-		System.out.println("Your firstname?");
-		String firstname = scaner.nextLine();
-		System.out.println("Name book?");
-		String namebook = scaner.nextLine();
+		print.addOrderLastname();
+		String lastname = scanerbox.getWord(scaner);
+		print.addOrderFirstName();
+		String firstname = scanerbox.getWord(scaner);
+		print.addbookName();
+		String namebook = scanerbox.getWord(scaner);
 		try {
-			if (SingleTonOnlineBook.getInstance().getOnlineBook().addOrder(lastname, firstname, namebook)) {
-				System.out.println(ORDER_SUCCES);
+			if (OnlineBook.getInstance().addOrder(lastname, firstname, namebook)) {
+				print.printFinishOperation();
 			} else {
-				System.out.println(THIS_BOOK_HAS_ALREADY_ORDERED_MORE_STOCK_NOT);
+				print.printNoFinishOperation();
 			}
-
 		} catch (ParseException e) {
-			WriteLoger.getLogger(AddNewOrderAction.class.getName()).error(e);
+			log.error(e);
 		}
-
 	}
 
 }

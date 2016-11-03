@@ -3,27 +3,35 @@ package com.sobolevski.senla.onlinebook.action;
 import java.text.ParseException;
 import java.util.Scanner;
 
-import loger.WriteLoger;
-import com.sobolevski.senla.onlinebook.operationmenu.SingleTonOnlineBook;
+import org.apache.log4j.Logger;
+
+import com.sobolevski.senla.onlinebook.operationmenu.Print;
+import com.sobolevski.senla.onlinebook.operationmenu.ScannerBox;
+
+import controller.OnlineBook;
 
 public class MuchOrderAction implements IAction {
-	private static final String COMPANY = "The company earned money -";
 	private Scanner scaner;
+	private Print print = new Print();
+	private ScannerBox scanerbox = new ScannerBox();
+	private Logger log = Logger.getLogger(MuchOrderAction.class.getName());
 
 	@Override
 	public void process() {
 		scaner = new Scanner(System.in);
-		System.out.println("Date one? (dd.MM.yyyy)");
-		String date1 = scaner.nextLine();
-		System.out.println("Date two? (dd.MM.yyyy)");
-		String date2 = scaner.nextLine();
-		try {
-			System.out.println(COMPANY +SingleTonOnlineBook.getInstance().getOnlineBook().printOrderPriceToOrder(date1, date2));
-			
-		} catch (ParseException e) {
-			WriteLoger.getLogger(MuchOrderAction.class.getName()).error(e);
+		print.dateOne();
+		String date1 = scanerbox.dateFormat(scaner);
+		print.dateTwo();
+		String date2 = scanerbox.dateFormat(scaner);
+		if (date1 != null && date2 != null) {
+			try {
+				print.dateFinish(OnlineBook.getInstance().printOrderPriceToOrder(date1, date2));
+			} catch (ParseException e) {
+				log.error(e);
+			}
+		} else {
+			print.printNoFinishOperation();
 		}
-
 	}
 
 }

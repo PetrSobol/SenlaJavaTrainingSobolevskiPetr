@@ -1,14 +1,15 @@
 package com.sobolevski.senla.onlinebook.action;
 
-import loger.WriteLoger;
-import com.sobolevski.senla.onlinebook.operationmenu.SingleTonOnlineBook;
+import org.apache.log4j.Logger;
+
+import controller.OnlineBook;
 
 public class SaveBaseAction implements IAction {
-
+private Logger log=Logger.getLogger(SaveBaseAction.class.getName());
 	@Override
 	public void process() {
-		SingleTonOnlineBook.getInstance().getOnlineBook().saveToDataBases();
-		WriteLoger.getLogger(SaveBaseAction.class.getName()).info("Save to database");
+		OnlineBook.getInstance().saveToDataBases();
+		log.info("save to databases");
 		
 	}
 

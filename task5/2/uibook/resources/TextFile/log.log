@@ -46,3 +46,23 @@
 2016-10-30 22:51:38 ERROR Navigator:43 - java.util.InputMismatchException
 2016-10-30 23:00:09 ERROR Navigator:43 - java.util.InputMismatchException
 2016-10-30 23:00:15 ERROR Navigator:43 - java.util.InputMismatchException
+2016-11-01 08:31:47 ERROR Navigator:43 - java.util.InputMismatchException
+2016-11-01 08:39:06 ERROR Navigator:63 - java.util.InputMismatchException
+2016-11-01 08:52:54 ERROR Navigator:60 - java.util.InputMismatchException
+2016-11-01 10:57:20 ERROR Navigator:58 - java.util.InputMismatchException
+2016-11-01 11:16:49 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-01 11:20:09 ERROR ScannerBox:16 - java.util.InputMismatchException
+2016-11-01 11:20:09 ERROR ScannerBox:16 - java.util.InputMismatchException
+2016-11-01 11:24:12 ERROR ScannerBox:16 - java.util.InputMismatchException
+2016-11-01 11:24:12 ERROR ScannerBox:16 - java.util.InputMismatchException
+2016-11-01 11:27:20 ERROR ScannerBox:15 - java.util.InputMismatchException
+2016-11-01 11:27:20 ERROR ScannerBox:15 - java.util.InputMismatchException
+2016-11-01 11:33:43 ERROR ScannerBox:15 - java.util.InputMismatchException
+2016-11-01 11:33:43 ERROR ScannerBox:15 - java.util.InputMismatchException
+2016-11-01 11:33:50 ERROR ScannerBox:15 - java.util.InputMismatchException
+2016-11-01 11:33:50 ERROR ScannerBox:15 - java.util.InputMismatchException
+2016-11-01 11:33:56 ERROR ScannerBox:15 - java.util.InputMismatchException
+2016-11-01 19:57:28 ERROR ScannerBox:21 - java.text.ParseException: Unparseable date: "dsaf"
+2016-11-01 19:57:28 ERROR ScannerBox:21 - java.text.ParseException: Unparseable date: "sdf"
+2016-11-01 20:41:17 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-01 20:42:20 INFO  SaveBaseAction:12 - save to databases

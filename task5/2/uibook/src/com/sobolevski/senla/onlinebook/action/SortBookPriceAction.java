@@ -1,14 +1,15 @@
 package com.sobolevski.senla.onlinebook.action;
 
-import com.sobolevski.senla.onlinebook.operationmenu.SingleTonOnlineBook;
+import com.sobolevski.senla.onlinebook.operationmenu.Print;
+
+import controller.OnlineBook;
 
 public class SortBookPriceAction implements IAction {
-
+	private Print print = new Print();
 	@Override
 	public void process() {
-		SingleTonOnlineBook.getInstance().getOnlineBook()
-				.printListBook(SingleTonOnlineBook.getInstance().getOnlineBook().sortBookPrice());
-
+		print.printListBook(OnlineBook.getInstance().sortBookPrice());
+		
 	}
 
 }

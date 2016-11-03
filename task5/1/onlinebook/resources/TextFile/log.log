@@ -6,3 +6,9 @@
 2016-10-29 17:17:54 INFO  Runner:60 - java.text.ParseException
 2016-10-29 18:05:32 INFO  Runner:63 - java.text.ParseException
 2016-10-29 18:18:26 INFO  Runner:63 - java.text.ParseException
+2016-11-01 09:04:41 INFO  Runner:62 - java.text.ParseException
+2016-11-01 09:33:55 INFO  Runner:62 - java.text.ParseException
+2016-11-01 09:48:43 INFO  Runner:64 - java.text.ParseException
+2016-11-01 09:49:14 INFO  Runner:64 - java.text.ParseException
+2016-11-01 09:49:42 ERROR Runner:64 - java.text.ParseException
+2016-11-01 09:50:06 ERROR Runner:64 - java.text.ParseException

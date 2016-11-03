@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+
 import dao.BookDao;
 import dao.OrderDao;
 import model.Book;
@@ -21,19 +24,32 @@ import sort.SortPriceOrder;
 import sort.SortStageOrder;
 
 public class OnlineBook {
+	private static OnlineBook onlinebook;
 	private DataBases dataBases = new DataBases();
 	private Converter converter = new Converter();
 	private PrintInformationModel printinformation = new PrintInformationModel();
 	private BookService bookService;
 	private OrderService orderservice;
-
-	public OnlineBook() throws ParseException {
+    private static Logger log= Logger.getLogger(OnlineBook.class.getName());
+	private  OnlineBook() throws ParseException {
 		BookDao bookdao = new BookDao(converter.getListBook(new ArrayList<Book>(), dataBases.readFileDB()));
 		OrderDao orderdao = new OrderDao(converter.getListOrder(new ArrayList<Order>(), dataBases.readFileDB()));
 		this.bookService = new BookService(bookdao);
 		this.orderservice = new OrderService(orderdao, this.bookService);
+		PropertyConfigurator.configure("resources/ log4j.properties");
 	}
 
+	public static OnlineBook getInstance(){
+		if(onlinebook==null){
+			try {
+				onlinebook=new OnlineBook();
+			} catch (ParseException e) {
+				log.error(e);
+			}
+		}
+		return onlinebook;
+	}
+		
 	// return true if order add succes
 	public Boolean addOrder(String lastname, String firstname, String namebook) throws ParseException {
 		if (orderservice.createNewOrder(lastname, firstname, namebook)) {
