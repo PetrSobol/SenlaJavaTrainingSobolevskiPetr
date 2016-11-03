@@ -12,3 +12,4 @@
 2016-11-01 09:49:14 INFO  Runner:64 - java.text.ParseException
 2016-11-01 09:49:42 ERROR Runner:64 - java.text.ParseException
 2016-11-01 09:50:06 ERROR Runner:64 - java.text.ParseException
+2016-11-03 09:47:19 ERROR Runner:14 - java.text.ParseException
