@@ -9,15 +9,17 @@ import controller.OnlineBook;
 
 
 public class CloseOrderAction implements IAction {
+	private static final String YOUR_LASTNAME = "Your lastname?";
+	private static final String YOUR_FIRSTNAME = "Your firstname?";
 	private Scanner scaner;
 	private Print print = new Print();
 	private ScannerBox scanerbox = new ScannerBox();
 	@Override
 	public void process() {
 		scaner = new Scanner(System.in);
-		print.addOrderLastname();
+		print.printMessage(YOUR_LASTNAME);
 		String lastname = scanerbox.getWord(scaner);
-		print.addOrderFirstName();	
+		print.printMessage(YOUR_FIRSTNAME);	
 		String firstname = scanerbox.getWord(scaner);
 		OnlineBook.getInstance().closeOrder(lastname, firstname);
 	}

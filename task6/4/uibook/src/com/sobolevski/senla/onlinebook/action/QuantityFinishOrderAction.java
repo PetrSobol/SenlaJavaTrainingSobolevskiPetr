@@ -11,6 +11,10 @@ import com.sobolevski.senla.onlinebook.operationmenu.ScannerBox;
 import controller.OnlineBook;
 
 public class QuantityFinishOrderAction implements IAction {
+	private static final String OPERATION_FINISH_NO_SUCESS_DATA_ENTRY_ERROR = "Operation finish no sucess. Data entry error!! ";
+	private static final String NUMBER_OF_COMPLETED_ORDERS_IN_THE_TIME_INTERVAL = "Number of completed orders in the time interval   ";
+	private static final String DATE_ONE_DD_MM_YYYY = "Date one? (dd.MM.yyyy)";
+	private static final String DATE_TWO_DD_MM_YYYY = "Date two? (dd.MM.yyyy)";
 	private Scanner scaner;
 	private Print print = new Print();
 	private ScannerBox scanerbox = new ScannerBox();
@@ -19,20 +23,21 @@ public class QuantityFinishOrderAction implements IAction {
 	@Override
 	public void process() {
 		scaner = new Scanner(System.in);
-		print.dateOne();
+		print.printMessage(DATE_ONE_DD_MM_YYYY);
 		String date1 = scanerbox.dateFormat(scaner);
-		print.dateTwo();
+		print.printMessage(DATE_TWO_DD_MM_YYYY);
 		String date2 = scanerbox.dateFormat(scaner);
 		if (date1 != null && date2 != null) {
 			try {
-				print.quantityOrder(OnlineBook.getInstance().printOrderFinish(date1, date2));
+				print.quantityOrder(NUMBER_OF_COMPLETED_ORDERS_IN_THE_TIME_INTERVAL,
+						OnlineBook.getInstance().printOrderFinish(date1, date2));
 			} catch (ParseException e) {
 				log.error(e);
 			}
 		} else {
-			print.printNoFinishOperation();
+			print.printMessage(OPERATION_FINISH_NO_SUCESS_DATA_ENTRY_ERROR);
 		}
-		
+
 	}
 
 }
