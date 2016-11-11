@@ -220,12 +220,12 @@ public class OnlineBook {
 
 	public void exportBookCSV() {
 		importexport.exportBookCSV(getListBookAll(),
-				PropertiesOnlineBook.getInstanceProperty().getRoatImportExportBook());
+				PropertiesOnlineBook.getInstanceProperty().getInstancePropertyHolder().getRoatimportexportBook());
 	}
 
 	public void exportOrderCSV() {
 		importexport.exportOrderCSV(getListOrderAll(),
-				PropertiesOnlineBook.getInstanceProperty().getRoatImportExportOrder());
+				PropertiesOnlineBook.getInstanceProperty().getInstancePropertyHolder().getRoatimportexportOrder());
 
 	}
 
@@ -234,7 +234,7 @@ public class OnlineBook {
 	 */
 
 	public void orderSales(String nameorder) {
-		Boolean sales = PropertiesOnlineBook.getInstanceProperty().getOrderSales();
+		Boolean sales = PropertiesOnlineBook.getInstanceProperty().getInstancePropertyHolder().getSalesorder();
 		Order order = orderservice.searchOrder(nameorder);
 		if (order != null) {
 			if (sales) {
@@ -246,8 +246,8 @@ public class OnlineBook {
 	}
 
 	public void importBookCSV() {
-		List<Book> listbook = importexport
-				.importBookCSV(PropertiesOnlineBook.getInstanceProperty().getRoatImportExportBook());
+		List<Book> listbook = importexport.importBookCSV(
+				PropertiesOnlineBook.getInstanceProperty().getInstancePropertyHolder().getRoatimportexportBook());
 		if (listbook != null) {
 			for (Book book : listbook) {
 				Book book2 = bookService.searchBook(book.getName());
@@ -282,8 +282,8 @@ public class OnlineBook {
 	 * import file in CSV
 	 */
 	public void importOrderCSV() {
-		List<Order> listorder = importexport
-				.importOrderCSV(PropertiesOnlineBook.getInstanceProperty().getRoatImportExportOrder());
+		List<Order> listorder = importexport.importOrderCSV(
+				PropertiesOnlineBook.getInstanceProperty().getInstancePropertyHolder().getRoatimportexportOrder());
 		if (listorder != null) {
 			for (Order order : listorder) {
 				Order order2 = orderservice.searchOrderById(order.getIdNumberOrder());

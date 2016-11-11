@@ -36,3 +36,7 @@
 2016-11-09 16:47:35 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
 2016-11-09 16:54:20 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
 2016-11-09 16:55:47 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-11 09:29:24 ERROR Seriazeble:30 - java.lang.NumberFormatException: null
+2016-11-11 09:32:30 ERROR Seriazeble:30 - java.lang.NumberFormatException: null
+2016-11-11 09:35:40 ERROR Seriazeble:31 - java.lang.NumberFormatException: null
+2016-11-11 09:37:10 ERROR Seriazeble:30 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762

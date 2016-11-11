@@ -9,17 +9,22 @@ import org.apache.log4j.Logger;
 
 public class PropertiesOnlineBook {
 	private static PropertiesOnlineBook propertyonlne;
+	private PropertyHolder propertyholder;
 	private Logger log = Logger.getLogger(PropertiesOnlineBook.class.getName());
-	private FileInputStream file = null;
 	private Properties property = new Properties();
 /**
  * creat file property
  */
 	private PropertiesOnlineBook() {
+		propertyholder=new PropertyHolder();
 		try {
-			file = new FileInputStream("resources/roat.properties");
-
+			FileInputStream file = new FileInputStream("resources/roat.properties");
 			property.load(file);
+            propertyholder.setRoatimportexportBook(property.getProperty("dbbookexport"));
+            propertyholder.setRoatimportexportOrder(property.getProperty("dborderscvexport"));
+            propertyholder.setRoatseriazeble(property.getProperty("dbessence"));
+            propertyholder.setOldmonth(Integer.parseInt(property.getProperty("dbinteger")));
+            propertyholder.setSalesorder(Boolean.parseBoolean(property.getProperty("dbboolean")));
 
 		} catch (FileNotFoundException e) {
 			log.error(e);
@@ -28,42 +33,6 @@ public class PropertiesOnlineBook {
 		}
 
 	}
-/**
- * 	roat to export/import file order
- * 
- */
-	public String getRoatImportExportOrder() {
-		String roat = property.getProperty("dborderscvexport");
-		return roat;
-	}
-/**
- * roat to export/import file book
- * 
- */
-	public String getRoatImportExportBook() {
-		String roat = property.getProperty("dbbookexport");
-		return roat;
-	}
-/**
- * roat to databases	
- * 
- */
-	public String getRoatSeriazeble() {
-		String roat = property.getProperty("dbessence");
-		return roat;
-	}
-	public Integer getOldMonth(){
-		Integer oldmonth=Integer.parseInt(property.getProperty("dbinteger"));
-		return oldmonth;
-	}
-	public Boolean getOrderSales(){
-		Boolean ordersales=Boolean.parseBoolean(property.getProperty("dbboolean"));
-		return ordersales;
-	}
-/**
- * creat instance 	 PropertiesOnlineBook
- * 
- */
 	public static PropertiesOnlineBook getInstanceProperty() {
 		if (propertyonlne == null) {
 			propertyonlne = new PropertiesOnlineBook();
@@ -71,5 +40,9 @@ public class PropertiesOnlineBook {
 		}
 		return propertyonlne;
 	}
-
+    public PropertyHolder getInstancePropertyHolder(){
+    	return propertyholder;
+    }
+	
+	
 }
