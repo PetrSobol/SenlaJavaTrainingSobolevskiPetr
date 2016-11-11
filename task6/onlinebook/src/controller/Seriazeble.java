@@ -22,8 +22,8 @@ public class Seriazeble {
 	 * gets data with essence.out
 	 */
 	public Seriazeble() {
-		try (ObjectInputStream ois = new ObjectInputStream(
-				new FileInputStream(PropertiesOnlineBook.getInstanceProperty().getRoatSeriazeble()))) {
+		try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(
+				PropertiesOnlineBook.getInstanceProperty().getInstancePropertyHolder().getRoatseriazeble()))) {
 			listbook = (ArrayList<Book>) ois.readObject();
 			listorder = (ArrayList<Order>) ois.readObject();
 		} catch (Exception e) {
@@ -36,8 +36,8 @@ public class Seriazeble {
 	 * save to essence.out
 	 */
 	public void saveToDataBases() {
-		try (ObjectOutputStream oos = new ObjectOutputStream(
-				new FileOutputStream(PropertiesOnlineBook.getInstanceProperty().getRoatSeriazeble()))) {
+		try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(
+				PropertiesOnlineBook.getInstanceProperty().getInstancePropertyHolder().getRoatseriazeble()))) {
 			oos.writeObject(listbook);
 			oos.writeObject(listorder);
 		} catch (Exception e) {
