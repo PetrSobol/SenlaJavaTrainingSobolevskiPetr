@@ -1,0 +1,43 @@
+2016-10-29 16:54:16 INFO  Runner:64 - dsfgsfdlgmf;ldksgk;lsfdk
+2016-10-29 16:54:34 INFO  Runner:64 - java.text.ParseException
+2016-10-29 16:57:38 ERROR Runner:63 - java.text.ParseException
+2016-10-29 17:03:03 INFO  WriteLoger:63 - java.text.ParseException
+2016-10-29 17:16:52 INFO  Runner:63 - java.text.ParseException
+2016-10-29 17:17:54 INFO  Runner:60 - java.text.ParseException
+2016-10-29 18:05:32 INFO  Runner:63 - java.text.ParseException
+2016-10-29 18:18:26 INFO  Runner:63 - java.text.ParseException
+2016-11-01 09:04:41 INFO  Runner:62 - java.text.ParseException
+2016-11-01 09:33:55 INFO  Runner:62 - java.text.ParseException
+2016-11-01 09:48:43 INFO  Runner:64 - java.text.ParseException
+2016-11-01 09:49:14 INFO  Runner:64 - java.text.ParseException
+2016-11-01 09:49:42 ERROR Runner:64 - java.text.ParseException
+2016-11-01 09:50:06 ERROR Runner:64 - java.text.ParseException
+2016-11-02 10:33:10 ERROR Runner:16 - java.text.ParseException
+2016-11-02 11:00:30 INFO  OnlineBook:50 - success
+2016-11-02 11:01:06 INFO  OnlineBook:50 - success
+2016-11-02 11:01:14 INFO  OnlineBook:50 - success
+2016-11-09 12:54:40 ERROR PropertiesOnlineBook:23 - java.io.FileNotFoundException: resources\roat.properties (Не удается найти указанный файл)
+2016-11-09 12:54:40 ERROR OnlineBook:70 - java.lang.NullPointerException
+2016-11-09 12:54:40 ERROR OnlineBook:82 - java.lang.NullPointerException
+2016-11-09 12:56:06 ERROR PropertiesOnlineBook:23 - java.io.FileNotFoundException: resources\roat.properties (Не удается найти указанный файл)
+2016-11-09 16:37:25 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:39:58 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:40:18 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:42:47 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:45:31 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -1998355820590834409
+2016-11-09 16:46:02 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:46:32 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:46:32 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:47:04 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:47:04 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:47:17 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:47:17 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:47:35 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:47:35 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:54:20 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:55:47 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-11 09:29:24 ERROR Seriazeble:30 - java.lang.NumberFormatException: null
+2016-11-11 09:32:30 ERROR Seriazeble:30 - java.lang.NumberFormatException: null
+2016-11-11 09:35:40 ERROR Seriazeble:31 - java.lang.NumberFormatException: null
+2016-11-11 09:37:10 ERROR Seriazeble:30 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-13 15:51:06 ERROR Seriazeble:30 - java.io.InvalidClassException: model.Book; local class incompatible: stream classdesc serialVersionUID = 7035448861061198656, local class serialVersionUID = 7023638879688777786
