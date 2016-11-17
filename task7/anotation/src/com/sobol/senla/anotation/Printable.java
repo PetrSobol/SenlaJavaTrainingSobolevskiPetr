@@ -10,4 +10,5 @@ import java.lang.annotation.Target;
 public @interface Printable {
 String name();
 boolean isDetaledOnly();
+int order();
 }

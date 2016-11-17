@@ -3,56 +3,51 @@ package com.sobol.senla.anotation;
 import java.lang.reflect.Field;
 
 public class PrintableTracker {
+	private StringBuilder 	string = new StringBuilder();;
 	/**
 	 * print information short
-	 * 
+	 * search anotation in class
 	 * @param clazz
+	 * @throws ClassNotFoundException
 	 */
-	public static void prinInformationShort(Class clazz) {
+
+	public String prinInformation(Class clazz, boolean detaled) throws ClassNotFoundException {
+	
 		PrintableObject annotation = (PrintableObject) clazz.getAnnotation(PrintableObject.class);
 		if (annotation != null) {
 			String nametype = annotation.name();
-			System.out.print(nametype + ": ");
+			string.append(nametype);
+			string.append(": ");
 			for (Field metod : clazz.getDeclaredFields()) {
 				Printable printable = metod.getAnnotation(Printable.class);
-				if (printable != null) {
+				PrintableRef printref = metod.getAnnotation(PrintableRef.class);
+				if (detaled) {
+					if (printref != null) {
+						boolean printables = printref.isRecursiv();
+						if (printables) {
+							Class clazz2 = metod.getType();
+							return prinInformation(clazz2, true);
+						}
+					}
+					if (printable != null) {
+						if (detaled) {
+							String name = printable.name();
+							string.append(name);
+							string.append("  ");
+						}
+					}
+				} else if (!detaled && printable != null) {
 					boolean detalied = printable.isDetaledOnly();
 					if (detalied) {
 						String name = printable.name();
-						System.out.print(name + " ");
+						string.append(name);
+						string.append(" ");
 					}
 				}
 			}
 		}
-		System.out.println();
+		return string.toString();
 	}
 
-	/**
-	 * print information detalied
-	 * 
-	 * @param clazz
-	 */
-	public static void prinInformationDetailed(Class clazz) {
-		PrintableObject annotation = (PrintableObject) clazz.getAnnotation(PrintableObject.class);
-		if (annotation != null) {
-			String nametype = annotation.name();
-			System.out.print(nametype + ": ");
-			for (Field metod : clazz.getDeclaredFields()) {
-				PrintableRef printref = metod.getAnnotation(PrintableRef.class);
-				Printable printable = metod.getAnnotation(Printable.class);
-
-				if (printable != null) {
-					String name = printable.name();
-					System.out.print(name + " ");
-				}
-				if (printref != null) {
-					String name = printref.name();
-					System.out.println(name + " ");
-
-				}
-			}
-
-		}
-		System.out.println();
-	}
+	
 }
