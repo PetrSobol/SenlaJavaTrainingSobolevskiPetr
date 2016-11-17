@@ -3,7 +3,6 @@ package interfaces;
 import java.util.Date;
 
 import model.StageBook;
-
 public interface IOrder {
 	public Date getDate();
 

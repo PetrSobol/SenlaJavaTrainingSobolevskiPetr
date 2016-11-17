@@ -85,3 +85,9 @@
 2016-11-13 12:48:34 INFO  SaveBaseAction:16 - save to databases
 2016-11-13 12:52:01 ERROR Navigator:57 - java.util.InputMismatchException
 2016-11-13 12:52:04 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-13 22:35:16 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-13 22:35:20 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-13 22:37:39 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-15 21:27:49 ERROR PropertiesOnlineBook:39 - java.io.FileNotFoundException: resources\instance.properties (Не удается найти указанный файл)
+2016-11-15 21:28:03 ERROR ScannerBox:40 - java.util.InputMismatchException
+2016-11-15 21:28:04 ERROR ScannerBox:40 - java.util.InputMismatchException

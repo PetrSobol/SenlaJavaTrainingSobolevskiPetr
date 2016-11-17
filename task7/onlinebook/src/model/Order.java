@@ -16,39 +16,39 @@ public class Order implements Cloneable, Serializable,IOrder {
 	/**
 	 * id number order
 	 */
-	@Printable(isDetaledOnly = false, name = "idNumberOrder")
+	@Printable(isDetaledOnly = false, name = "idNumberOrder",order=1)
 	private String idNumberOrder;
 	/**
 	 * lastname customer
 	 */
-	@Printable(isDetaledOnly = true, name = "lastname")
+	@Printable(isDetaledOnly = true, name = "lastname",order=2)
 	private String lastname;
 	/**
 	 * first name customer
 	 */
-	@Printable(isDetaledOnly = false, name = "firstname")
+	@Printable(isDetaledOnly = false, name = "firstname",order=3)
 	private String firstname;
 	/**
 	 * price order
 	 */
-	@Printable(isDetaledOnly = false, name = "price")
+	@Printable(isDetaledOnly = false, name = "price",order=4)
 	private Integer price;
 	/**
 	 * date start order
 	 */
-	@Printable(isDetaledOnly = false, name = "date")
+	@Printable(isDetaledOnly = false, name = "date",order=5)
 	private Date date;
 	/**
 	 * date finish order
 	 */
-	@Printable(isDetaledOnly = false, name = "dateFinishOrder")
+	@Printable(isDetaledOnly = false, name = "dateFinishOrder",order=6)
 	private Date dateFinishOrder;
 	/**
 	 * where is the stock
 	 */
-	@Printable(isDetaledOnly = true, name = "stage")
+	@Printable(isDetaledOnly = true, name = "stage",order=7)
 	private StageBook stage;
-	@PrintableRef(name = "book")
+	@PrintableRef(name = "Book",isRecursiv=false,order =1)
 	private IBook book;
 
 	public Order() {

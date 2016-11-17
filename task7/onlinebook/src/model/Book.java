@@ -14,34 +14,34 @@ public class Book implements Serializable,IBook {
 	/**
 	 * name book
 	 */
-	@Printable(isDetaledOnly = false, name = "name")
+	@Printable(isDetaledOnly = false, name = "name",order=1)
 	private String name;
 	/**
 	 * id book
 	 */
-	@Printable(isDetaledOnly = true, name = "id")
+	@Printable(isDetaledOnly = true, name = "id",order=2)
 	private String id;
 	/**
 	 * name writer book
 	 */
-	@Printable(isDetaledOnly = false, name = "writer")
+	@Printable(isDetaledOnly = false, name = "writer",order=3)
 	private String writer;
 	/**
 	 * price book
 	 */
-	@Printable(isDetaledOnly = false, name = "price")
+	@Printable(isDetaledOnly = false, name = "price",order=4)
 	private Integer price;
 	/**
 	 * year book done
 	 */
-	@Printable(isDetaledOnly = true, name = "quantityPages")
+	@Printable(isDetaledOnly = true, name = "quantityPages",order=5)
 	private Integer quantityPages;
 	/**
 	 * whether there is stock
 	 */
-	@Printable(isDetaledOnly = true, name = "stage")
+	@Printable(isDetaledOnly = true, name = "stage",order=6)
 	private StageBook stage;
-	@PrintableRef(name = "order")
+	@PrintableRef(name = "Order",isRecursiv=true,order=1)
 	private IOrder order;
 
 	public Book() {

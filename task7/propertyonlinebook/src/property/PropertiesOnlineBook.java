@@ -18,23 +18,14 @@ public class PropertiesOnlineBook {
 	 */
 	private PropertiesOnlineBook() {
 		propertyholder = new PropertyHolder();
-		try {
-			FileInputStream file = new FileInputStream("resources/roat.properties");
+		try (FileInputStream file = new FileInputStream("resources/roat.properties");) {
 			property.load(file);
 			propertyholder.setRoatimportexportBook(property.getProperty("dbbookexport"));
 			propertyholder.setRoatimportexportOrder(property.getProperty("dborderscvexport"));
 			propertyholder.setRoatseriazeble(property.getProperty("dbessence"));
 			propertyholder.setOldmonth(Integer.parseInt(property.getProperty("dbinteger")));
 			propertyholder.setSalesorder(Boolean.parseBoolean(property.getProperty("dbboolean")));
-			propertyholder.setOnlinebook(property.getProperty("IOnlainBook.class"));
-			propertyholder.setIbook(property.getProperty("IBook.class"));
-			propertyholder.setIorder(property.getProperty("IOrder.class"));
-			propertyholder.setIbookdao(property.getProperty("IBookDao.class"));
-			propertyholder.setIorderdao(property.getProperty("IOrderDao.class"));
-			propertyholder.setIbookservice(property.getProperty("IBookService.class"));
-			propertyholder.setIorderservice(property.getProperty("IOrderService.class"));
-			propertyholder.setIseriazeble(property.getProperty("ISeriazeble.class"));
-			propertyholder.setIimportexport(property.getProperty("IImportExport.class"));
+
 		} catch (FileNotFoundException e) {
 			log.error(e);
 		} catch (IOException e) {
