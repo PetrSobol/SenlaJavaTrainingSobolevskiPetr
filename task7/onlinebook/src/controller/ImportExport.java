@@ -14,9 +14,9 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import interfaces.IBook;
 import interfaces.IImportExport;
-import interfaces.IOrder;
+import model.Book;
+import model.Order;
 
 public class ImportExport implements IImportExport {
 	private Converter converter = new Converter();
@@ -28,7 +28,7 @@ public class ImportExport implements IImportExport {
 	 * @param book
 	 * @param rout
 	 */
-	public void exportBookCSV(List<IBook> book, String rout) {
+	public void exportBookCSV(List<Book> book, String rout) {
 		try (BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(rout), "UTF-8"))) {
 
 			String[] arraybook = converter.getArrayBook(book);
@@ -53,7 +53,7 @@ public class ImportExport implements IImportExport {
 	 * @param order
 	 * @param rout
 	 */
-	public void exportOrderCSV(List<IOrder> order, String rout) {
+	public void exportOrderCSV(List<Order> order, String rout) {
 		try (BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(rout), "UTF-8"))) {
 			String[] arrayorder = converter.getArrayOrder(order);
 			for (int i = 0; i < arrayorder.length; i++) {
@@ -74,8 +74,8 @@ public class ImportExport implements IImportExport {
 	 * @param rout
 	 * @return
 	 */
-	public List<IBook> importBookCSV(String rout) {
-		List<IBook> listbook = null;
+	public List<Book> importBookCSV(String rout) {
+		List<Book> listbook = null;
 		String line = null;
 		try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(rout), "UTF-8"))) {
 			List<String> liststring = new ArrayList<String>();
@@ -99,9 +99,9 @@ public class ImportExport implements IImportExport {
 	 * @param rout
 	 * @return
 	 */
-	public List<IOrder> importOrderCSV(String rout) {
+	public List<Order> importOrderCSV(String rout) {
 
-		List<IOrder> listorder = null;
+		List<Order> listorder = null;
 		String line = null;
 
 		try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(rout), "UTF-8"))) {

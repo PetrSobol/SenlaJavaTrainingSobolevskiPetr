@@ -42,7 +42,7 @@ public class Book implements Serializable,IBook {
 	@Printable(isDetaledOnly = true, name = "stage",order=6)
 	private StageBook stage;
 	@PrintableRef(name = "Order",isRecursiv=true,order=1)
-	private IOrder order;
+	private Order order;
 
 	public Book() {
 		super();
@@ -82,11 +82,11 @@ public class Book implements Serializable,IBook {
 		return price;
 	}
 
-	public IOrder getOrder() {
+	public Order getOrder() {
 		return order;
 	}
 
-	public void setOrder(IOrder order) {
+	public void setOrder(Order order) {
 		this.order = order;
 	}
 

@@ -2,9 +2,9 @@ package service;
 
 import java.util.List;
 
-import interfaces.IBook;
 import interfaces.IBookDao;
 import interfaces.IBookService;
+import model.Book;
 
 public class BookService implements IBookService {
 	private IBookDao bookdao;
@@ -19,9 +19,9 @@ public class BookService implements IBookService {
 
 	}
 
-	public IBook searchBook(String name) {
+	public Book searchBook(String name) {
 
-		IBook book = bookdao.search(name);
+		Book book = bookdao.search(name);
 		if (book != null) {
 			return book;
 		}
@@ -41,7 +41,7 @@ public class BookService implements IBookService {
 		this.bookdao = bookdao;
 	}
 
-	public void addBook(IBook book) {
+	public void addBook(Book book) {
 		bookdao.addBook(book);
 	}
 
@@ -49,12 +49,12 @@ public class BookService implements IBookService {
 		bookdao.deleteBook(namebook);
 	}
 
-	public List<IBook> getListBook() {
-		List<IBook> listbook = bookdao.getListBook();
+	public List<Book> getListBook() {
+		List<Book> listbook = bookdao.getListBook();
 		return listbook;
 	}
 
-	public void updateBook(IBook book, IBook book2) {
+	public void updateBook(Book book, Book book2) {
 		bookdao.updateBook(book, book2);
 	}
 }

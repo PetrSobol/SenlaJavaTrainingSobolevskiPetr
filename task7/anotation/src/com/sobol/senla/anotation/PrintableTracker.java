@@ -3,16 +3,30 @@ package com.sobol.senla.anotation;
 import java.lang.reflect.Field;
 
 public class PrintableTracker {
-	private StringBuilder 	string = new StringBuilder();;
+	private static PrintableTracker printable;
+	private static StringBuilder string;
+
+	private PrintableTracker() {
+
+	}
+
+	public static PrintableTracker getInstance() {
+		if (printable == null) {
+			printable = new PrintableTracker();
+			string = new StringBuilder();
+		}
+		string.delete(0, string.length());
+		return printable;
+	}
+
 	/**
-	 * print information short
-	 * search anotation in class
+	 * print information short search anotation in class
+	 * 
 	 * @param clazz
 	 * @throws ClassNotFoundException
 	 */
-
 	public String prinInformation(Class clazz, boolean detaled) throws ClassNotFoundException {
-	
+
 		PrintableObject annotation = (PrintableObject) clazz.getAnnotation(PrintableObject.class);
 		if (annotation != null) {
 			String nametype = annotation.name();
@@ -49,5 +63,4 @@ public class PrintableTracker {
 		return string.toString();
 	}
 
-	
 }
