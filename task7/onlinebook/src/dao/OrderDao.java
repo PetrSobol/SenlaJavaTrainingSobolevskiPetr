@@ -6,26 +6,26 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import interfaces.IOrder;
 import interfaces.IOrderDao;
+import model.Order;
 
 public class OrderDao implements IOrderDao {
-	private List<IOrder> listorder;
+	private List<Order> listorder;
 
 	public OrderDao() {
 
 	}
 
-	public OrderDao(List<IOrder> listorder) {
+	public OrderDao(List<Order> listorder) {
 		this.listorder = listorder;
 	}
 
-	public List<IOrder> getListOrder() {
+	public List<Order> getListOrder() {
 		return listorder;
 	}
 
 	
-	public void setListorder(List<IOrder> listorder) {
+	public void setListorder(List<Order> listorder) {
 		this.listorder = listorder;
 	}
 
@@ -33,12 +33,12 @@ public class OrderDao implements IOrderDao {
 		this.listorder.remove(searchOrder(name));
 	}
 
-	public void addOrder(IOrder order) {
+	public void addOrder(Order order) {
 		this.listorder.add(order);
 	}
 
-	public IOrder searchOrderById(String number) {
-		for (IOrder order : listorder) {
+	public Order searchOrderById(String number) {
+		for (Order order : listorder) {
 			if (order.getIdNumberOrder().equals(number)) {
 				return order;
 			}
@@ -52,9 +52,9 @@ public class OrderDao implements IOrderDao {
 	 * @param name
 	 * @return
 	 */
-	public IOrder searchOrder(String name) {
+	public Order searchOrder(String name) {
 
-		for (IOrder order : listorder) {
+		for (Order order : listorder) {
 			if (order.getLastname().equals(name)) {
 				return order;
 			}
@@ -70,7 +70,7 @@ public class OrderDao implements IOrderDao {
 	 */
 	public int searchOrderIndex(String name) {
 		int number = 0;
-		for (IOrder order : listorder) {
+		for (Order order : listorder) {
 			if (order.getLastname().equals(name)) {
 
 				return number;
@@ -89,12 +89,12 @@ public class OrderDao implements IOrderDao {
 	 * @return
 	 * @throws ParseException
 	 */
-	public List<IOrder> listorderclock(String date1, String date2) throws ParseException {
+	public List<Order> listorderclock(String date1, String date2) throws ParseException {
 		SimpleDateFormat simple = new SimpleDateFormat("dd.MM.yyyy");
-		List<IOrder> listorderclock = new ArrayList<IOrder>();
+		List<Order> listorderclock = new ArrayList<Order>();
 		Date datemin = simple.parse(date1);
 		Date datemax = simple.parse(date2);
-		for (IOrder order : listorder) {
+		for (Order order : listorder) {
 			if (order.dateFinishOrder().after(datemin) && order.dateFinishOrder().before(datemax)) {
 				listorderclock.add(order);
 			}
@@ -102,7 +102,7 @@ public class OrderDao implements IOrderDao {
 		return listorderclock;
 	}
 
-	public void updateOrder(IOrder order, IOrder order2) {
+	public void updateOrder(Order order, Order order2) {
 		if (order2 != null) {
 			order2.setLastname(order.getLastname());
 			order2.setFirstname(order.getFirstname());

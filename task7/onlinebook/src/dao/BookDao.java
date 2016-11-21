@@ -2,30 +2,30 @@ package dao;
 
 import java.util.List;
 
-import interfaces.IBook;
 import interfaces.IBookDao;
+import model.Book;
 
 public class BookDao implements IBookDao {
-	private List<IBook> listbook;
+	private List<Book> listbook;
 
 	public BookDao() {
 
 	}
 
-	public BookDao(List<IBook> listbook) {
+	public BookDao(List<Book> listbook) {
 		this.listbook = listbook;
 	}
 
-	public List<IBook> getListBook() {
+	public List<Book> getListBook() {
 		return listbook;
 	}
 
 
-	public void setListbook(List<IBook> listbook) {
+	public void setListbook(List<Book> listbook) {
 		this.listbook = listbook;
 	}
 
-	public void addBook(IBook book) {
+	public void addBook(Book book) {
 		this.listbook.add(book);
 	}
 
@@ -33,7 +33,7 @@ public class BookDao implements IBookDao {
 		this.listbook.remove(searchBook(namebook));
 	}
 
-	public void updateBook(IBook book, IBook book2) {
+	public void updateBook(Book book, Book book2) {
 		if (book2 != null) {
 			book2.setWriter(book.getWriter());
 			book2.setId(book.getId());
@@ -44,9 +44,9 @@ public class BookDao implements IBookDao {
 
 	}
 
-	public IBook search(String name) {
+	public Book search(String name) {
 
-		for (IBook book : getListBook()) {
+		for (Book book : getListBook()) {
 			if (book.getName().equals(name)) {
 				return book;
 			}
@@ -62,7 +62,7 @@ public class BookDao implements IBookDao {
 	 */
 	public int searchBook(String name) {
 		int number = 0;
-		for (IBook book : listbook) {
+		for (Book book : listbook) {
 			if (book.getName().equals(name)) {
 
 				return number;

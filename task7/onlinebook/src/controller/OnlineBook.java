@@ -8,16 +8,15 @@ import java.util.UUID;
 import org.apache.log4j.Logger;
 
 import di.DI;
-import interfaces.IBook;
 import interfaces.IBookDao;
 import interfaces.IBookService;
 import interfaces.IImportExport;
 import interfaces.IOnlineBook;
-import interfaces.IOrder;
 import interfaces.IOrderDao;
 import interfaces.IOrderService;
 import interfaces.ISeriazeble;
 import model.Book;
+import model.Order;
 import property.PropertiesOnlineBook;
 import sort.SortBookDate;
 import sort.SortBookName;
@@ -36,17 +35,17 @@ public class OnlineBook implements IOnlineBook {
 	private ISeriazeble seriazeble;
 
 	private OnlineBook() throws ParseException {
-		DI di = new DI();
+		
 		try {
-			seriazeble = (ISeriazeble) di.load("ISeriazeble.class");
-			importexport = (IImportExport) di.load("IImportExport.class");
-			IBookDao bookdao = (IBookDao) di.load("IBookDao.class");
+			seriazeble = (ISeriazeble) DI.load(ISeriazeble.class);
+			importexport = (IImportExport) DI.load(IImportExport.class);
+			IBookDao bookdao = (IBookDao) DI.load(IBookDao.class);
 			bookdao.setListbook(seriazeble.getListBook());
-			IOrderDao orderdao = (IOrderDao) di.load("IOrderDao.class");
+			IOrderDao orderdao = (IOrderDao) DI.load(IOrderDao.class);
 			orderdao.setListorder(seriazeble.getListOrder());
-			this.bookService = (IBookService) di.load("IBookService.class");
+			this.bookService = (IBookService) DI.load(IBookService.class);
 			bookService.setBookdao(bookdao);
-			this.orderservice = (IOrderService) di.load("IOrderService.class");
+			this.orderservice = (IOrderService) DI.load(IOrderService.class);
 			orderservice.setOrderdao(orderdao);
 			orderservice.setBookservice(this.bookService);
 		} catch (InstantiationException e) {
@@ -136,8 +135,8 @@ public class OnlineBook implements IOnlineBook {
 	 * sort list books by name
 	 * 
 	 */
-	public List<IBook> sortBookName() {
-		List<IBook> listbook = bookService.getListBook();
+	public List<Book> sortBookName() {
+		List<Book> listbook = bookService.getListBook();
 		Collections.sort(listbook, new SortBookName());
 		return listbook;
 	}
@@ -146,8 +145,8 @@ public class OnlineBook implements IOnlineBook {
 	 * sort list books by price
 	 *
 	 */
-	public List<IBook> sortBookPrice() {
-		List<IBook> listbook = bookService.getListBook();
+	public List<Book> sortBookPrice() {
+		List<Book> listbook = bookService.getListBook();
 		Collections.sort(listbook, new SortBookPrice());
 		return listbook;
 
@@ -157,8 +156,8 @@ public class OnlineBook implements IOnlineBook {
 	 * sort list books by dates
 	 *
 	 */
-	public List<IBook> sortBookDate() {
-		List<IBook> listbook = bookService.getListBook();
+	public List<Book> sortBookDate() {
+		List<Book> listbook = bookService.getListBook();
 		Collections.sort(listbook, new SortBookDate());
 		return listbook;
 
@@ -168,26 +167,26 @@ public class OnlineBook implements IOnlineBook {
 	 * sort list books by where is the stock
 	 * 
 	 */
-	public List<IBook> sortBookStage() {
-		List<IBook> listbook = bookService.getListBook();
+	public List<Book> sortBookStage() {
+		List<Book> listbook = bookService.getListBook();
 		Collections.sort(listbook, new SortBookStock());
 		return listbook;
 	}
 
-	public List<IOrder> sortOrderDate() {
-		List<IOrder> listbook = orderservice.getListOrder();
+	public List<Order> sortOrderDate() {
+		List<Order> listbook = orderservice.getListOrder();
 		Collections.sort(listbook, new SortDateOrder());
 		return listbook;
 	}
 
-	public List<IOrder> sortOrderPrice() {
-		List<IOrder> listbook = orderservice.getListOrder();
+	public List<Order> sortOrderPrice() {
+		List<Order> listbook = orderservice.getListOrder();
 		Collections.sort(listbook, new SortPriceOrder());
 		return listbook;
 	}
 
-	public List<IOrder> sortOrderStage() {
-		List<IOrder> listbook = orderservice.getListOrder();
+	public List<Order> sortOrderStage() {
+		List<Order> listbook = orderservice.getListOrder();
 		Collections.sort(listbook, new SortStageOrder());
 		return listbook;
 	}
@@ -199,22 +198,22 @@ public class OnlineBook implements IOnlineBook {
 		seriazeble.saveToDataBases();
 	}
 
-	public List<IOrder> sortOrderDateToDate(String date1, String date2) throws ParseException {
-		List<IOrder> listorder = orderservice.getListOrderClock(date1, date2);
+	public List<Order> sortOrderDateToDate(String date1, String date2) throws ParseException {
+		List<Order> listorder = orderservice.getListOrderClock(date1, date2);
 		Collections.sort(listorder, new SortDateOrder());
 		return listorder;
 	}
 
-	public List<IOrder> sortOrderDateToPrice(String date1, String date2) throws ParseException {
-		List<IOrder> listorder = orderservice.getListOrderClock(date1, date2);
+	public List<Order> sortOrderDateToPrice(String date1, String date2) throws ParseException {
+		List<Order> listorder = orderservice.getListOrderClock(date1, date2);
 		Collections.sort(listorder, new SortPriceOrder());
 		return listorder;
 	}
 
 	public Integer printOrderPriceToOrder(String date1, String date2) throws ParseException {
-		List<IOrder> listorder = orderservice.getListOrderClock(date1, date2);
+		List<Order> listorder = orderservice.getListOrderClock(date1, date2);
 		Integer priceOll = 0;
-		for (IOrder order : listorder) {
+		for (Order order : listorder) {
 			priceOll += order.getPrice();
 		}
 
@@ -222,22 +221,22 @@ public class OnlineBook implements IOnlineBook {
 	}
 
 	public Integer printOrderFinish(String date1, String date2) throws ParseException {
-		List<IOrder> listorder = orderservice.getListOrderClock(date1, date2);
+		List<Order> listorder = orderservice.getListOrderClock(date1, date2);
 		Integer orderOll = 0;
-		for (IOrder order : listorder) {
+		for (Order order : listorder) {
 			orderOll++;
 		}
 
 		return orderOll;
 	}
 
-	public List<IOrder> getListOrderAll() {
-		List<IOrder> listorder = orderservice.getListOrder();
+	public List<Order> getListOrderAll() {
+		List<Order> listorder = orderservice.getListOrder();
 		return listorder;
 	}
 
-	public List<IBook> getListBookAll() {
-		List<IBook> listbook = bookService.getListBook();
+	public List<Book> getListBookAll() {
+		List<Book> listbook = bookService.getListBook();
 		return listbook;
 	}
 
@@ -258,7 +257,7 @@ public class OnlineBook implements IOnlineBook {
 
 	public void orderSales(String nameorder) {
 		Boolean sales = PropertiesOnlineBook.getInstanceProperty().getInstancePropertyHolder().getSalesorder();
-		IOrder order = orderservice.searchOrder(nameorder);
+		Order order = orderservice.searchOrder(nameorder);
 		if (order != null) {
 			if (sales) {
 				orderservice.closeOrder(order.getLastname(), order.getFirstname());
@@ -269,11 +268,11 @@ public class OnlineBook implements IOnlineBook {
 	}
 
 	public void importBookCSV() {
-		List<IBook> listbook = importexport.importBookCSV(
+		List<Book> listbook = importexport.importBookCSV(
 				PropertiesOnlineBook.getInstanceProperty().getInstancePropertyHolder().getRoatimportexportBook());
 		if (listbook != null) {
-			for (IBook book : listbook) {
-				IBook book2 = bookService.searchBook(book.getName());
+			for (Book book : listbook) {
+				Book book2 = bookService.searchBook(book.getName());
 				if (book2 != null) {
 					bookService.updateBook(book, book2);
 				} else {
@@ -292,7 +291,7 @@ public class OnlineBook implements IOnlineBook {
 	 * @throws CloneNotSupportedException
 	 */
 	public void cloneOrder(String nameclone) throws CloneNotSupportedException {
-		IOrder order = null;
+		Order order = null;
 		if (orderservice.searchOrder(nameclone) != null) {
 			order = orderservice.searchOrder(nameclone).clone();
 			order.setIdNumberOrder(UUID.randomUUID().toString());
@@ -305,11 +304,11 @@ public class OnlineBook implements IOnlineBook {
 	 * import file in CSV
 	 */
 	public void importOrderCSV() {
-		List<IOrder> listorder = importexport.importOrderCSV(
+		List<Order> listorder = importexport.importOrderCSV(
 				PropertiesOnlineBook.getInstanceProperty().getInstancePropertyHolder().getRoatimportexportOrder());
 		if (listorder != null) {
-			for (IOrder order : listorder) {
-				IOrder order2 = orderservice.searchOrderById(order.getIdNumberOrder());
+			for (Order order : listorder) {
+				Order order2 = orderservice.searchOrderById(order.getIdNumberOrder());
 				if (order2 != null) {
 					orderservice.updateOrder(order, order2);
 				} else {

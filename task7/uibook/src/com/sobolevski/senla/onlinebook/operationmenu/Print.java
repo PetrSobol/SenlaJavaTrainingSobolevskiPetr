@@ -5,8 +5,8 @@ import java.util.List;
 
 import com.sobolevski.senla.onlinebook.menu.IMenu;
 
-import interfaces.IBook;
-import interfaces.IOrder;
+import model.Book;
+import model.Order;
 
 public class Print {
 	private static final String STAGE2 = "  Stage: ";
@@ -28,7 +28,7 @@ public class Print {
 	 * @param book
 	 * @return
 	 */
-	private String printInfoBook(IBook book) {
+	private String printInfoBook(Book book) {
 		StringBuilder stringbuilder = new StringBuilder();
 		stringbuilder.append(NAME_BOOK);
 		stringbuilder.append(book.getName());
@@ -49,7 +49,7 @@ public class Print {
 	 * @param order
 	 * @return
 	 */
-	private String printInfoOrderOll(IOrder order) {
+	private String printInfoOrderOll(Order order) {
 		StringBuilder stringbuilder = new StringBuilder();
 		stringbuilder.append(CUSTOMER_LASTNAME_ORDER);
 		stringbuilder.append(order.getLastname());
@@ -80,14 +80,14 @@ public class Print {
 
 	}
 
-	public void printListOrder(List<IOrder> listorder) {
-		for (IOrder order : listorder) {
+	public void printListOrder(List<Order> listorder) {
+		for (Order order : listorder) {
 			System.out.println(printInfoOrderOll(order));
 		}
 	}
 
-	public void printListBook(List<IBook> listbook) {
-		for (IBook book : listbook) {
+	public void printListBook(List<Book> listbook) {
+		for (Book book : listbook) {
 			System.out.println(printInfoBook(book));
 		}
 	}

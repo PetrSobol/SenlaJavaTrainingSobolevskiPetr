@@ -4,24 +4,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DI {
-	private Map<String, String> maps = new HashMap<String, String>();
-	private Map<String, Object> mapsobject = new HashMap<String, Object>();
+	private static Map<Class, Object> mapsobject = new HashMap<Class, Object>();
+	private static PropertyInstance property = new PropertyInstance();
 
 	/**
 	 * fils maps rout
 	 */
-	public DI() {
-		PropertyInstance property = new PropertyInstance();
-		maps.put("IOnlainBook.class", property.getOnlinebook());
-		maps.put("IBook.class", property.getIbook());
-		maps.put("IOrder.class", property.getIorder());
-		maps.put("IBookDao.class", property.getIbookdao());
-		maps.put("IOrderDao.class", property.getIorderdao());
-		maps.put("IBookService.class", property.getIbookservice());
-		maps.put("IOrderService.class", property.getIorderservice());
-		maps.put("ISeriazeble.class", property.getIseriazeble());
-		maps.put("IImportExport.class", property.getIimportexport());
-	}
 
 	/**
 	 * creat instance object
@@ -32,18 +20,18 @@ public class DI {
 	 * @throws IllegalAccessException
 	 * @throws ClassNotFoundException
 	 */
-	public Object load(String nameclass)
+	public static Object load(Class clazz)
 
 			throws InstantiationException, IllegalAccessException, ClassNotFoundException {
-		Object object = mapsobject.get(nameclass);
+		Object object = mapsobject.get(clazz.getName());
 		if (object != null) {
 			return object;
 		} else if (object == null) {
-			String rout = maps.get(nameclass);
+			String rout = property.load(clazz.getName());
 			if (rout != null) {
-				Class clazz = Class.forName(rout);
-				Object objectnew = clazz.newInstance();
-				mapsobject.put(nameclass, objectnew);
+				Class clazz2 = Class.forName(rout);
+				Object objectnew = clazz2.newInstance();
+				mapsobject.put(clazz, objectnew);
 				return objectnew;
 			}
 		}

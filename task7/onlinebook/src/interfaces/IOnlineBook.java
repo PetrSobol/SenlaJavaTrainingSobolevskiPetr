@@ -3,6 +3,9 @@ package interfaces;
 import java.text.ParseException;
 import java.util.List;
 
+import model.Book;
+import model.Order;
+
 public interface IOnlineBook {
 	public Boolean addOrder(String lastname, String firstname, String namebook) throws ParseException;
 
@@ -14,33 +17,33 @@ public interface IOnlineBook {
 
 	public Boolean deleteOrder(String name);
 
-	public List<IBook> sortBookName();
+	public List<Book> sortBookName();
 
-	public List<IBook> sortBookPrice();
+	public List<Book> sortBookPrice();
 
-	public List<IBook> sortBookDate();
+	public List<Book> sortBookDate();
 
-	public List<IBook> sortBookStage();
+	public List<Book> sortBookStage();
 
-	public List<IOrder> sortOrderDate();
+	public List<Order> sortOrderDate();
 
-	public List<IOrder> sortOrderPrice();
+	public List<Order> sortOrderPrice();
 
-	public List<IOrder> sortOrderStage();
+	public List<Order> sortOrderStage();
 
 	public void saveToDataBases();
 
-	public List<IOrder> sortOrderDateToDate(String date1, String date2) throws ParseException;
+	public List<Order> sortOrderDateToDate(String date1, String date2) throws ParseException;
 
-	public List<IOrder> sortOrderDateToPrice(String date1, String date2) throws ParseException;
+	public List<Order> sortOrderDateToPrice(String date1, String date2) throws ParseException;
 
 	public Integer printOrderPriceToOrder(String date1, String date2) throws ParseException;
 
 	public Integer printOrderFinish(String date1, String date2) throws ParseException;
 
-	public List<IOrder> getListOrderAll();
+	public List<Order> getListOrderAll();
 
-	public List<IBook> getListBookAll();
+	public List<Book> getListBookAll();
 
 	public void exportBookCSV();
 

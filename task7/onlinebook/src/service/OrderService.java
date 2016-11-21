@@ -10,6 +10,7 @@ import interfaces.IBookService;
 import interfaces.IOrder;
 import interfaces.IOrderDao;
 import interfaces.IOrderService;
+import model.Book;
 import model.Order;
 import model.StageBook;
 
@@ -62,9 +63,9 @@ public class OrderService implements IOrderService {
 	public Boolean createNewOrder(String lastname, String firstname, String nameBook) throws ParseException {
 		Date date = new Date();
 		String number = UUID.randomUUID().toString();
-		IBook book = bookservice.searchBook(nameBook);
+		Book book = bookservice.searchBook(nameBook);
 		if (book != null && book.getStage().equals(StageBook.THERE_IS_STOCK)) {
-			IOrder order = new Order(number, lastname, firstname, book, date);
+			Order order = new Order(number, lastname, firstname, book, date);
 			orderdao.addOrder(order);
 			book.setOrder(order);
 			book.setStage(StageBook.SALES);
@@ -74,20 +75,20 @@ public class OrderService implements IOrderService {
 		return false;
 	}
 
-	public void addCloneOrder(IOrder order) {
+	public void addCloneOrder(Order order) {
 		orderdao.addOrder(order);
 	}
 
-	public List<IOrder> getListOrderClock(String date1, String date2) throws ParseException {
+	public List<Order> getListOrderClock(String date1, String date2) throws ParseException {
 		if (orderdao.listorderclock(date1, date2) != null) {
-			List<IOrder> listorderClock = orderdao.listorderclock(date1, date2);
+			List<Order> listorderClock = orderdao.listorderclock(date1, date2);
 			return listorderClock;
 		}
 		return null;
 	}
 
-	public List<IOrder> getListOrder() {
-		List<IOrder> listorder = orderdao.getListOrder();
+	public List<Order> getListOrder() {
+		List<Order> listorder = orderdao.getListOrder();
 		return listorder;
 	}
 
@@ -100,7 +101,7 @@ public class OrderService implements IOrderService {
 	public Boolean deleteOrder(String nameorder) {
 		if (orderdao.searchOrderIndex(nameorder) != orderdao.getListOrder().size()) {
 			String sales = orderdao.searchOrder(nameorder).getBook().getName();
-			IBook book = bookservice.searchBook(sales);
+			Book book = bookservice.searchBook(sales);
 			book.setStage(StageBook.THERE_IS_STOCK);
 			book.setId("");
 			orderdao.deleteOrder(nameorder);
@@ -109,18 +110,18 @@ public class OrderService implements IOrderService {
 		return false;
 	}
 
-	public IOrder searchOrder(String name) {
-		IOrder order = orderdao.searchOrder(name);
+	public Order searchOrder(String name) {
+		Order order = orderdao.searchOrder(name);
 		return order;
 	}
 
-	public void updateOrder(IOrder order, IOrder order2) {
+	public void updateOrder(Order order, Order order2) {
 		orderdao.updateOrder(order, order2);
 
 	}
 
-	public IOrder searchOrderById(String number) {
-		IOrder order = orderdao.searchOrderById(number);
+	public Order searchOrderById(String number) {
+		Order order = orderdao.searchOrderById(number);
 		return order;
 	}
 
