@@ -98,3 +98,4 @@
 2016-11-20 13:48:17 INFO  SaveBaseAction:16 - save to databases
 2016-11-20 13:52:13 ERROR Seriazeble:31 - java.io.EOFException
 2016-11-20 13:52:20 INFO  SaveBaseAction:16 - save to databases
+2016-11-20 14:25:07 ERROR Navigator:57 - java.util.InputMismatchException

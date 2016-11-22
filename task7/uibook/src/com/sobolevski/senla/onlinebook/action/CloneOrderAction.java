@@ -5,7 +5,8 @@ import org.apache.log4j.Logger;
 import com.sobolevski.senla.onlinebook.operationmenu.Print;
 import com.sobolevski.senla.onlinebook.operationmenu.ScannerBox;
 
-import controller.OnlineBook;
+import di.DI;
+import interfaces.IOnlineBook;
 
 public class CloneOrderAction implements IAction {
 	private static final String LASTNAME = "Lastname?";
@@ -19,11 +20,17 @@ public class CloneOrderAction implements IAction {
 	@Override
 	public void process() {
 		print.printMessage(LASTNAME);
-		;
 		String lastname = scanerbox.getWord();
 		try {
-			OnlineBook.getInstance().cloneOrder(lastname);
+			IOnlineBook onlinebook = (IOnlineBook) DI.load(IOnlineBook.class);
+			onlinebook.cloneOrder(lastname);
 		} catch (CloneNotSupportedException e) {
+			log.error(e);
+		} catch (InstantiationException e) {
+			log.error(e);
+		} catch (IllegalAccessException e) {
+			log.error(e);
+		} catch (ClassNotFoundException e) {
 			log.error(e);
 		}
 

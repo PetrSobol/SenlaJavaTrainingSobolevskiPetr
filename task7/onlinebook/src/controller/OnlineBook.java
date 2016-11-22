@@ -27,14 +27,13 @@ import sort.SortPriceOrder;
 import sort.SortStageOrder;
 
 public class OnlineBook implements IOnlineBook {
-	private static IOnlineBook onlinebook;
 	private static Logger log = Logger.getLogger(OnlineBook.class.getName());
 	private IImportExport importexport;
 	private IBookService bookService;
 	private IOrderService orderservice;
 	private ISeriazeble seriazeble;
 
-	private OnlineBook() throws ParseException {
+	public OnlineBook() throws ParseException {
 		
 		try {
 			seriazeble = (ISeriazeble) DI.load(ISeriazeble.class);
@@ -55,22 +54,7 @@ public class OnlineBook implements IOnlineBook {
 		} catch (ClassNotFoundException e) {
 			log.error(e);
 		}
-
 	}
-
-	public static OnlineBook getInstance() {
-		if (onlinebook == null) {
-
-			try {
-				onlinebook = new OnlineBook();
-			} catch (ParseException e) {
-				log.error(e);
-			}
-
-		}
-		return (OnlineBook) onlinebook;
-	}
-
 	/**
 	 * return true if order add succes
 	 * 

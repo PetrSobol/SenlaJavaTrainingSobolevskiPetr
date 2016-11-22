@@ -4,7 +4,6 @@ import java.lang.reflect.Field;
 
 public class PrintableTracker {
 	private static PrintableTracker printable;
-	private static StringBuilder string;
 
 	private PrintableTracker() {
 
@@ -13,9 +12,8 @@ public class PrintableTracker {
 	public static PrintableTracker getInstance() {
 		if (printable == null) {
 			printable = new PrintableTracker();
-			string = new StringBuilder();
+			
 		}
-		string.delete(0, string.length());
 		return printable;
 	}
 
@@ -26,7 +24,7 @@ public class PrintableTracker {
 	 * @throws ClassNotFoundException
 	 */
 	public String prinInformation(Class clazz, boolean detaled) throws ClassNotFoundException {
-
+	StringBuilder string = new StringBuilder();
 		PrintableObject annotation = (PrintableObject) clazz.getAnnotation(PrintableObject.class);
 		if (annotation != null) {
 			String nametype = annotation.name();
@@ -39,14 +37,21 @@ public class PrintableTracker {
 					if (printref != null) {
 						boolean printables = printref.isRecursiv();
 						if (printables) {
+							String order=String.valueOf(printref.order());
+							string.append(order);
+							string.append(" ");
 							Class clazz2 = metod.getType();
-							return prinInformation(clazz2, true);
+							return string.append(prinInformation(clazz2, true)).toString();
+									
 						}
 					}
 					if (printable != null) {
 						if (detaled) {
 							String name = printable.name();
 							string.append(name);
+							string.append("  ");
+							String order = String.valueOf(printable.order());
+							string.append(order);
 							string.append("  ");
 						}
 					}
@@ -56,6 +61,9 @@ public class PrintableTracker {
 						String name = printable.name();
 						string.append(name);
 						string.append(" ");
+						String order = String.valueOf(printable.order());
+						string.append(order);
+						string.append("  ");
 					}
 				}
 			}
