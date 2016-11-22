@@ -7,7 +7,8 @@ import org.apache.log4j.Logger;
 import com.sobolevski.senla.onlinebook.operationmenu.Print;
 import com.sobolevski.senla.onlinebook.operationmenu.ScannerBox;
 
-import controller.OnlineBook;
+import di.DI;
+import interfaces.IOnlineBook;
 
 public class MuchOrderAction implements IAction {
 	private static final String OPERATION_FINISH_NO_SUCESS_DATA_ENTRY_ERROR = "Operation finish no sucess. Data entry error!! ";
@@ -29,9 +30,15 @@ public class MuchOrderAction implements IAction {
 		String date2 = scanerbox.dateFormat();
 		if (date1 != null && date2 != null) {
 			try {
-				print.quantityOrder(THE_COMPANY_EARNED_MONEY,
-						OnlineBook.getInstance().printOrderPriceToOrder(date1, date2));
+				IOnlineBook onlinebook = (IOnlineBook) DI.load(IOnlineBook.class);
+				print.quantityOrder(THE_COMPANY_EARNED_MONEY, onlinebook.printOrderPriceToOrder(date1, date2));
 			} catch (ParseException e) {
+				log.error(e);
+			} catch (InstantiationException e) {
+				log.error(e);
+			} catch (IllegalAccessException e) {
+				log.error(e);
+			} catch (ClassNotFoundException e) {
 				log.error(e);
 			}
 		} else {

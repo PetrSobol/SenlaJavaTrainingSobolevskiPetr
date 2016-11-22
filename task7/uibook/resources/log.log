@@ -99,3 +99,4 @@
 2016-11-20 13:52:13 ERROR Seriazeble:31 - java.io.EOFException
 2016-11-20 13:52:20 INFO  SaveBaseAction:16 - save to databases
 2016-11-20 14:25:07 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-22 09:55:21 ERROR Navigator:57 - java.util.InputMismatchException

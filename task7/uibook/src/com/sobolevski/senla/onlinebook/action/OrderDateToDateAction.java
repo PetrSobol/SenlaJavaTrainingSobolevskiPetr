@@ -7,7 +7,8 @@ import org.apache.log4j.Logger;
 import com.sobolevski.senla.onlinebook.operationmenu.Print;
 import com.sobolevski.senla.onlinebook.operationmenu.ScannerBox;
 
-import controller.OnlineBook;
+import di.DI;
+import interfaces.IOnlineBook;
 
 public class OrderDateToDateAction implements IAction {
 	private static final String OPERATION_FINISH_NO_SUCESS_DATA_ENTRY_ERROR = "Operation finish no sucess. Data entry error!! ";
@@ -16,8 +17,9 @@ public class OrderDateToDateAction implements IAction {
 	private Print print = new Print();
 	private ScannerBox scanerbox = new ScannerBox();
 	private Logger log = Logger.getLogger(MuchOrderAction.class.getName());
+
 	/**
-	 * print  order in the range , FINISH_ORDER
+	 * print order in the range , FINISH_ORDER
 	 */
 	@Override
 	public void process() {
@@ -27,14 +29,21 @@ public class OrderDateToDateAction implements IAction {
 		String date2 = scanerbox.dateFormat();
 		if (date1 != null && date2 != null) {
 			try {
-				print.printListOrder(OnlineBook.getInstance().sortOrderDateToDate(date1, date1));
+				IOnlineBook onlinebook = (IOnlineBook) DI.load(IOnlineBook.class);
+				print.printListOrder(onlinebook.sortOrderDateToDate(date1, date1));
 			} catch (ParseException e) {
+				log.error(e);
+			} catch (InstantiationException e) {
+				log.error(e);
+			} catch (IllegalAccessException e) {
+				log.error(e);
+			} catch (ClassNotFoundException e) {
 				log.error(e);
 			}
 		} else {
 			print.printMessage(OPERATION_FINISH_NO_SUCESS_DATA_ENTRY_ERROR);
 		}
-		
+
 	}
 
 }

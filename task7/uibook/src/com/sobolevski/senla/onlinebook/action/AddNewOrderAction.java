@@ -7,7 +7,8 @@ import org.apache.log4j.Logger;
 import com.sobolevski.senla.onlinebook.operationmenu.Print;
 import com.sobolevski.senla.onlinebook.operationmenu.ScannerBox;
 
-import controller.OnlineBook;
+import di.DI;
+import interfaces.IOnlineBook;
 
 public class AddNewOrderAction implements IAction {
 	private static final String OPERATION_FINISH_SUCESS = "Operation finish sucess";
@@ -31,12 +32,19 @@ public class AddNewOrderAction implements IAction {
 		print.printMessage(NAME_BOOK2);
 		String namebook = scanerbox.getWord();
 		try {
-			if (OnlineBook.getInstance().addOrder(lastname, firstname, namebook)) {
+			IOnlineBook onlinebook = (IOnlineBook) DI.load(IOnlineBook.class);
+			if (onlinebook.addOrder(lastname, firstname, namebook)) {
 				print.printMessage(OPERATION_FINISH_SUCESS);
 			} else {
 				print.printMessage(OPERATION_FINISH_NO_SUCESS_DATA_ENTRY_ERROR);
 			}
 		} catch (ParseException e) {
+			log.error(e);
+		} catch (InstantiationException e) {
+			log.error(e);
+		} catch (IllegalAccessException e) {
+			log.error(e);
+		} catch (ClassNotFoundException e) {
 			log.error(e);
 		}
 	}

@@ -53,4 +53,7 @@ public interface IOnlineBook {
 
 	public void importBookCSV();
 
+	public void cloneOrder(String nameclone) throws CloneNotSupportedException;
+
+	public void importOrderCSV();
 }
