@@ -1,28 +1,15 @@
 package com.sobolevski.senla.onlinebook.action;
 
-import org.apache.log4j.Logger;
-import di.DI;
-import interfaces.IOnlineBook;
+import com.sobolevski.senla.onlinebook.client.Client;
 
 public class ImportOrderAction implements IAction {
-	private Logger log = Logger.getLogger(ImportOrderAction.class.getName());
-
+	private static final String IMPORTORDER = "importorder";
 	/**
 	 * import orders list in CSV
 	 */
 	@Override
 	public void process() {
-		IOnlineBook onlinebook;
-		try {
-			onlinebook = (IOnlineBook) DI.load(IOnlineBook.class);
-			onlinebook.importOrderCSV();
-		} catch (InstantiationException e) {
-			log.error(e);
-		} catch (IllegalAccessException e) {
-			log.error(e);
-		} catch (ClassNotFoundException e) {
-			log.error(e);
-		}
+		Client.getInstance().goWord(IMPORTORDER);
 
 	}
 }

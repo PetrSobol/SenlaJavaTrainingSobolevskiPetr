@@ -10,20 +10,14 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import com.sobolevski.senla.onlinebook.operationmenu.Print;
-
 public class Client {
 	private Socket socket;
 	private DataOutputStream dataout;
 	private static Client client;
 	private Logger loger = Logger.getLogger(Client.class.getName());
-	private Print print = new Print();
 	private ObjectInputStream objectinput;
 
 	private Client() {
-		/**
-		 * create new socket for connection server with port(6687)
-		 */
 		try {
 			socket = new Socket("localhost", 6687);
 			OutputStream output = socket.getOutputStream();
@@ -55,12 +49,49 @@ public class Client {
 	 * 
 	 * @param words
 	 * @return
+	 * @throws IOException
+	 * @throws UnknownHostException
 	 */
-	public List<?> getWordList(String words) {
+
+	public List<?> getWordList(String wordsnamecommand) {
 
 		try {
-			dataout.writeUTF(words);
+			dataout.writeUTF(wordsnamecommand);
 			return (List<?>) objectinput.readObject();
+		} catch (ClassNotFoundException e) {
+			loger.error(e);
+		} catch (IOException e) {
+			loger.error(e);
+		}
+		return null;
+	}
+
+	public List<?> getDateList(String wordsnamecommand, String date) {
+
+		try {
+			dataout.writeUTF(wordsnamecommand);
+			dataout.writeUTF(date);
+			return (List<?>) objectinput.readObject();
+		} catch (ClassNotFoundException e) {
+			loger.error(e);
+		} catch (IOException e) {
+			loger.error(e);
+		}
+		return null;
+	}
+
+	public void goWord(String words) {
+		try {
+			dataout.writeUTF(words);
+		} catch (IOException e) {
+			loger.error(e);
+		}
+	}
+
+	public String getWordString(String wordsnamecommand) {
+		try {
+			dataout.writeUTF(wordsnamecommand);
+			return (String) objectinput.readObject();
 		} catch (ClassNotFoundException e) {
 			loger.error(e);
 		} catch (IOException e) {
@@ -74,12 +105,37 @@ public class Client {
 	 * 
 	 * @param words
 	 */
-	public void setWord(String words) {
+	public void setWord(String wordsnamecommand) {
 		try {
-			dataout.writeUTF(words);
+			dataout.writeUTF(wordsnamecommand);
 		} catch (IOException e) {
 			loger.error(e);
 		}
+	}
+
+	public void setDateToServer(String wordsnamecommand, String stringdate) {
+		try {
+			dataout.writeUTF(wordsnamecommand);
+			dataout.writeUTF(stringdate);
+
+		} catch (IOException e) {
+			loger.error(e);
+		}
+
+	}
+
+	public String getDateServer(String wordsnamecommand, String stringdate) {
+		try {
+			dataout.writeUTF(wordsnamecommand);
+			dataout.writeUTF(stringdate);
+			return (String) objectinput.readObject();
+
+		} catch (IOException e) {
+			loger.error(e);
+		} catch (ClassNotFoundException e) {
+			loger.error(e);
+		}
+		return null;
 	}
 
 	/**
@@ -88,6 +144,8 @@ public class Client {
 	public void close() {
 		if (socket != null && !socket.isClosed()) {
 			try {
+				objectinput.close();
+				dataout.close();
 				socket.close();
 			} catch (IOException e) {
 				loger.error(e);

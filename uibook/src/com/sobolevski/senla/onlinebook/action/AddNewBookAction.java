@@ -1,14 +1,11 @@
 package com.sobolevski.senla.onlinebook.action;
 
-import org.apache.log4j.Logger;
-
+import com.sobolevski.senla.onlinebook.client.Client;
 import com.sobolevski.senla.onlinebook.operationmenu.Print;
 import com.sobolevski.senla.onlinebook.operationmenu.ScannerBox;
 
-import di.DI;
-import interfaces.IOnlineBook;
-
 public class AddNewBookAction implements IAction {
+	private static final String ADDNEBOOK = "addnebook";
 	private static final String OPERATION_FINISH_SUCESS = "Operation finish sucess";
 	private static final String OPERATION_FINISH_NO_SUCESS_DATA_ENTRY_ERROR = "Operation finish no sucess. Data entry error!! ";
 	private static final String NAME_BOOK2 = "Name book?";
@@ -17,7 +14,7 @@ public class AddNewBookAction implements IAction {
 	private static final String YEAR_YYYY = "Year? #yyyy#";
 	private Print print = new Print();
 	private ScannerBox scanerbox = new ScannerBox();
-	private Logger log = Logger.getLogger(AddNewBookAction.class.getName());
+	private StringBuilder string = new StringBuilder();
 
 	/**
 	 * add new book in databases
@@ -27,28 +24,25 @@ public class AddNewBookAction implements IAction {
 	public void process() {
 		print.printMessage(NAME_BOOK2);
 		String name = scanerbox.getWord();
+		string.append(name);
+		string.append(",");
 		print.printMessage(WRITER_BOOK);
 		String writer = scanerbox.getWord();
+		string.append(writer);
+		string.append(",");
 		print.printMessage(PRICE);
 		Integer price = scanerbox.getNumber();
+		string.append(price.toString());
+		string.append(",");
 		print.printMessage(YEAR_YYYY);
 		Integer quantity = scanerbox.getNumber();
-		try {
-			IOnlineBook onlinebook = (IOnlineBook) DI.load(IOnlineBook.class);
-			if (name != null && writer != null && price != null && quantity != null) {
-				onlinebook.addNewBook(name, writer, price, quantity);
-				print.printMessage(OPERATION_FINISH_SUCESS);
-			} else {
-				print.printMessage(OPERATION_FINISH_NO_SUCESS_DATA_ENTRY_ERROR);
-			}
-		} catch (InstantiationException e) {
-			log.error(e);
-		} catch (IllegalAccessException e) {
-			log.error(e);
-		} catch (ClassNotFoundException e) {
-			log.error(e);
+		string.append(quantity.toString());
+		if (name != null && writer != null && price != null && quantity != null) {
+			Client.getInstance().setDateToServer(ADDNEBOOK, string.toString());
+			print.printMessage(OPERATION_FINISH_SUCESS);
+		} else {
+			print.printMessage(OPERATION_FINISH_NO_SUCESS_DATA_ENTRY_ERROR);
+
 		}
-
 	}
-
 }

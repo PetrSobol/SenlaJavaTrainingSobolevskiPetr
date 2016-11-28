@@ -1,30 +1,16 @@
 package com.sobolevski.senla.onlinebook.action;
 
-import org.apache.log4j.Logger;
-
-import di.DI;
-import interfaces.IOnlineBook;
+import com.sobolevski.senla.onlinebook.client.Client;
 
 public class SaveBaseAction implements IAction {
-	private Logger log = Logger.getLogger(SaveBaseAction.class.getName());
+	private static final String SAVEBASEACTION = "savebaseaction";
 
 	/**
 	 * save data to databases
 	 */
 	@Override
 	public void process() {
-		IOnlineBook onlinebook;
-		try {
-			onlinebook = (IOnlineBook) DI.load(IOnlineBook.class);
-			onlinebook.saveToDataBases();
-			log.info("save to databases");
-		} catch (InstantiationException e) {
-			log.error(e);
-		} catch (IllegalAccessException e) {
-			log.error(e);
-		} catch (ClassNotFoundException e) {
-			log.error(e);
-		}
+		Client.getInstance().getWordList(SAVEBASEACTION);
 
 	}
 

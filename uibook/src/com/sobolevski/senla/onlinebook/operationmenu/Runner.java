@@ -4,12 +4,8 @@ public class Runner {
 
 	public static void main(String[] args) throws ClassNotFoundException {
 
-	
-		  Navigator navigator = new Navigator(); 
-		  navigator.startMenu();
-		
-		
+		Navigator navigator = new Navigator();
+		navigator.startMenu();
 
-		
 	}
 }

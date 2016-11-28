@@ -64,7 +64,7 @@ public class OnlineBook implements IOnlineBook {
 	 * @return
 	 * @throws ParseException
 	 */
-	public Boolean addOrder(String lastname, String firstname, String namebook) throws ParseException {
+	public synchronized Boolean addOrder(String lastname, String firstname, String namebook) throws ParseException {
 		if (orderservice.createNewOrder(lastname, firstname, namebook)) {
 			return true;
 		}
@@ -90,7 +90,7 @@ public class OnlineBook implements IOnlineBook {
 	 * @param lastname
 	 * @param firstname
 	 */
-	public void closeOrder(String lastname, String firstname) {
+	public synchronized void closeOrder(String lastname, String firstname) {
 		orderservice.closeOrder(lastname, firstname);
 	}
 
@@ -99,14 +99,14 @@ public class OnlineBook implements IOnlineBook {
 	 * 
 	 * @param name
 	 */
-	public void deleteBook(String name) {
+	public synchronized void deleteBook(String name) {
 		bookService.deleteBook(name);
 	}
 
 	/**
 	 * return true if delete order sucess
 	 */
-	public Boolean deleteOrder(String name) {
+	public  Boolean deleteOrder(String name) {
 		if (orderservice.deleteOrder(name)) {
 			return true;
 		}
@@ -178,7 +178,7 @@ public class OnlineBook implements IOnlineBook {
 	/**
 	 * save changes in databases
 	 */
-	public void saveToDataBases() {
+	public synchronized void saveToDataBases() {
 		seriazeble.saveToDataBases();
 	}
 
@@ -204,7 +204,7 @@ public class OnlineBook implements IOnlineBook {
 		return priceOll;
 	}
 
-	public Integer printOrderFinish(String date1, String date2) throws ParseException {
+	public  Integer printOrderFinish(String date1, String date2) throws ParseException {
 		List<Order> listorder = orderservice.getListOrderClock(date1, date2);
 		Integer orderOll = 0;
 		for (Order order : listorder) {
@@ -224,12 +224,12 @@ public class OnlineBook implements IOnlineBook {
 		return listbook;
 	}
 
-	public void exportBookCSV() {
+	public synchronized void exportBookCSV() {
 		importexport.exportBookCSV(getListBookAll(),
 				PropertiesOnlineBook.getInstanceProperty().getInstancePropertyHolder().getRoatimportexportBook());
 	}
 
-	public void exportOrderCSV() {
+	public synchronized void exportOrderCSV() {
 		importexport.exportOrderCSV(getListOrderAll(),
 				PropertiesOnlineBook.getInstanceProperty().getInstancePropertyHolder().getRoatimportexportOrder());
 
@@ -239,7 +239,7 @@ public class OnlineBook implements IOnlineBook {
 	 * marks the application as completed
 	 */
 
-	public void orderSales(String nameorder) {
+	public synchronized void orderSales(String nameorder) {
 		Boolean sales = PropertiesOnlineBook.getInstanceProperty().getInstancePropertyHolder().getSalesorder();
 		Order order = orderservice.searchOrder(nameorder);
 		if (order != null) {
@@ -251,7 +251,7 @@ public class OnlineBook implements IOnlineBook {
 		}
 	}
 
-	public void importBookCSV() {
+	public synchronized void importBookCSV() {
 		List<Book> listbook = importexport.importBookCSV(
 				PropertiesOnlineBook.getInstanceProperty().getInstancePropertyHolder().getRoatimportexportBook());
 		if (listbook != null) {
@@ -274,7 +274,7 @@ public class OnlineBook implements IOnlineBook {
 	 * @return
 	 * @throws CloneNotSupportedException
 	 */
-	public void cloneOrder(String nameclone) throws CloneNotSupportedException {
+	public synchronized void cloneOrder(String nameclone) throws CloneNotSupportedException {
 		Order order = null;
 		if (orderservice.searchOrder(nameclone) != null) {
 			order = orderservice.searchOrder(nameclone).clone();
@@ -287,7 +287,7 @@ public class OnlineBook implements IOnlineBook {
 	/**
 	 * import file in CSV
 	 */
-	public void importOrderCSV() {
+	public synchronized void importOrderCSV() {
 		List<Order> listorder = importexport.importOrderCSV(
 				PropertiesOnlineBook.getInstanceProperty().getInstancePropertyHolder().getRoatimportexportOrder());
 		if (listorder != null) {

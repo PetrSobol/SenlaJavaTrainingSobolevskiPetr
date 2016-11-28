@@ -1,29 +1,15 @@
 package com.sobolevski.senla.onlinebook.action;
 
-import org.apache.log4j.Logger;
-
-import di.DI;
-import interfaces.IOnlineBook;
+import com.sobolevski.senla.onlinebook.client.Client;
 
 public class ExportBookAction implements IAction {
-	private Logger log = Logger.getLogger(ExportBookAction.class.getName());
-
+	private static final String EXPORTBOOK = "exportbook";
 	/**
 	 * export books list in databases
 	 */
 	@Override
 	public void process() {
-		IOnlineBook onlinebook;
-		try {
-			onlinebook = (IOnlineBook) DI.load(IOnlineBook.class);
-			onlinebook.exportBookCSV();
-		} catch (InstantiationException e) {
-			log.error(e);
-		} catch (IllegalAccessException e) {
-			log.error(e);
-		} catch (ClassNotFoundException e) {
-			log.error(e);
-		}
+		Client.getInstance().goWord(EXPORTBOOK);
 
 	}
 
