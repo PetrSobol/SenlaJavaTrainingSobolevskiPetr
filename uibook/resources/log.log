@@ -1,0 +1,156 @@
+2016-11-09 12:31:29 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-09 12:32:05 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-09 12:32:05 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-09 12:32:06 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-09 12:32:10 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-09 12:32:10 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-09 12:32:11 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-09 12:32:11 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-09 12:49:32 ERROR PropertiesOnlineBook:23 - java.io.FileNotFoundException: resources\roat.properties (Не удается найти указанный файл)
+2016-11-09 12:49:32 ERROR OnlineBook:70 - java.lang.NullPointerException
+2016-11-09 12:49:32 ERROR OnlineBook:82 - java.lang.NullPointerException
+2016-11-09 12:51:43 ERROR PropertiesOnlineBook:23 - java.io.FileNotFoundException: resources\roat.properties (Не удается найти указанный файл)
+2016-11-09 12:51:43 ERROR OnlineBook:70 - java.lang.NullPointerException
+2016-11-09 12:51:43 ERROR OnlineBook:82 - java.lang.NullPointerException
+2016-11-09 12:52:36 ERROR PropertiesOnlineBook:23 - java.io.FileNotFoundException: resources\roat.properties (Не удается найти указанный файл)
+2016-11-09 12:52:36 ERROR OnlineBook:70 - java.lang.NullPointerException
+2016-11-09 12:52:36 ERROR OnlineBook:82 - java.lang.NullPointerException
+2016-11-09 12:53:28 ERROR PropertiesOnlineBook:23 - java.io.FileNotFoundException: resources\roat.properties (Не удается найти указанный файл)
+2016-11-09 12:53:28 ERROR OnlineBook:70 - java.lang.NullPointerException
+2016-11-09 12:53:28 ERROR OnlineBook:82 - java.lang.NullPointerException
+2016-11-09 12:59:17 ERROR ScannerBox:31 - java.util.InputMismatchException
+2016-11-09 12:59:17 ERROR ScannerBox:31 - java.util.InputMismatchException
+2016-11-09 12:59:55 INFO  SaveBaseAction:12 - save to databases
+2016-11-09 13:50:03 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-09 14:16:00 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-09 16:20:25 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:21:40 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:22:12 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:24:46 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:25:55 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:31:32 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:33:01 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:35:37 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 19:37:02 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 19:37:13 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 19:37:16 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-09 19:41:51 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -1998355820590834409
+2016-11-09 19:44:49 ERROR Seriazeble:34 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 19:45:54 ERROR Seriazeble:34 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 19:56:42 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-09 19:57:10 INFO  SaveBaseAction:12 - save to databases
+2016-11-09 19:57:43 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 19:58:14 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-09 19:58:41 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-09 21:27:58 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-09 21:28:13 INFO  SaveBaseAction:12 - save to databases
+2016-11-09 21:29:21 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 21:29:33 INFO  SaveBaseAction:12 - save to databases
+2016-11-09 21:29:35 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-09 21:36:59 INFO  SaveBaseAction:12 - save to databases
+2016-11-09 21:39:27 INFO  SaveBaseAction:12 - save to databases
+2016-11-09 21:39:29 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-09 21:40:55 ERROR Seriazeble:27 - java.io.EOFException
+2016-11-09 21:41:01 INFO  SaveBaseAction:12 - save to databases
+2016-11-09 21:42:03 INFO  SaveBaseAction:12 - save to databases
+2016-11-09 21:42:56 INFO  SaveBaseAction:12 - save to databases
+2016-11-09 21:47:00 ERROR Seriazeble:27 - java.io.EOFException
+2016-11-09 21:47:11 INFO  SaveBaseAction:12 - save to databases
+2016-11-09 21:51:26 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-09 21:51:35 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-09 21:53:30 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-09 21:57:22 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-09 21:57:27 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-09 22:05:54 ERROR ScannerBox:33 - java.util.InputMismatchException
+2016-11-09 22:05:54 ERROR ScannerBox:33 - java.util.InputMismatchException
+2016-11-09 22:07:06 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-10 09:45:41 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-11 09:27:02 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-11 09:27:03 ERROR Seriazeble:30 - java.lang.NumberFormatException: null
+2016-11-11 09:27:40 ERROR Seriazeble:30 - java.lang.NumberFormatException: null
+2016-11-11 09:43:27 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-11 09:43:35 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-11 09:43:42 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-12 12:30:47 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-12 12:30:47 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-12 12:30:48 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-12 12:43:27 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-12 12:43:28 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-12 12:43:37 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-12 22:29:54 ERROR Seriazeble:30 - java.io.InvalidClassException: model.Book; local class incompatible: stream classdesc serialVersionUID = 7035448861061198656, local class serialVersionUID = -7602109397831358528
+2016-11-12 22:42:46 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-13 12:47:51 ERROR Seriazeble:30 - java.io.InvalidClassException: model.Book; local class incompatible: stream classdesc serialVersionUID = 7035448861061198656, local class serialVersionUID = 7023638879688777786
+2016-11-13 12:48:05 INFO  SaveBaseAction:16 - save to databases
+2016-11-13 12:48:26 ERROR Seriazeble:30 - java.io.EOFException
+2016-11-13 12:48:34 INFO  SaveBaseAction:16 - save to databases
+2016-11-13 12:52:01 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-13 12:52:04 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-13 22:35:16 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-13 22:35:20 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-13 22:37:39 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-15 21:27:49 ERROR PropertiesOnlineBook:39 - java.io.FileNotFoundException: resources\instance.properties (Не удается найти указанный файл)
+2016-11-15 21:28:03 ERROR ScannerBox:40 - java.util.InputMismatchException
+2016-11-15 21:28:04 ERROR ScannerBox:40 - java.util.InputMismatchException
+2016-11-18 10:07:57 ERROR Seriazeble:31 - java.io.InvalidClassException: model.Book; local class incompatible: stream classdesc serialVersionUID = 7023638879688777786, local class serialVersionUID = -7602109397831358528
+2016-11-18 10:12:27 ERROR Seriazeble:31 - java.io.InvalidClassException: model.Book; local class incompatible: stream classdesc serialVersionUID = 7035448861061198656, local class serialVersionUID = -7602109397831358528
+2016-11-20 13:35:45 ERROR Seriazeble:31 - java.io.InvalidClassException: model.Book; local class incompatible: stream classdesc serialVersionUID = 7023638879688777786, local class serialVersionUID = -7602109397831358528
+2016-11-20 13:48:06 ERROR Seriazeble:31 - java.io.InvalidClassException: model.Book; local class incompatible: stream classdesc serialVersionUID = 7023638879688777786, local class serialVersionUID = -7602109397831358528
+2016-11-20 13:48:17 INFO  SaveBaseAction:16 - save to databases
+2016-11-20 13:52:13 ERROR Seriazeble:31 - java.io.EOFException
+2016-11-20 13:52:20 INFO  SaveBaseAction:16 - save to databases
+2016-11-20 14:25:07 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-22 09:55:21 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-24 08:59:36 ERROR Client:57 - java.net.SocketException: Connection reset
+2016-11-24 08:59:45 ERROR Client:57 - java.net.SocketException: Connection reset
+2016-11-24 08:59:46 ERROR Client:57 - java.net.SocketException: Connection reset
+2016-11-24 08:59:47 ERROR Client:57 - java.net.SocketException: Connection reset
+2016-11-24 08:59:47 ERROR Client:57 - java.net.SocketException: Connection reset
+2016-11-24 08:59:48 ERROR Client:57 - java.net.SocketException: Connection reset
+2016-11-24 08:59:48 ERROR Client:57 - java.net.SocketException: Connection reset
+2016-11-24 09:01:59 ERROR Client:57 - java.net.SocketException: Connection reset
+2016-11-24 09:03:17 ERROR Client:57 - java.net.SocketException: Connection reset
+2016-11-24 09:04:36 ERROR Client:57 - java.net.SocketException: socket closed
+2016-11-24 09:04:37 ERROR Client:57 - java.net.SocketException: socket closed
+2016-11-24 09:04:41 ERROR Client:57 - java.net.SocketException: socket closed
+2016-11-24 09:05:01 ERROR Client:57 - java.net.SocketException: socket closed
+2016-11-24 09:06:38 ERROR Client:57 - java.io.EOFException
+2016-11-24 09:11:31 ERROR Client:57 - java.io.EOFException
+2016-11-24 09:44:13 ERROR Client:58 - java.io.EOFException
+2016-11-24 09:44:18 ERROR Client:58 - java.io.EOFException
+2016-11-25 12:28:36 ERROR Navigator:60 - java.util.InputMismatchException
+2016-11-25 13:59:35 ERROR Client:32 - java.net.ConnectException: Connection refused: connect
+2016-11-25 14:41:31 ERROR Client:37 - java.net.SocketException: Connection reset
+2016-11-25 14:41:31 ERROR Client:78 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-25 14:43:05 ERROR Client:38 - java.net.SocketException: Connection reset
+2016-11-25 14:43:05 ERROR Client:79 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-25 14:43:29 ERROR Client:38 - java.net.ConnectException: Connection refused: connect
+2016-11-25 14:43:37 ERROR Client:38 - java.net.ConnectException: Connection refused: connect
+2016-11-25 14:45:25 ERROR Client:38 - java.net.SocketException: Connection reset
+2016-11-25 14:45:25 ERROR Client:79 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-25 14:46:03 ERROR Client:38 - java.net.ConnectException: Connection refused: connect
+2016-11-25 14:50:30 ERROR Client:32 - java.net.SocketException: Connection reset
+2016-11-25 14:50:30 ERROR Client:64 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-26 15:04:22 ERROR PropertiesOnlineBook:22 - java.io.FileNotFoundException: resources\instance.properties (Не удается найти указанный файл)
+2016-11-26 15:13:36 ERROR Navigator:60 - java.util.InputMismatchException
+2016-11-26 15:42:58 ERROR Client:33 - java.net.ConnectException: Connection refused: connect
+2016-11-26 15:48:10 ERROR Client:33 - java.net.ConnectException: Connection refused: connect
+2016-11-26 22:12:58 ERROR Client:72 - java.net.ConnectException: Connection refused: connect
+2016-11-26 22:41:02 ERROR Client:72 - java.net.ConnectException: Connection refused: connect
+2016-11-27 21:44:28 ERROR Client:64 - java.net.SocketException: Software caused connection abort: recv failed
+2016-11-27 21:48:47 ERROR Navigator:60 - java.util.InputMismatchException
+2016-11-27 21:50:29 ERROR Client:29 - java.net.ConnectException: Connection refused: connect
+2016-11-27 21:53:45 ERROR Client:29 - java.net.ConnectException: Connection refused: connect
+2016-11-27 22:06:25 ERROR Client:29 - java.net.ConnectException: Connection refused: connect
+2016-11-28 10:39:36 ERROR Client:64 - java.net.SocketException: Software caused connection abort: recv failed
+2016-11-28 10:45:57 ERROR Client:59 - java.net.SocketException: Connection reset
+2016-11-28 10:46:46 ERROR Client:59 - java.io.StreamCorruptedException: invalid type code: AC
+2016-11-28 11:07:07 ERROR ScannerBox:40 - java.util.InputMismatchException
+2016-11-29 11:48:56 ERROR Client:67 - java.io.EOFException
+2016-11-29 11:50:21 ERROR Client:67 - java.io.EOFException
+2016-11-29 12:08:54 ERROR Client:65 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 15:00:02 ERROR Client:70 - java.io.WriteAbortedException: writing aborted; java.io.NotSerializableException: java.lang.reflect.Method
+2016-11-30 14:02:44 ERROR ScannerBox:40 - java.util.InputMismatchException
+2016-12-01 09:34:53 ERROR PropertyInstance:20 - java.io.FileNotFoundException: resources\instance.properties (Не удается найти указанный файл)
+2016-12-01 11:29:20 ERROR PropertyInstance:20 - java.io.FileNotFoundException: resources\instance.properties (Не удается найти указанный файл)
+2016-12-01 11:30:40 ERROR Client:49 - java.io.EOFException
+2016-12-01 12:32:37 ERROR Client:49 - java.io.EOFException
