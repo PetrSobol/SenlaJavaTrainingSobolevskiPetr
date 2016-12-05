@@ -9,15 +9,16 @@ import java.net.Socket;
 import org.apache.log4j.Logger;
 
 import com.senla.sobol.api.EssenceCommon;
+import com.senla.sobol.di.DI;
 import com.senla.sobol.model.IOnlineBook;
 
 public class Connection extends Thread {
 	private Socket socket;
-	private IOnlineBook onlinebook;
 	private Logger loger = Logger.getLogger(Connection.class.getName());
 	private ObjectOutputStream objectoutput;
 	private ObjectInputStream objectinput;
 	private FunctionServer function = new FunctionServer();
+	private IOnlineBook onlineBook;
 
 	/**
 	 * create new connection
@@ -25,13 +26,21 @@ public class Connection extends Thread {
 	 * @param socket
 	 * @param conections
 	 */
-	public Connection(Socket socket, IOnlineBook onlineBook) {
+	public Connection(Socket socket) {
 		this.socket = socket;
-		this.onlinebook = onlineBook;
+
 		try {
+			onlineBook = (IOnlineBook) DI.load(IOnlineBook.class);
 			objectinput = new ObjectInputStream(socket.getInputStream());
 			objectoutput = new ObjectOutputStream(socket.getOutputStream());
+			start();
 		} catch (IOException e) {
+			loger.error(e);
+		} catch (InstantiationException e) {
+			loger.error(e);
+		} catch (IllegalAccessException e) {
+			loger.error(e);
+		} catch (ClassNotFoundException e) {
 			loger.error(e);
 		}
 	}
@@ -45,18 +54,22 @@ public class Connection extends Thread {
 		try {
 			while (true) {
 				EssenceCommon essence = (EssenceCommon) objectinput.readObject();
-				EssenceCommon essenseserver = function.getEssenceDate(onlinebook, essence);
-				objectoutput.writeObject(essenseserver);
-						
+				if (!essence.getNameMetod().equals("EXIT")) {
+					EssenceCommon essenseserver = function.getEssenceDate(onlineBook, essence);
+					objectoutput.writeObject(essenseserver);
+					objectoutput.flush();
+				} else {
+					break;
+				}
+
 			}
+
 		} catch (IOException e) {
 			loger.error(e);
-
 		} catch (SecurityException e) {
 			loger.error(e);
 		} catch (ClassNotFoundException e) {
 			loger.error(e);
-
 		} catch (IllegalAccessException e) {
 			loger.error(e);
 		} catch (IllegalArgumentException e) {
@@ -73,6 +86,5 @@ public class Connection extends Thread {
 			}
 		}
 
-		
 	}
 }

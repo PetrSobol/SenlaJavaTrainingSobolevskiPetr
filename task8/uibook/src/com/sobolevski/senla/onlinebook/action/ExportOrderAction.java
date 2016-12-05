@@ -1,6 +1,7 @@
 package com.sobolevski.senla.onlinebook.action;
 
 import com.senla.sobol.api.EssenceCommon;
+import com.senla.sobol.api.SupportClient;
 
 public class ExportOrderAction implements IAction {
 	private static final String NAMEMETOD = "exportOrderCSV";
@@ -10,8 +11,8 @@ public class ExportOrderAction implements IAction {
 	 * export list order in databases
 	 */
 	@Override
-	public void process() {
+	public void process(SupportClient supportaction) {
 		essence.setNameMetod(NAMEMETOD);
-		// give metod
+		supportaction.getEssennce(essence);
 	}
 }

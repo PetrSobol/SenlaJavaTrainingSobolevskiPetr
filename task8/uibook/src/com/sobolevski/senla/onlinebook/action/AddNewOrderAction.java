@@ -1,10 +1,7 @@
 package com.sobolevski.senla.onlinebook.action;
 
-import org.apache.log4j.Logger;
-
 import com.senla.sobol.api.EssenceCommon;
-import com.senla.sobol.client.Client;
-import com.senla.sobol.di.DI;
+import com.senla.sobol.api.SupportClient;
 import com.sobolevski.senla.onlinebook.operationmenu.Print;
 import com.sobolevski.senla.onlinebook.operationmenu.ScannerBox;
 
@@ -16,13 +13,11 @@ public class AddNewOrderAction implements IAction {
 	private ScannerBox scanerbox = new ScannerBox();
 	private Print print = new Print();
 	private EssenceCommon essence = new EssenceCommon();
-	private Logger loger = Logger.getLogger(AddNewOrderAction.class.getName());
-
 	/**
 	 * add new order in databases
 	 */
 	@Override
-	public void process() {
+	public void process(SupportClient supportaction) {
 		print.printMessage(YOUR_LASTNAME);
 		String lastname = scanerbox.getWord();
 		print.printMessage(YOUR_FIRSTNAME);
@@ -32,17 +27,7 @@ public class AddNewOrderAction implements IAction {
 		essence.setNameMetod(NAMEMETOD);
 		Object[] a = { lastname, firstname, namebook };
 		essence.setObjects(a);
-		Client client;
-		try {
-			client = (Client) DI.load(Client.class);
-			client.getEssennce(essence);
-		} catch (InstantiationException e) {
-			loger.error(e);
-		} catch (IllegalAccessException e) {
-			loger.error(e);
-		} catch (ClassNotFoundException e) {
-			loger.error(e);
-		}
+		supportaction.getEssennce(essence);
 
 	}
 

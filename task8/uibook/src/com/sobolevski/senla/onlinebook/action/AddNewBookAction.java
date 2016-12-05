@@ -1,10 +1,7 @@
 package com.sobolevski.senla.onlinebook.action;
 
-import org.apache.log4j.Logger;
-
 import com.senla.sobol.api.EssenceCommon;
-import com.senla.sobol.client.Client;
-import com.senla.sobol.di.DI;
+import com.senla.sobol.api.SupportClient;
 import com.sobolevski.senla.onlinebook.operationmenu.Print;
 import com.sobolevski.senla.onlinebook.operationmenu.ScannerBox;
 
@@ -19,15 +16,13 @@ public class AddNewBookAction implements IAction {
 	private Print print = new Print();
 	private ScannerBox scanerbox = new ScannerBox();
 	private EssenceCommon essence = new EssenceCommon();
-	private Logger loger = Logger.getLogger(AddNewBookAction.class.getName());
 
 	/**
 	 * add new book in databases
 	 */
 
 	@Override
-	public void process() {
-
+	public void process(SupportClient supportaction) {
 		print.printMessage(NAME_BOOK2);
 		String name = scanerbox.getWord();
 		print.printMessage(WRITER_BOOK);
@@ -36,23 +31,12 @@ public class AddNewBookAction implements IAction {
 		Integer price = scanerbox.getNumber();
 		print.printMessage(YEAR_YYYY);
 		Integer quantity = scanerbox.getNumber();
-			if (name != null && writer != null && price != null && quantity != null) {
+		if (name != null && writer != null && price != null && quantity != null) {
 			essence.setNameMetod(NAMEMETOD);
 			Object[] arraystring = { name, writer, price, quantity };
 			essence.setObjects(arraystring);
-			Client client;
-			try {
-				client = (Client) DI.load(Client.class);
-				client.getEssennce(essence);
-				print.printMessage(OPERATION_FINISH_SUCESS);
-			} catch (InstantiationException e) {
-				loger.error(e);
-			} catch (IllegalAccessException e) {
-				loger.error(e);
-			} catch (ClassNotFoundException e) {
-				loger.error(e);
-			}
-
+			supportaction.getEssennce(essence);
+			print.printMessage(OPERATION_FINISH_SUCESS);
 		} else {
 			print.printMessage(OPERATION_FINISH_NO_SUCESS_DATA_ENTRY_ERROR);
 

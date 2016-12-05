@@ -1,6 +1,7 @@
 package com.sobolevski.senla.onlinebook.action;
 
 import com.senla.sobol.api.EssenceCommon;
+import com.senla.sobol.api.SupportClient;
 import com.sobolevski.senla.onlinebook.operationmenu.Print;
 import com.sobolevski.senla.onlinebook.operationmenu.ScannerBox;
 
@@ -16,7 +17,7 @@ public class CloseOrderAction implements IAction {
 	 * close order in databases
 	 */
 	@Override
-	public void process() {
+	public void process(SupportClient supportaction) {
 		print.printMessage(YOUR_LASTNAME);
 		String lastname = scanerbox.getWord();
 		print.printMessage(YOUR_FIRSTNAME);
@@ -24,7 +25,7 @@ public class CloseOrderAction implements IAction {
 		essence.setNameMetod(NAMEMETOD);
         Object []array={lastname,firstname};
         essence.setObjects(array);
-		// метод
+		supportaction.getEssennce(essence);
 	}
 
 }

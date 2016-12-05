@@ -1,22 +1,20 @@
 package com.sobolevski.senla.onlinebook.action;
 
-
-import com.senla.sobol.client.Client;
+import com.senla.sobol.api.EssenceCommon;
+import com.senla.sobol.api.SupportClient;
 import com.sobolevski.senla.onlinebook.operationmenu.Print;
 
 public class PrintOrderAnnotationAction implements IAction {
-	private static final String ORDERANNOOTATIONDET = "orderannootationdet";
-	private static final String ORDERANNOTATION = "orderannotation";
-	private static final String DETAILED_INFORMATION = "Detailed information";
+	private static final String ORDERANNOOTATIONDET = "getAnnotationOrder";
 	private Print print = new Print();
-
+	private EssenceCommon essence = new EssenceCommon();
 	@Override
-	public void process() {
+	public void process(SupportClient supportaction) {
 
-		/*print.printMessage(Client.getInstance().getWordString(ORDERANNOTATION));
-		print.printMessage(DETAILED_INFORMATION);
-		print.printMessage(Client.getInstance().getWordString(ORDERANNOOTATIONDET));*/
-
+		essence.setNameMetod(ORDERANNOOTATIONDET);
+		EssenceCommon essenceCommonNoDet = supportaction.getEssennce(essence);
+		print.printMessage((String) essenceCommonNoDet.getCurront());
+		
 	}
 
 }

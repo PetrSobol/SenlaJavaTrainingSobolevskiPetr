@@ -6,7 +6,6 @@ import java.util.List;
 import com.senla.sobol.model.IBook;
 import com.senla.sobol.model.IOrder;
 
-
 public interface IOnlineBook {
 	public Boolean addOrder(String lastname, String firstname, String namebook) throws ParseException;
 
@@ -57,4 +56,9 @@ public interface IOnlineBook {
 	public void cloneOrder(String nameclone) throws CloneNotSupportedException;
 
 	public void importOrderCSV();
+
+	public String getAnnotationBook();
+
+	public String getAnnotationOrder();
+
 }

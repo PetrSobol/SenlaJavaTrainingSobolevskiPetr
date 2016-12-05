@@ -11,6 +11,8 @@ import com.senla.sobol.di.DI;
 import com.senla.sobol.model.IBook;
 import com.senla.sobol.model.IOnlineBook;
 import com.senla.sobol.model.IOrder;
+import com.sobol.senla.anotation.PrintableTracker;
+
 import interfaces.IBookDao;
 import interfaces.IBookService;
 import interfaces.IImportExport;
@@ -18,6 +20,7 @@ import interfaces.IOrderDao;
 import interfaces.IOrderService;
 import interfaces.ISeriazeble;
 import model.Book;
+import model.Order;
 import property.PropertiesOnlineBook;
 import sort.SortBookDate;
 import sort.SortBookName;
@@ -66,7 +69,7 @@ public class OnlineBook implements IOnlineBook {
 	 * @return
 	 * @throws ParseException
 	 */
-		public Boolean addOrder(String lastname, String firstname, String namebook) throws ParseException {
+	public Boolean addOrder(String lastname, String firstname, String namebook) throws ParseException {
 		if (orderservice.createNewOrder(lastname, firstname, namebook)) {
 			return true;
 		}
@@ -82,7 +85,7 @@ public class OnlineBook implements IOnlineBook {
 	 * @param price
 	 * @param quantity
 	 */
-	
+
 	public void addNewBook(String name, String writer, Integer price, Integer quantity) {
 		bookService.addBook(new Book(name, writer, price, quantity));
 	}
@@ -93,7 +96,7 @@ public class OnlineBook implements IOnlineBook {
 	 * @param lastname
 	 * @param firstname
 	 */
-		public void closeOrder(String lastname, String firstname) {
+	public void closeOrder(String lastname, String firstname) {
 		orderservice.closeOrder(lastname, firstname);
 	}
 
@@ -102,21 +105,26 @@ public class OnlineBook implements IOnlineBook {
 	 * 
 	 * @param name
 	 */
-	
+
 	public void deleteBook(String name) {
-		bookService.deleteBook(name);
+		synchronized (bookService) {
+			bookService.deleteBook(name);
+		}
+
 	}
 
 	/**
 	 * return true if delete order sucess
 	 */
-	
-	public Boolean deleteOrder(String name) {
-		if (orderservice.deleteOrder(name)) {
-			return true;
-		}
 
-		return false;
+	public Boolean deleteOrder(String name) {
+		synchronized (orderservice) {
+			if (orderservice.deleteOrder(name)) {
+				return true;
+			}
+
+			return false;
+		}
 
 	}
 
@@ -184,21 +192,24 @@ public class OnlineBook implements IOnlineBook {
 	 * save changes in databases
 	 */
 	public void saveToDataBases() {
-		seriazeble.saveToDataBases();
+		synchronized (seriazeble) {
+			seriazeble.saveToDataBases();
+		}
+
 	}
-	
+
 	public List<IOrder> sortOrderDateToDate(String date1, String date2) throws ParseException {
 		List<IOrder> listorder = orderservice.getListOrderClock(date1, date2);
 		Collections.sort(listorder, new SortDateOrder());
 		return listorder;
 	}
-	
+
 	public List<IOrder> sortOrderDateToPrice(String date1, String date2) throws ParseException {
 		List<IOrder> listorder = orderservice.getListOrderClock(date1, date2);
 		Collections.sort(listorder, new SortPriceOrder());
 		return listorder;
 	}
-	
+
 	public Integer printOrderPriceToOrder(String date1, String date2) throws ParseException {
 		List<IOrder> listorder = orderservice.getListOrderClock(date1, date2);
 		Integer priceOll = 0;
@@ -208,7 +219,7 @@ public class OnlineBook implements IOnlineBook {
 
 		return priceOll;
 	}
-	
+
 	public Integer printOrderFinish(String date1, String date2) throws ParseException {
 		List<IOrder> listorder = orderservice.getListOrderClock(date1, date2);
 		Integer orderOll = 0;
@@ -243,7 +254,7 @@ public class OnlineBook implements IOnlineBook {
 	/**
 	 * marks the application as completed
 	 */
-	
+
 	public void orderSales(String nameorder) {
 		Boolean sales = PropertiesOnlineBook.getInstanceProperty().getInstancePropertyHolder().getSalesorder();
 		IOrder order = orderservice.searchOrder(nameorder);
@@ -279,7 +290,7 @@ public class OnlineBook implements IOnlineBook {
 	 * @return
 	 * @throws CloneNotSupportedException
 	 */
-	
+
 	public void cloneOrder(String nameclone) throws CloneNotSupportedException {
 		IOrder order = null;
 		if (orderservice.searchOrder(nameclone) != null) {
@@ -312,6 +323,26 @@ public class OnlineBook implements IOnlineBook {
 
 			}
 		}
+	}
+
+	public String getAnnotationBook() {
+		String information = null;
+		try {
+			information = PrintableTracker.getInstance().prinInformation(Book.class, true);
+		} catch (ClassNotFoundException e) {
+			log.error(e);
+		}
+		return information;
+	}
+
+	public String getAnnotationOrder() {
+		String information = null;
+		try {
+			information = PrintableTracker.getInstance().prinInformation(Order.class, true);
+		} catch (ClassNotFoundException e) {
+			log.error(e);
+		}
+		return information;
 	}
 
 }
