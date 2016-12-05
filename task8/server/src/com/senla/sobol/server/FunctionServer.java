@@ -2,7 +2,6 @@ package com.senla.sobol.server;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.List;
 
 import com.senla.sobol.api.EssenceCommon;
 import com.senla.sobol.model.IOnlineBook;
@@ -18,55 +17,32 @@ public class FunctionServer {
 			if (metod1.getName().equals(essence.getNameMetod())) {
 
 				if (essence.getObjects() != null) {
-					String types = metod1.getReturnType().getName();
-					if (types.equals("void")) {
+					Object types = metod1.getReturnType();
+					if (types.equals(void.class)) {
 
 						metod1.invoke(onlinebook, essence.getObjects());
 						return esenceserver;
 
-					} else if (types.equals("java.lang.Boolean")) {
-
-						esenceserver.setAnswerend((Boolean) metod1.invoke(onlinebook, essence.getObjects()));
-						return esenceserver;
-
-					} else if (types.equals("java.util.List")) {
-
-						esenceserver.setLsit((List<?>) metod1.invoke(onlinebook, essence.getObjects()));
-						return esenceserver;
-
-					} else if (types.equals("java.lang.Integer")) {
-
-						esenceserver.setNumber((Integer) metod1.invoke(onlinebook, essence.getObjects()));
+					} else {
+						Object listobjet = metod1.invoke(onlinebook, essence.getObjects());
+						esenceserver.setCurront(listobjet);
 						return esenceserver;
 					}
 
 				} else {
-					String types = metod1.getReturnType().getName();
-					if (types.equals("void")) {
+					Object types = metod1.getReturnType();
+					if (types.equals(void.class)) {
 
 						metod1.invoke(onlinebook, null);
 						return esenceserver;
 
-					} else if (types.equals("java.lang.Boolean")) {
-
-						esenceserver.setAnswerend((Boolean) metod1.invoke(onlinebook, null));
-						return esenceserver;
-
-					} else if (types.equals("java.util.List")) {
-
-						esenceserver.setLsit((List<?>) metod1.invoke(onlinebook, null));
-						return esenceserver;
-
-					} else if (types.equals("java.lang.Integer")) {
-
-						esenceserver.setNumber((Integer) metod1.invoke(onlinebook, null));
+					} else {
+						Object listobjet = metod1.invoke(onlinebook, null);
+						esenceserver.setCurront(listobjet);
 						return esenceserver;
 					}
-
 				}
-
 			}
-
 		}
 
 		return null;

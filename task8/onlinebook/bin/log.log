@@ -323,3 +323,6 @@
 2016-11-29 11:40:13 ERROR Seriazeble:28 - java.io.EOFException
 2016-11-29 11:46:30 ERROR PropertyInstance:20 - java.io.FileNotFoundException: resources\instance.properties (Не удается найти указанный файл)
 2016-11-29 13:14:45 ERROR PropertyInstance:20 - java.io.FileNotFoundException: resources\instance.properties (Не удается найти указанный файл)
+2016-12-03 16:46:35 ERROR PropertyInstance:20 - java.io.FileNotFoundException: resources\instance.properties (Не удается найти указанный файл)
+2016-12-03 16:47:16 ERROR PropertyInstance:20 - java.io.FileNotFoundException: resources\instance.properties (Не удается найти указанный файл)
+2016-12-04 22:15:45 ERROR PropertyInstance:20 - java.io.FileNotFoundException: resources\instance.properties (Не удается найти указанный файл)

@@ -6,9 +6,6 @@ import java.net.Socket;
 
 import org.apache.log4j.Logger;
 
-import com.senla.sobol.di.DI;
-import com.senla.sobol.model.IOnlineBook;
-
 public class Server {
 	/**
 	 * all connection in server
@@ -23,7 +20,6 @@ public class Server {
 			 */
 
 			server = new ServerSocket(6687);
-			IOnlineBook onlinebook = (IOnlineBook) DI.load(IOnlineBook.class);
 			while (true) {
 				/**
 				 * we wait new connection
@@ -31,17 +27,10 @@ public class Server {
 
 				Socket sochet = server.accept();
 
-				Connection con = new Connection(sochet, onlinebook);
-				con.start();
+				Connection con = new Connection(sochet);
 
 			}
 		} catch (IOException e) {
-			loger.error(e);
-		} catch (InstantiationException e) {
-			loger.error(e);
-		} catch (IllegalAccessException e) {
-			loger.error(e);
-		} catch (ClassNotFoundException e) {
 			loger.error(e);
 		}
 		/**
