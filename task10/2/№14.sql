@@ -1,0 +1,1 @@
+select mydb.pc.cd,avg(mydb.pc.price) from mydb.pc where mydb.pc.cd=mydb.pc.speed

@@ -1,0 +1,1 @@
+SELECT avg(cd) from mydb.pc

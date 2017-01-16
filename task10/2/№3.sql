@@ -1,0 +1,1 @@
+	SELECT code,ram,price,screen FROM mydb.laptop  WHERE price<'1000'
