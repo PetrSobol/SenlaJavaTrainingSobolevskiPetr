@@ -1,0 +1,1 @@
+	SELECT * FROM mydb.printer  WHERE color='Y'

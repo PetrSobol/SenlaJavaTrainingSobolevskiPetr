@@ -1,0 +1,1 @@
+SELECT model,price FROM mydb.printer where price=(select max(price) from mydb.printer )

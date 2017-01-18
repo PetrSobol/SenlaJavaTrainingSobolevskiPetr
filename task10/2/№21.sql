@@ -1,0 +1,1 @@
+select mydb.product.maker,max(mydb.pc.price) from mydb.product,mydb.pc where mydb.product.type='PC' group by mydb.product.maker

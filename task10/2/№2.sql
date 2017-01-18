@@ -1,0 +1,1 @@
+	SELECT maker from mydb.product WHERE type='Printer'

@@ -1,0 +1,1 @@
+SELECT mydb.product.maker,mydb.laptop.speed FROM mydb.product,mydb.laptop where mydb.product.model=mydb.laptop.model and mydb.laptop.hd<'10000'

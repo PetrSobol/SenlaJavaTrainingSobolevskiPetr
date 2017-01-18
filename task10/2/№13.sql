@@ -1,0 +1,1 @@
+SELECT avg(cd) from mydb.pc,mydb.product where mydb.product.model=mydb.pc.model and mydb.product.maker='Siemens'
