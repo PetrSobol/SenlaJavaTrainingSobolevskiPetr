@@ -1,0 +1,1 @@
+SELECT code,model,speed,hd FROM mydb.pc  WHERE cd='12x'||cd='24x' and price<'600'

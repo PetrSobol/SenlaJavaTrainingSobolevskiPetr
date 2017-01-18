@@ -1,0 +1,1 @@
+select mydb.product.maker,mydb.printer.price from mydb.product,mydb.printer where mydb.product.model=mydb.printer.model and mydb.printer.price=(select min(mydb.printer.price)from mydb.printer where mydb.printer.color='Y') 

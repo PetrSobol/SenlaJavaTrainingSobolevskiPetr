@@ -1,0 +1,1 @@
+select mydb.product.maker from mydb.product where mydb.product.type!='Laptop' 

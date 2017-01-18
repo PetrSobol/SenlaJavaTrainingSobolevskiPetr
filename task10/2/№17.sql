@@ -1,0 +1,1 @@
+select mydb.product.type,mydb.laptop.model,mydb.laptop.speed from mydb.product,mydb.laptop where mydb.product.model=mydb.laptop.model and mydb.laptop.speed<(select min(mydb.pc.speed)from mydb.pc)

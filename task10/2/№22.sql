@@ -1,0 +1,1 @@
+select mydb.pc.speed, avg(mydb.pc.price) from mydb.pc where mydb.pc.speed>'600' group by mydb.pc.speed

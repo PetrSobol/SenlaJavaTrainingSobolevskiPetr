@@ -1,0 +1,1 @@
+	SELECT model,speed,hd from mydb.pc WHERE price<'500'
