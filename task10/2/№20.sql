@@ -1,1 +1,1 @@
-SELECT mydb.product.maker,count(mydb.product.model) from mydb.product where mydb.product.type='PC' group by mydb.product.maker having count(mydb.product.model)>=3 
+SELECT sobol.product.maker,count(sobol.product.model) from sobol.product where sobol.product.type='PC' group by sobol.product.maker having count(sobol.product.model)>=3 

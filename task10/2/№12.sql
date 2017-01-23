@@ -1,1 +1,1 @@
-SELECT avg(cd) from mydb.pc where mydb.pc.price>'500'
+SELECT avg(cd) from sobol.pc where sobol.pc.price>'500'

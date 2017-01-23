@@ -1,1 +1,1 @@
-	SELECT maker from mydb.product WHERE type='Printer'
+	SELECT maker from sobol.product WHERE type='Printer'

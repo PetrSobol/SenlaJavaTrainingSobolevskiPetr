@@ -1,1 +1,1 @@
-select mydb.product.maker from mydb.product where mydb.product.type!='Laptop' 
+select sobol.product.maker from sobol.product where sobol.product.type!='Laptop' 

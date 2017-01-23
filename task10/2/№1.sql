@@ -1,1 +1,1 @@
-	SELECT model,speed,hd from mydb.pc WHERE price<'500'
+	SELECT model,speed,hd from sobol.pc WHERE price<'500'

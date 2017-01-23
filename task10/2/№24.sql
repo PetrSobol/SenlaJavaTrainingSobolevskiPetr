@@ -1,24 +1,24 @@
 SELECT model
 FROM ( 
- SELECT mydb.pc. model, mydb.pc.price 
- FROM mydb.pc
+ SELECT sobol.pc. model, sobol.pc.price 
+ FROM sobol.pc
  UNION 
- SELECT mydb.laptop. model,mydb.laptop. price 
- FROM mydb.laptop
+ SELECT sobol.laptop. model,sobol.laptop. price 
+ FROM sobol.laptop
   UNION 
- SELECT mydb.printer. model, mydb.printer. price 
- FROM mydb.printer
+ SELECT sobol.printer. model, sobol.printer. price 
+ FROM sobol.printer
 ) t1 
 WHERE  price = ( 
  SELECT MAX(t2.price) 
  FROM ( 
-  SELECT mydb.pc. price 
-  FROM mydb.pc 
+  SELECT sobol.pc. price 
+  FROM sobol.pc 
   UNION 
-  SELECT mydb.laptop. price 
-  FROM mydb.laptop 
+  SELECT sobol.laptop. price 
+  FROM sobol.laptop 
   UNION 
-  SELECT mydb.printer. price 
-  FROM mydb.printer 
+  SELECT sobol.printer. price 
+  FROM sobol.printer 
   ) t2 
  )

@@ -1,1 +1,1 @@
-select mydb.product.maker from mydb.product,mydb.pc where mydb.product.model=mydb.pc.model and mydb.pc.speed<'450'
+select sobol.product.maker from sobol.product,sobol.pc where sobol.product.model=sobol.pc.model and sobol.pc.speed<'450'

@@ -1,1 +1,1 @@
-SELECT avg(cd) from mydb.pc
+SELECT avg(cd) from sobol.pc

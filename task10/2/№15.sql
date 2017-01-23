@@ -1,1 +1,1 @@
-SELECT mydb.pc.hd from mydb.pc  group by mydb.pc.hd having count(mydb.pc.hd)>=2
+SELECT sobol.pc.hd from sobol.pc  group by sobol.pc.hd having count(sobol.pc.hd)>=2

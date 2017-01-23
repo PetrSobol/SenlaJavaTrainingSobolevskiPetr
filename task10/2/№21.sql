@@ -1,1 +1,1 @@
-select mydb.product.maker,max(mydb.pc.price) from mydb.product,mydb.pc where mydb.product.type='PC' group by mydb.product.maker
+select sobol.product.maker,max(sobol.pc.price) from sobol.product,sobol.pc where sobol.product.type='PC' group by sobol.product.maker

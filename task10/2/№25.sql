@@ -1,23 +1,23 @@
-SELECT DISTINCT mydb.product. maker 
-FROM mydb.product 
-WHERE       mydb.product .model IN ( 
-SELECT mydb.pc. model 
-FROM mydb. pc 
-WHERE mydb.pc. ram = ( 
-  SELECT MIN(mydb.pc.ram) 
-  FROM mydb.pc 
+SELECT DISTINCT sobol.product. maker 
+FROM sobol.product 
+WHERE       sobol.product .model IN ( 
+SELECT sobol.pc. model 
+FROM sobol. pc 
+WHERE sobol.pc. ram = ( 
+  SELECT MIN(sobol.pc.ram) 
+  FROM sobol.pc 
   ) 
-AND  mydb.pc. speed = ( 
-  SELECT MAX( mydb.pc. speed) 
-  FROM mydb. pc 
-  WHERE mydb.pc. ram = ( 
-   SELECT MIN(mydb.pc.ram) 
-   FROM mydb. pc 
+AND  sobol.pc. speed = ( 
+  SELECT MAX( sobol.pc. speed) 
+  FROM sobol. pc 
+  WHERE sobol.pc. ram = ( 
+   SELECT MIN(sobol.pc.ram) 
+   FROM sobol. pc 
    ) 
   ) 
 ) AND 
-mydb.product.   maker IN ( 
-SELECT mydb.product. maker 
-FROM mydb. product 
-WHERE mydb.product.type='Printer' 
+sobol.product.   maker IN ( 
+SELECT sobol.product. maker 
+FROM sobol. product 
+WHERE sobol.product.type='Printer' 
 )

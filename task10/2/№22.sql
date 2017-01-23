@@ -1,1 +1,1 @@
-select mydb.pc.speed, avg(mydb.pc.price) from mydb.pc where mydb.pc.speed>'600' group by mydb.pc.speed
+select sobol.pc.speed, avg(sobol.pc.price) from sobol.pc where sobol.pc.speed>'600' group by sobol.pc.speed
