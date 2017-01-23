@@ -1,1 +1,1 @@
-SELECT mydb.product.maker,mydb.laptop.speed FROM mydb.product,mydb.laptop where mydb.product.model=mydb.laptop.model and mydb.laptop.hd<'10000'
+SELECT sobol.product.maker,sobol.laptop.speed FROM sobol.product,sobol.laptop where sobol.product.model=sobol.laptop.model and sobol.laptop.hd<'10000'

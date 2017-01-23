@@ -1,6 +1,6 @@
-SELECT DISTINCT mydb.product.maker 
-FROM  mydb. product  JOIN mydb. pc  ON mydb. product .model=mydb. pc.model 
+SELECT DISTINCT sobol.product.maker 
+FROM  sobol. product  JOIN sobol. pc  ON sobol. product .model=sobol. pc.model 
 WHERE speed>=750 AND maker IN 
-( SELECT mydb.product. maker 
-FROM mydb. product JOIN mydb.laptop  ON mydb. product.model=mydb.laptop.model 
+( SELECT sobol.product. maker 
+FROM sobol. product JOIN sobol.laptop  ON sobol. product.model=sobol.laptop.model 
 WHERE speed>=750 )

@@ -1,1 +1,1 @@
-SELECT model,price FROM mydb.printer where price=(select max(price) from mydb.printer )
+SELECT model,price FROM sobol.printer where price=(select max(price) from sobol.printer )

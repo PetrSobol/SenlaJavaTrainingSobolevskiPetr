@@ -1,1 +1,1 @@
-	SELECT * FROM mydb.printer  WHERE color='Y'
+	SELECT * FROM sobol.printer  WHERE color='Y'
