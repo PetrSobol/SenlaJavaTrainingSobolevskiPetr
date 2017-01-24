@@ -1,0 +1,389 @@
+2016-10-29 16:54:16 INFO  Runner:64 - dsfgsfdlgmf;ldksgk;lsfdk
+2016-10-29 16:54:34 INFO  Runner:64 - java.text.ParseException
+2016-10-29 16:57:38 ERROR Runner:63 - java.text.ParseException
+2016-10-29 17:03:03 INFO  WriteLoger:63 - java.text.ParseException
+2016-10-29 17:16:52 INFO  Runner:63 - java.text.ParseException
+2016-10-29 17:17:54 INFO  Runner:60 - java.text.ParseException
+2016-10-29 18:05:32 INFO  Runner:63 - java.text.ParseException
+2016-10-29 18:18:26 INFO  Runner:63 - java.text.ParseException
+2016-11-01 09:04:41 INFO  Runner:62 - java.text.ParseException
+2016-11-01 09:33:55 INFO  Runner:62 - java.text.ParseException
+2016-11-01 09:48:43 INFO  Runner:64 - java.text.ParseException
+2016-11-01 09:49:14 INFO  Runner:64 - java.text.ParseException
+2016-11-01 09:49:42 ERROR Runner:64 - java.text.ParseException
+2016-11-01 09:50:06 ERROR Runner:64 - java.text.ParseException
+2016-11-02 10:33:10 ERROR Runner:16 - java.text.ParseException
+2016-11-02 11:00:30 INFO  OnlineBook:50 - success
+2016-11-02 11:01:06 INFO  OnlineBook:50 - success
+2016-11-02 11:01:14 INFO  OnlineBook:50 - success
+2016-11-09 12:54:40 ERROR PropertiesOnlineBook:23 - java.io.FileNotFoundException: resources\roat.properties (Не удается найти указанный файл)
+2016-11-09 12:54:40 ERROR OnlineBook:70 - java.lang.NullPointerException
+2016-11-09 12:54:40 ERROR OnlineBook:82 - java.lang.NullPointerException
+2016-11-09 12:56:06 ERROR PropertiesOnlineBook:23 - java.io.FileNotFoundException: resources\roat.properties (Не удается найти указанный файл)
+2016-11-09 16:37:25 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:39:58 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:40:18 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:42:47 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:45:31 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -1998355820590834409
+2016-11-09 16:46:02 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:46:32 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:46:32 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:47:04 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:47:04 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:47:17 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:47:17 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:47:35 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:47:35 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:54:20 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:55:47 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-11 09:29:24 ERROR Seriazeble:30 - java.lang.NumberFormatException: null
+2016-11-11 09:32:30 ERROR Seriazeble:30 - java.lang.NumberFormatException: null
+2016-11-11 09:35:40 ERROR Seriazeble:31 - java.lang.NumberFormatException: null
+2016-11-11 09:37:10 ERROR Seriazeble:30 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-13 15:51:06 ERROR Seriazeble:30 - java.io.InvalidClassException: model.Book; local class incompatible: stream classdesc serialVersionUID = 7035448861061198656, local class serialVersionUID = 7023638879688777786
+2016-11-23 16:22:39 ERROR Seriazeble:31 - java.io.InvalidClassException: model.Book; local class incompatible: stream classdesc serialVersionUID = 7035448861061198656, local class serialVersionUID = -7602109397831358528
+2016-11-23 16:24:51 ERROR Seriazeble:31 - java.io.InvalidClassException: model.Book; local class incompatible: stream classdesc serialVersionUID = 7035448861061198656, local class serialVersionUID = -7602109397831358528
+2016-11-23 21:12:20 ERROR Connection:62 - java.net.SocketException: Connection reset
+2016-11-23 21:13:35 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-23 21:13:40 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-23 21:14:25 ERROR Connection:62 - java.net.SocketException: Connection reset
+2016-11-23 21:40:47 ERROR Connection:62 - java.net.SocketException: Connection reset
+2016-11-23 21:41:36 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-23 21:43:42 ERROR Connection:62 - java.net.SocketException: Connection reset
+2016-11-23 21:43:50 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-23 21:45:15 ERROR Connection:62 - java.net.SocketException: Connection reset
+2016-11-23 21:45:21 ERROR Connection:62 - java.net.SocketException: Connection reset
+2016-11-23 21:47:37 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-24 09:06:07 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-24 09:23:21 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-24 09:56:28 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-24 09:58:46 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-24 10:23:39 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-24 10:23:54 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-24 10:24:37 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-24 10:28:16 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-24 10:35:21 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-24 11:06:35 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-24 11:10:11 ERROR Connection:74 - java.net.SocketException: Connection reset
+2016-11-24 11:16:55 ERROR Connection:74 - java.io.EOFException
+2016-11-24 11:23:29 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-24 11:26:13 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-25 10:40:49 ERROR Connection:101 - java.net.SocketException: Connection reset
+2016-11-25 10:43:41 ERROR Connection:101 - java.net.SocketException: Connection reset
+2016-11-25 11:02:29 ERROR Server:37 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-25 11:03:09 ERROR Connection:116 - java.net.SocketException: Connection reset
+2016-11-25 12:28:41 ERROR Connection:143 - java.net.SocketException: Connection reset
+2016-11-25 12:30:20 ERROR Connection:143 - java.net.SocketException: Connection reset
+2016-11-25 12:30:39 ERROR Connection:143 - java.net.SocketException: Connection reset
+2016-11-25 13:59:57 ERROR Connection:143 - java.net.SocketException: Connection reset
+2016-11-25 14:06:05 ERROR Connection:143 - java.net.SocketException: Connection reset
+2016-11-25 14:09:46 ERROR Server:37 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-25 14:10:20 ERROR Connection:143 - java.net.SocketException: Connection reset
+2016-11-26 11:25:23 ERROR Connection:149 - java.net.SocketException: Connection reset
+2016-11-26 11:42:03 ERROR Connection:153 - java.net.SocketException: Connection reset
+2016-11-26 15:43:52 ERROR Server:37 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-26 15:44:18 ERROR Connection:183 - java.net.SocketException: Connection reset
+2016-11-26 15:44:41 ERROR Connection:183 - java.net.SocketException: Connection reset
+2016-11-26 15:48:56 ERROR Connection:183 - java.net.SocketException: Connection reset
+2016-11-26 15:52:59 ERROR Connection:183 - java.net.SocketException: Connection reset
+2016-11-26 15:53:13 ERROR Connection:183 - java.net.SocketException: Connection reset
+2016-11-26 15:58:09 ERROR Connection:183 - java.net.SocketException: Connection reset
+2016-11-26 15:58:09 ERROR Connection:183 - java.net.SocketException: Connection reset
+2016-11-26 15:58:09 ERROR Connection:183 - java.net.SocketException: Connection reset
+2016-11-26 16:02:27 ERROR Connection:183 - java.net.SocketException: Connection reset
+2016-11-26 16:02:27 ERROR Connection:183 - java.net.SocketException: Connection reset
+2016-11-26 16:02:27 ERROR Connection:183 - java.net.SocketException: Connection reset
+2016-11-26 16:02:27 ERROR Connection:183 - java.net.SocketException: Connection reset
+2016-11-26 16:02:27 ERROR Connection:183 - java.net.SocketException: Connection reset
+2016-11-26 16:04:05 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:08 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:20 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:25 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:26 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:27 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:39 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:40 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:42 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:54 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:55 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:56 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:56 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:57 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:58 ERROR Connection:183 - java.io.EOFException
+2016-11-26 17:00:07 ERROR Server:41 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-26 17:00:29 ERROR Connection:183 - java.io.EOFException
+2016-11-26 17:00:30 ERROR Connection:183 - java.io.EOFException
+2016-11-26 17:00:32 ERROR Connection:183 - java.io.EOFException
+2016-11-26 17:00:32 ERROR Connection:183 - java.io.EOFException
+2016-11-26 17:00:33 ERROR Connection:183 - java.io.EOFException
+2016-11-26 17:00:34 ERROR Connection:183 - java.io.EOFException
+2016-11-26 17:00:35 ERROR Connection:183 - java.io.EOFException
+2016-11-26 17:00:36 ERROR Connection:183 - java.io.EOFException
+2016-11-26 17:00:39 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:09:15 ERROR Server:38 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-26 22:11:40 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:11:43 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:11:45 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:11:47 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:11:48 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:12:20 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:12:26 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:12:38 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:13:24 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:13:25 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:14:09 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:14:14 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:14:34 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:16:29 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:16:33 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:16:35 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:16:36 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:16:36 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:16:51 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:16:55 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:24:53 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:24:54 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:24:55 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:24:56 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:24:57 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:24:59 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:08 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:08 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:09 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:09 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:10 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:19 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:20 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:21 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:22 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:24 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:25 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:26 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:26 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:27 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:28 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:29 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:37 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:37 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:38 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:38 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:39 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:39 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:39 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:39 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:40 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:40 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:41 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:41 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:42 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:43 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:43 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:43 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:44 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:44 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:46 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:46 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:27:49 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:29:02 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:02 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:08 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:08 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:09 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:09 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:10 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:10 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:12 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:12 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:14 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:14 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:15 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:15 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:29 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:29 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:30 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:30 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:31 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:31 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:33 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:33 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:34:27 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:34:30 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:39:42 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:53:11 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:53:13 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:53:23 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:53:26 ERROR Connection:183 - java.io.EOFException
+2016-11-27 21:40:05 ERROR Server:37 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-27 21:45:14 ERROR Server:37 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-27 21:45:37 ERROR Connection:180 - java.net.SocketException: Connection reset
+2016-11-27 21:48:54 ERROR Connection:180 - java.net.SocketException: Connection reset
+2016-11-27 21:56:21 ERROR Connection:180 - java.net.SocketException: Connection reset
+2016-11-27 21:58:44 ERROR Connection:181 - java.net.SocketException: Software caused connection abort: socket write error
+2016-11-27 21:58:44 ERROR Connection:196 - java.net.SocketException: Socket closed
+2016-11-27 22:01:53 ERROR Connection:181 - java.net.SocketException: Software caused connection abort: socket write error
+2016-11-27 22:01:53 ERROR Connection:196 - java.net.SocketException: Socket closed
+2016-11-27 22:04:27 ERROR Connection:181 - java.net.SocketException: Software caused connection abort: socket write error
+2016-11-27 22:04:27 ERROR Connection:196 - java.net.SocketException: Socket closed
+2016-11-27 22:18:55 ERROR Connection:178 - java.net.SocketException: Software caused connection abort: socket write error
+2016-11-27 22:18:55 ERROR Connection:193 - java.net.SocketException: Socket closed
+2016-11-27 22:32:49 ERROR Connection:165 - java.net.SocketException: Software caused connection abort: socket write error
+2016-11-27 22:32:49 ERROR Connection:179 - java.net.SocketException: Socket closed
+2016-11-27 22:34:12 ERROR Connection:165 - java.net.SocketException: Software caused connection abort: socket write error
+2016-11-27 22:34:12 ERROR Connection:179 - java.net.SocketException: Socket closed
+2016-11-27 22:35:35 ERROR Connection:165 - java.net.SocketException: Software caused connection abort: socket write error
+2016-11-27 22:35:35 ERROR Connection:179 - java.net.SocketException: Socket closed
+2016-11-28 10:37:04 ERROR Connection:163 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 10:37:04 ERROR Connection:176 - java.net.SocketException: Socket closed
+2016-11-28 10:37:55 ERROR Connection:163 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 10:37:55 ERROR Connection:176 - java.net.SocketException: Socket closed
+2016-11-28 11:04:32 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:04:32 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:05:34 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:05:34 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:08:01 ERROR Connection:168 - java.net.SocketException: Connection reset
+2016-11-28 11:08:01 ERROR Connection:168 - java.net.SocketException: Connection reset
+2016-11-28 11:08:01 ERROR Connection:168 - java.net.SocketException: Connection reset
+2016-11-28 11:08:01 ERROR Connection:168 - java.net.SocketException: Connection reset
+2016-11-28 11:08:01 ERROR Connection:168 - java.net.SocketException: Connection reset
+2016-11-28 11:08:01 ERROR Connection:168 - java.net.SocketException: Connection reset
+2016-11-28 11:08:01 ERROR Connection:168 - java.net.SocketException: Connection reset
+2016-11-28 11:08:01 ERROR Connection:168 - java.net.SocketException: Unrecognized Windows Sockets error: 0: recv failed
+2016-11-28 11:11:25 ERROR Server:33 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-28 11:13:07 ERROR Connection:168 - java.net.SocketException: Connection reset
+2016-11-28 11:13:10 ERROR Server:33 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-28 11:14:34 ERROR Connection:173 - java.net.SocketException: Connection reset
+2016-11-28 11:18:53 ERROR Server:38 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-28 11:46:07 ERROR Server:38 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-28 11:48:35 ERROR Connection:158 - java.net.SocketException: Connection reset
+2016-11-28 11:58:56 ERROR Connection:158 - java.net.SocketException: Connection reset
+2016-11-28 11:59:02 ERROR Connection:158 - java.net.SocketException: Connection reset
+2016-11-28 11:59:06 ERROR Connection:158 - java.net.SocketException: Connection reset
+2016-11-28 12:03:46 ERROR Connection:158 - java.net.SocketException: Connection reset
+2016-11-28 12:04:38 ERROR Connection:158 - java.net.SocketException: Connection reset
+2016-11-28 12:14:14 ERROR Server:38 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-28 12:16:57 ERROR Connection:158 - java.net.SocketException: Connection reset
+2016-11-28 12:17:03 ERROR Connection:158 - java.net.SocketException: Connection reset
+2016-11-28 12:24:48 ERROR Connection:158 - java.net.SocketException: Connection reset
+2016-11-28 12:25:23 ERROR Connection:164 - java.net.SocketException: Connection reset
+2016-11-28 12:26:14 ERROR Server:38 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-28 13:29:07 ERROR Server:38 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-28 13:30:36 ERROR Connection:162 - java.net.SocketException: Connection reset
+2016-11-28 14:21:02 ERROR Connection:162 - java.net.SocketException: Connection reset
+2016-11-28 14:24:52 ERROR Connection:161 - java.net.SocketException: Connection reset
+2016-11-28 14:25:08 ERROR Connection:161 - java.net.SocketException: Connection reset
+2016-11-28 14:25:30 ERROR Connection:161 - java.net.SocketException: Connection reset
+2016-11-28 14:27:13 ERROR Connection:161 - java.net.SocketException: Connection reset
+2016-11-28 14:27:40 ERROR Connection:161 - java.net.SocketException: Connection reset
+2016-11-29 11:23:08 ERROR PropertyInstance:20 - java.io.FileNotFoundException: resources\instance.properties (Не удается найти указанный файл)
+2016-11-29 11:24:07 ERROR PropertyInstance:20 - java.io.FileNotFoundException: resources\instance.properties (Не удается найти указанный файл)
+2016-11-29 11:26:05 ERROR PropertyInstance:20 - java.io.FileNotFoundException: resources\instance.properties (Не удается найти указанный файл)
+2016-11-29 11:27:01 ERROR PropertyInstance:20 - java.io.FileNotFoundException: resources\instance.properties (Не удается найти указанный файл)
+2016-11-29 11:29:13 ERROR PropertyInstance:20 - java.io.FileNotFoundException: resources\instance.properties (Не удается найти указанный файл)
+2016-11-29 11:29:17 ERROR PropertyInstance:20 - java.io.FileNotFoundException: resources\instance.properties (Не удается найти указанный файл)
+2016-11-29 11:30:55 ERROR PropertyInstance:20 - java.io.FileNotFoundException: resources\instance.properties (Не удается найти указанный файл)
+2016-11-29 11:38:40 ERROR Seriazeble:28 - java.io.EOFException
+2016-11-29 11:39:30 ERROR Seriazeble:28 - java.io.EOFException
+2016-11-29 11:40:01 ERROR Seriazeble:28 - java.io.EOFException
+2016-11-29 11:40:13 ERROR Seriazeble:28 - java.io.EOFException
+2016-11-29 11:46:30 ERROR PropertyInstance:20 - java.io.FileNotFoundException: resources\instance.properties (Не удается найти указанный файл)
+2016-11-29 13:14:45 ERROR PropertyInstance:20 - java.io.FileNotFoundException: resources\instance.properties (Не удается найти указанный файл)
+2016-12-03 16:46:35 ERROR PropertyInstance:20 - java.io.FileNotFoundException: resources\instance.properties (Не удается найти указанный файл)
+2016-12-03 16:47:16 ERROR PropertyInstance:20 - java.io.FileNotFoundException: resources\instance.properties (Не удается найти указанный файл)
+2017-01-18 21:59:49 ERROR PropertiesOnlineBook:33 - java.io.FileNotFoundException: resources\roat.properties (Не удается найти указанный файл)
+2017-01-19 12:11:26 ERROR BookDao:37 - java.sql.SQLException: Parameter index out of range (1 > number of parameters, which is 0).
+2017-01-19 12:13:13 ERROR BookDao:37 - java.sql.SQLException: Parameter index out of range (1 > number of parameters, which is 0).
+2017-01-19 12:13:13 ERROR BookDao:69 - java.sql.SQLException: Column Index out of range, 12 > 5. 
+2017-01-19 12:14:24 ERROR BookDao:37 - java.sql.SQLException: Parameter index out of range (1 > number of parameters, which is 0).
+2017-01-19 12:14:24 ERROR BookDao:69 - java.sql.SQLException: Column Index out of range, 12 > 5. 
+2017-01-19 12:16:20 ERROR BookDao:69 - java.sql.SQLException: Column Index out of range, 12 > 5. 
+2017-01-19 12:18:21 ERROR BookDao:69 - java.sql.SQLException: Column Index out of range, 12 > 5. 
+2017-01-19 12:20:53 ERROR BookDao:37 - java.sql.SQLException: Parameter index out of range (1 > number of parameters, which is 0).
+2017-01-19 12:22:58 ERROR BookDao:38 - java.sql.SQLException: Parameter index out of range (1 > number of parameters, which is 0).
+2017-01-19 12:24:45 ERROR BookDao:38 - java.sql.SQLException: Parameter index out of range (1 > number of parameters, which is 0).
+2017-01-19 13:30:11 ERROR BookDao:38 - java.sql.SQLException: Parameter index out of range (1 > number of parameters, which is 0).
+2017-01-19 13:33:25 ERROR BookDao:38 - java.sql.SQLException: Parameter index out of range (0 < 1 ).
+2017-01-19 13:33:48 ERROR BookDao:38 - java.sql.SQLException: Parameter index out of range (1 > number of parameters, which is 0).
+2017-01-19 13:39:00 ERROR BookDao:117 - com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''2' at line 1
+2017-01-19 13:40:11 ERROR BookDao:118 - com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''2' at line 1
+2017-01-19 14:25:15 ERROR WriterDao:95 - com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'idCustomer' in 'where clause'
+2017-01-20 14:56:11 ERROR BookDao:80 - java.sql.SQLException: Bad format for DATE '10.12.2011' in column 9.
+2017-01-20 14:58:24 ERROR BookDao:80 - java.sql.SQLException: Bad format for DATE '10.12.2011' in column 9.
+2017-01-20 14:59:35 ERROR BookDao:80 - java.sql.SQLException: Bad format for DATE '10.12.2011' in column 9.
+2017-01-20 14:59:35 ERROR BookDao:80 - java.sql.SQLException: Bad format for DATE '10.12.2011' in column 9.
+2017-01-20 15:03:16 ERROR BookDao:80 - java.sql.SQLException: Bad format for DATE '10.12.2011' in column 9.
+2017-01-20 15:03:16 ERROR BookDao:80 - java.sql.SQLException: Bad format for DATE '10.12.2011' in column 9.
+2017-01-20 16:33:34 ERROR PropertyInstance:20 - java.io.FileNotFoundException: resources\instance.properties (Не удается найти указанный файл)
+2017-01-20 16:33:34 ERROR PropertyInstance:20 - java.io.FileNotFoundException: resources\instance.properties (Не удается найти указанный файл)
+2017-01-20 16:33:34 ERROR CreatConnectionOne:22 - java.sql.SQLException: The url cannot be null
+2017-01-21 11:26:08 ERROR OrderDao:48 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-1' for key 'PRIMARY'
+2017-01-21 15:21:58 ERROR OrderDao:160 - com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' `dateOrder`='19.10.2017'' at line 1
+2017-01-21 15:22:38 ERROR OrderDao:160 - com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' `dateOrder`='19.10.2017'' at line 1
+2017-01-21 15:22:51 ERROR OrderDao:160 - com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' `dateOrder`='19.10.2017'' at line 1
+2017-01-22 11:42:43 ERROR CreatConnectionOne:22 - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+2017-01-22 11:43:37 ERROR CreatConnectionOne:22 - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+2017-01-22 11:45:31 ERROR CreatConnectionOne:22 - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+2017-01-22 11:45:52 ERROR CreatConnectionOne:22 - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+2017-01-22 11:47:10 ERROR WriterDao:89 - java.text.ParseException: Unparseable date: "2010-10-20"
+2017-01-22 11:47:10 ERROR OrderDao:102 - java.text.ParseException: Unparseable date: "2010-12-20"
+2017-01-22 11:47:10 ERROR BookDao:87 - java.text.ParseException: Unparseable date: "2010-10-20"
+2017-01-22 11:47:10 ERROR WriterDao:89 - java.text.ParseException: Unparseable date: "2010-10-20"
+2017-01-22 12:32:01 ERROR OrderDao:132 - com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' `dateOrder`='10.10.2010'' at line 1
+2017-01-22 12:33:24 ERROR OrderDao:132 - com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' `dateOrder`='10.10.2010'' at line 1
+2017-01-22 13:18:53 ERROR OrderDao:132 - com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' `dateOrder`='10.10.2010'' at line 1
+2017-01-22 13:19:30 ERROR OrderDao:132 - com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' `dateOrder`='10.10.2010'' at line 1
+2017-01-22 13:19:55 ERROR OrderDao:132 - com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' `dateOrder`='10.10.2010'' at line 1
+2017-01-22 13:20:27 ERROR OrderDao:132 - com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' `dateOrder`='10.10.2010'' at line 1
+2017-01-22 13:21:08 ERROR OrderDao:132 - com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' `dateOrder`='10.10.2010'' at line 1
+2017-01-22 13:22:19 ERROR OrderDao:132 - com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' `dateOrder`='10.10.2010'' at line 1
+2017-01-22 13:27:59 ERROR OrderDao:132 - com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' `dateOrder`='10.10.2010'' at line 1
+2017-01-22 13:29:31 ERROR OrderDao:132 - com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' `dateOrder`='10.10.2010'' at line 1
+2017-01-23 11:21:33 ERROR CreatConnectionOne:22 - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+2017-01-23 20:55:30 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1-2-23.01.2017' for key 'PRIMARY'
+2017-01-23 20:55:51 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1-2-23.01.2017' for key 'PRIMARY'
+2017-01-23 20:55:58 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1-2-23.01.2017' for key 'PRIMARY'
+2017-01-23 20:57:04 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1-2-23.01.2017' for key 'PRIMARY'
+2017-01-23 21:05:05 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1-2-23.01.2017' for key 'PRIMARY'
+2017-01-23 21:05:35 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1-2-23.01.2017' for key 'PRIMARY'
+2017-01-23 21:56:37 ERROR ImportExport:134 - java.io.FileNotFoundException: dbexportimport (Не удается найти указанный файл)
+2017-01-23 22:00:05 ERROR ImportExport:99 - java.io.FileNotFoundException: resources\export\file.csv (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
+2017-01-23 22:00:50 ERROR ImportExport:99 - java.io.FileNotFoundException: resources\export\file.csv (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
+2017-01-23 22:00:50 ERROR ImportExport:99 - java.io.FileNotFoundException: resources\export\file.csv (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
+2017-01-24 10:37:36 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1-2-24.01.2017' for key 'PRIMARY'
+2017-01-24 10:44:22 ERROR OrderDao:60 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1-2-24.01.2017' for key 'PRIMARY'
+2017-01-24 10:45:57 ERROR OrderDao:60 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-24.01.2017' for key 'PRIMARY'
