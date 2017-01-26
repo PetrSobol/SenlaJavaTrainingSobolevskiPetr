@@ -55,4 +55,6 @@ public interface IOnlineBook {
 
 	public void importCustomerCSV();
 
+	public void closeDBConnector();
+
 }

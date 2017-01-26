@@ -387,3 +387,50 @@
 2017-01-24 10:37:36 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1-2-24.01.2017' for key 'PRIMARY'
 2017-01-24 10:44:22 ERROR OrderDao:60 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1-2-24.01.2017' for key 'PRIMARY'
 2017-01-24 10:45:57 ERROR OrderDao:60 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-24.01.2017' for key 'PRIMARY'
+<<<<<<< HEAD
+2017-01-25 16:28:19 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-25.01.2017' for key 'PRIMARY'
+2017-01-26 18:06:29 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 18:08:09 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 18:09:41 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 18:10:52 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 18:11:28 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 18:17:30 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 18:18:28 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 18:18:58 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 18:19:08 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 18:21:47 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 18:22:05 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 18:23:04 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 18:53:45 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 18:56:16 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 19:17:03 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 19:17:54 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 19:19:56 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 19:21:36 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 19:21:50 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 19:22:12 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 19:26:09 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 19:29:16 ERROR OrderDao:51 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 19:47:16 ERROR OrderService:74 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 19:48:11 ERROR OrderService:75 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 19:48:35 ERROR OrderService:75 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 19:48:56 ERROR OrderService:75 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 21:16:19 ERROR OrderService:83 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 21:19:55 ERROR OrderService:83 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 21:19:55 ERROR OrderDao:156 - java.sql.SQLException: Parameter index out of range (1 > number of parameters, which is 0).
+2017-01-26 21:21:21 ERROR OrderService:83 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 21:21:21 ERROR OrderDao:156 - java.sql.SQLException: Parameter index out of range (1 > number of parameters, which is 0).
+2017-01-26 21:24:52 ERROR OrderService:83 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 21:46:02 ERROR OrderService:83 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 21:46:02 ERROR CustomerDao:90 - com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'bylastnameCustomer' at line 1
+2017-01-26 21:46:18 ERROR OrderService:83 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 21:46:18 ERROR CustomerDao:90 - com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'bylastnameCustomer' at line 1
+2017-01-26 21:50:35 ERROR OrderService:83 - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2-2-26.01.2017' for key 'PRIMARY'
+2017-01-26 22:04:13 ERROR WriterDao:108 - java.sql.SQLException: Parameter index out of range (1 > number of parameters, which is 0).
+2017-01-26 22:04:13 ERROR WriterDao:108 - java.sql.SQLException: Parameter index out of range (1 > number of parameters, which is 0).
+2017-01-26 22:05:39 ERROR WriterDao:107 - com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '4' at line 1
+2017-01-26 22:05:39 ERROR WriterDao:107 - com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '3' at line 1
+2017-01-26 22:07:14 ERROR WriterDao:108 - java.sql.SQLException: Parameter index out of range (1 > number of parameters, which is 0).
+2017-01-26 22:07:14 ERROR WriterDao:108 - java.sql.SQLException: Parameter index out of range (1 > number of parameters, which is 0).
+=======
+>>>>>>> 410171363b30886c18e224d7ec22673766aeff46
