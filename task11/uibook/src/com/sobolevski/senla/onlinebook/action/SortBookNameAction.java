@@ -6,8 +6,8 @@ import com.senla.sobol.api.EssenceCommon;
 import com.senla.sobol.api.SupportClient;
 import com.sobolevski.senla.onlinebook.operationmenu.Print;
 
-public class SortBookPriceAction implements IAction{
-	private static final String NAMEMETOD = "getSortBookByPrice";
+public class SortBookNameAction implements IAction {
+	private static final String NAMEMETOD = "getSortBookByName";
 	private Print print = new Print();
 	private EssenceCommon essence = new EssenceCommon();
 

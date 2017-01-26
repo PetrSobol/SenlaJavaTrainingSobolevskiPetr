@@ -5,9 +5,9 @@ import com.senla.sobol.api.SupportClient;
 import com.sobolevski.senla.onlinebook.operationmenu.Print;
 import com.sobolevski.senla.onlinebook.operationmenu.ScannerBox;
 
-public class DeleteBookAction implements IAction {
-	private static final String NAMEMETOD = "deleteBook";
-	private static final String NAME_BOOK2 = "Id book?";
+public class DeleteWriterAction implements IAction {
+	private static final String NAMEMETOD = "deleteWriter";
+	private static final String NAME_BOOK2 = "Id writer?";
 	private Print print = new Print();
 	private ScannerBox scanerbox = new ScannerBox();
 	private EssenceCommon essence = new EssenceCommon();
