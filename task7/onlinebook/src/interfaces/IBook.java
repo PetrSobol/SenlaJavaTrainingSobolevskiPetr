@@ -1,5 +1,6 @@
 package interfaces;
 
+import model.Order;
 import model.StageBook;
 
 public interface IBook {
@@ -13,9 +14,9 @@ public interface IBook {
 
 	public Integer getPrice();
 
-	public IOrder getOrder();
+	public Order getOrder();
 
-	public void setOrder(IOrder order);
+	public void setOrder(Order order);
 
 	public void setPrice(Integer price);
 

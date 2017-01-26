@@ -2,6 +2,7 @@ package interfaces;
 
 import java.util.Date;
 
+import model.Book;
 import model.StageBook;
 public interface IOrder {
 	public Date getDate();
@@ -34,9 +35,9 @@ public interface IOrder {
 
 	public Date dateFinishOrder();
 
-	public IBook getBook();
+	public Book getBook();
 
-	public void setBook(IBook book);
+	public void setBook(Book book);
 
 	public IOrder clone() throws CloneNotSupportedException;
 }

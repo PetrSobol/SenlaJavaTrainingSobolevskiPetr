@@ -7,8 +7,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import interfaces.IBook;
-import interfaces.IOrder;
 import model.Book;
 import model.Order;
 import model.StageBook;
@@ -51,7 +49,7 @@ public class Converter {
 	 * @param listbook
 	 * @return
 	 */
-	public String[] getOllArray(List<IOrder> listorder, List<IBook> listbook) {
+	public String[] getOllArray(List<Order> listorder, List<Book> listbook) {
 		String[] array = anAssociation(getArrayBook(listbook), getArrayOrder(listorder));
 		return array;
 
@@ -63,11 +61,11 @@ public class Converter {
 	 * @param listorder
 	 * @return
 	 */
-	public String[] getArrayOrder(List<IOrder> listorder) {
+	public String[] getArrayOrder(List<Order> listorder) {
 		int index = 0;
 		String[] array = new String[listorder.size()];
 		StringBuilder string;
-		for (IOrder order : listorder) {
+		for (Order order : listorder) {
 			string = new StringBuilder();
 			string.append("2");
 			string.append(",");
@@ -100,11 +98,11 @@ public class Converter {
 	 * @param listbook
 	 * @return
 	 */
-	public String[] getArrayBook(List<IBook> listbook) {
+	public String[] getArrayBook(List<Book> listbook) {
 		int index = 0;
 		String[] array = new String[listbook.size()];
 		StringBuilder string;
-		for (IBook book : listbook) {
+		for (Book book : listbook) {
 			string = new StringBuilder();
 			string.append("1");
 			string.append(",");
@@ -134,14 +132,14 @@ public class Converter {
 	 * @param array
 	 * @return
 	 */
-	public List<IBook> getListBook(List<IBook> listbook, String[] array) {
-		listbook = new ArrayList<IBook>();
+	public List<Book> getListBook(List<Book> listbook, String[] array) {
+		listbook = new ArrayList<Book>();
 		String[] masBook = array;
 
 		for (int i = 0; i < masBook.length; i++) {
 			String[] wordString = masBook[i].split(",");
 			if (wordString[0].equals("1")) {
-				IBook book = new Book();
+				Book book = new Book();
 				for (int j = 1; j < wordString.length; j++) {
 					if (j == 1) {
 						book.setName(wordString[j]);
@@ -179,14 +177,14 @@ public class Converter {
 	 * @return
 	 * @throws ParseException
 	 */
-	public List<IOrder> getListOrder(List<IOrder> listorder, String[] array) throws ParseException {
-		listorder = new ArrayList<IOrder>();
+	public List<Order> getListOrder(List<Order> listorder, String[] array) throws ParseException {
+		listorder = new ArrayList<Order>();
 		String[] masBook = array;
 
 		for (int i = 0; i < masBook.length; i++) {
 			String[] wordString = masBook[i].split(",");
 			if (wordString[0].equals("2")) {
-				IOrder order = new Order();
+				Order order = new Order();
 				for (int j = 1; j < wordString.length; j++) {
 					if (j == 1) {
 						order.setIdNumberOrder((wordString[j]));

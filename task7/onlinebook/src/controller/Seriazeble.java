@@ -9,15 +9,15 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import interfaces.IBook;
-import interfaces.IOrder;
 import interfaces.ISeriazeble;
+import model.Book;
+import model.Order;
 import property.PropertiesOnlineBook;
 
 public class Seriazeble implements ISeriazeble {
 	private Logger log = Logger.getLogger(Seriazeble.class.getName());
-	private List<IBook> listbook;
-	private List<IOrder> listorder;
+	private List<Book> listbook;
+	private List<Order> listorder;
 
 	/**
 	 * gets data with essence.out
@@ -25,8 +25,8 @@ public class Seriazeble implements ISeriazeble {
 	public Seriazeble() {
 		try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(
 				PropertiesOnlineBook.getInstanceProperty().getInstancePropertyHolder().getRoatseriazeble()))) {
-			listbook = (ArrayList<IBook>) ois.readObject();
-			listorder = (ArrayList<IOrder>) ois.readObject();
+			listbook = (ArrayList<Book>) ois.readObject();
+			listorder = (ArrayList<Order>) ois.readObject();
 		} catch (Exception e) {
 			log.error(e);
 		}
@@ -46,11 +46,11 @@ public class Seriazeble implements ISeriazeble {
 		}
 	}
 
-	public List<IBook> getListBook() {
+	public List<Book> getListBook() {
 		return listbook;
 	}
 
-	public List<IOrder> getListOrder() {
+	public List<Order> getListOrder() {
 		return listorder;
 	}
 }

@@ -8,7 +8,6 @@ import com.sobol.senla.anotation.Printable;
 import com.sobol.senla.anotation.PrintableObject;
 import com.sobol.senla.anotation.PrintableRef;
 
-import interfaces.IBook;
 import interfaces.IOrder;
 
 @PrintableObject(name = "Order")
@@ -49,12 +48,12 @@ public class Order implements Cloneable, Serializable,IOrder {
 	@Printable(isDetaledOnly = true, name = "stage",order=7)
 	private StageBook stage;
 	@PrintableRef(name = "Book",isRecursiv=false,order =1)
-	private IBook book;
+	private Book book;
 
 	public Order() {
 	}
 
-	public Order(String id, String lastname, String firstname, IBook book, Date date) throws ParseException {
+	public Order(String id, String lastname, String firstname, Book book, Date date) throws ParseException {
 		this.idNumberOrder = id;
 		this.lastname = lastname;
 		this.firstname = firstname;
@@ -125,11 +124,11 @@ public class Order implements Cloneable, Serializable,IOrder {
 		return dateFinishOrder;
 	}
 
-	public IBook getBook() {
+	public Book getBook() {
 		return book;
 	}
 
-	public void setBook(IBook book) {
+	public void setBook(Book book) {
 		this.book = book;
 	}
 

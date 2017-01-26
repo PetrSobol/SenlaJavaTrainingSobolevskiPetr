@@ -91,3 +91,12 @@
 2016-11-15 21:27:49 ERROR PropertiesOnlineBook:39 - java.io.FileNotFoundException: resources\instance.properties (Не удается найти указанный файл)
 2016-11-15 21:28:03 ERROR ScannerBox:40 - java.util.InputMismatchException
 2016-11-15 21:28:04 ERROR ScannerBox:40 - java.util.InputMismatchException
+2016-11-18 10:07:57 ERROR Seriazeble:31 - java.io.InvalidClassException: model.Book; local class incompatible: stream classdesc serialVersionUID = 7023638879688777786, local class serialVersionUID = -7602109397831358528
+2016-11-18 10:12:27 ERROR Seriazeble:31 - java.io.InvalidClassException: model.Book; local class incompatible: stream classdesc serialVersionUID = 7035448861061198656, local class serialVersionUID = -7602109397831358528
+2016-11-20 13:35:45 ERROR Seriazeble:31 - java.io.InvalidClassException: model.Book; local class incompatible: stream classdesc serialVersionUID = 7023638879688777786, local class serialVersionUID = -7602109397831358528
+2016-11-20 13:48:06 ERROR Seriazeble:31 - java.io.InvalidClassException: model.Book; local class incompatible: stream classdesc serialVersionUID = 7023638879688777786, local class serialVersionUID = -7602109397831358528
+2016-11-20 13:48:17 INFO  SaveBaseAction:16 - save to databases
+2016-11-20 13:52:13 ERROR Seriazeble:31 - java.io.EOFException
+2016-11-20 13:52:20 INFO  SaveBaseAction:16 - save to databases
+2016-11-20 14:25:07 ERROR Navigator:57 - java.util.InputMismatchException
+2016-11-22 09:55:21 ERROR Navigator:57 - java.util.InputMismatchException

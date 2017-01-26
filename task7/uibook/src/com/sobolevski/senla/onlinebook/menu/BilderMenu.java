@@ -16,7 +16,9 @@ import com.sobolevski.senla.onlinebook.action.MuchOrderAction;
 import com.sobolevski.senla.onlinebook.action.OrderDateToDateAction;
 import com.sobolevski.senla.onlinebook.action.OrderStageAction;
 import com.sobolevski.senla.onlinebook.action.PrintBookActionAll;
+import com.sobolevski.senla.onlinebook.action.PrintBookAnnotationAction;
 import com.sobolevski.senla.onlinebook.action.PrintOrderActionAll;
+import com.sobolevski.senla.onlinebook.action.PrintOrderAnnotationAction;
 import com.sobolevski.senla.onlinebook.action.QuantityFinishOrderAction;
 import com.sobolevski.senla.onlinebook.action.SaveBaseAction;
 import com.sobolevski.senla.onlinebook.action.SortBookDateAction;
@@ -35,7 +37,8 @@ public class BilderMenu {
 		IMenu menu3 = new Menu("Clone order", 3,new CloneOrderAction());
 		IMenu menu4 = new Menu("Save changes to the database", 4,new SaveBaseAction());
 		IMenu menu5 = new Menu("Import/export", 5);
-		IMenu menu6 = new Menu("Exit", 6);
+		IMenu menu6 = new Menu("Print annotation", 6);
+		IMenu menu7 = new Menu("Exit", 7);
 		IMenu menubook1 = new Menu("Print all book", 1, new PrintBookActionAll());
 		IMenu menubook2 = new Menu("Add new book", 2, new AddNewBookAction());
 		IMenu menubook3 = new Menu("Delete book", 3, new DeleteBookAction());
@@ -71,6 +74,13 @@ public class BilderMenu {
 		menu2.setMenuList(menuorder8);
 		menu2.setMenuList(menuorder9);
 		
+		IMenu menuanotation1 = new Menu("Print order annotation", 1,new PrintOrderAnnotationAction());
+		IMenu menuanotation2 = new Menu("Print book annotation ", 2,new PrintBookAnnotationAction());
+		IMenu menuanotation3 = new Menu("Exit", 3);
+		menu6.setMenuList(menuanotation1);
+		menu6.setMenuList(menuanotation2);
+		menu6.setMenuList(menuanotation3);
+		
 		IMenu menuexportorder = new Menu("Export book", 1,new ExportBookAction());
 		IMenu menuexportbook = new Menu("Export order", 2,new ExportOrderAction());
 		IMenu menuimportorder = new Menu("Import order", 3,new ImportOrderAction());
@@ -90,6 +100,7 @@ public class BilderMenu {
 		listmenu.add(menu4);
 		listmenu.add(menu5);
 		listmenu.add(menu6);
+		listmenu.add(menu7);
 	}
 
 	public List<IMenu> getListMenu() {
