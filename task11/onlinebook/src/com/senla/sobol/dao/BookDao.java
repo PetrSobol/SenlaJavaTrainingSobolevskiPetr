@@ -36,30 +36,8 @@ public class BookDao extends ACommonDAO<IBook> {
 		super();
 	}
 
-	public void addNew(Connection connection, IBook t) {
-		PreparedStatement statement = null;
-
-		try {
-			statement = connection
-					.prepareStatement(INSERT_INTO_MYDB_BOOK_ID_WRITER_NAME_BOOK_QUANTITY_BOOK_PRICE_VALUES);
-			statement.setInt(1, t.getWriter().getIdWriter());
-			statement.setString(2, t.getNameBook());
-			statement.setInt(3, t.getQuantityPages());
-			statement.setInt(4, t.getPrice());
-			addNew(statement);
-
-		} catch (SQLException e) {
-			log.error(e);
-		} finally {
-			try {
-				statement.close();
-
-			} catch (SQLException e) {
-				log.error(e);
-			}
-
-		}
-
+	public void addNewBook(Connection connection, IBook t) throws SQLException {
+		addNew(connection, t);
 	}
 
 	@Override
@@ -74,7 +52,7 @@ public class BookDao extends ACommonDAO<IBook> {
 				statement = connection.prepareStatement(
 						SELECT_FROM_MYDB_BOOK_JOIN_MYDB_WRITER_ON_MYDB_BOOK_ID_WRITER_MYDB_WRITER_ID_WRITER_ORDER_BY);
 				statement.setString(1, date);
-				} else {
+			} else {
 				statement = connection.prepareStatement(
 						SELECT_FROM_MYDB_BOOK_JOIN_MYDB_WRITER_ON_MYDB_BOOK_ID_WRITER_MYDB_WRITER_ID_WRITER);
 			}
@@ -107,45 +85,53 @@ public class BookDao extends ACommonDAO<IBook> {
 		return listbook;
 	}
 
-	public void delete(Connection connection, Integer idbook) {
-		PreparedStatement statement = null;
-
-		try {
-			statement = connection.prepareStatement(DELETE_FROM_MYDB_BOOK_WHERE_ID_BOOK);
-			delete(statement);
-		} catch (SQLException e) {
-			log.error(e);
-		} finally {
-			try {
-				statement.close();
-
-			} catch (SQLException e) {
-				log.error(e);
-			}
-		}
+	public void deleteBook(Connection connection, Integer idbook) {
+		delete(connection, idbook);
 	}
 
-	public void update(Connection connection, IBook t) throws SQLException {
-		PreparedStatement statement = null;
-		statement = connection
-				.prepareStatement(UPDATE_MYDB_BOOK_SET_ID_WRITER_NAME_BOOK_QUANTITY_BOOK_PRICE_WHERE_ID_BOOK);
-		statement.setInt(1, t.getWriter().getIdWriter());
-		statement.setString(2, t.getNameBook());
-		statement.setInt(3, t.getQuantityPages());
-		statement.setInt(4, t.getPrice());
-		statement.setInt(5, t.getIdBook());
-		update(statement);
-		statement.close();
+	public void updateBook(Connection connection, IBook t) throws SQLException {
+		update(connection, t);
 	}
 
-	public IBook getBook(Connection connection, Integer idBook) {
-		List<IBook> listbook = getReadAllTable(connection, null);
-		for (IBook book : listbook) {
-			if (idBook.equals(book.getIdBook())) {
-				return book;
-			}
-		}
-		return null;
+	@Override
+	public String getInsertSql() {
+		return INSERT_INTO_MYDB_BOOK_ID_WRITER_NAME_BOOK_QUANTITY_BOOK_PRICE_VALUES;
+	}
+
+	@Override
+	public String getUpdateSql() {
+		return UPDATE_MYDB_BOOK_SET_ID_WRITER_NAME_BOOK_QUANTITY_BOOK_PRICE_WHERE_ID_BOOK;
+	}
+
+	@Override
+	public String getDeletSql() {
+		return DELETE_FROM_MYDB_BOOK_WHERE_ID_BOOK;
+	}
+
+	@Override
+	public void prepareStatemantOnUpdate(PreparedStatement prepar, IBook t) throws SQLException {
+		prepar.setInt(1, t.getWriter().getIdWriter());
+		prepar.setString(2, t.getNameBook());
+		prepar.setInt(3, t.getQuantityPages());
+		prepar.setInt(4, t.getPrice());
+		prepar.setInt(5, t.getIdBook());
+
+	}
+
+	@Override
+	public void prepareStatemantOnDelete(PreparedStatement prepar, Integer t) throws SQLException {
+		prepar.setInt(1, t);
+
+	}
+
+	@Override
+	public void prepareStatemantOnInsert(PreparedStatement prepar, IBook t) throws SQLException {
+		prepar.setInt(1, t.getWriter().getIdWriter());
+		prepar.setString(2, t.getNameBook());
+		prepar.setInt(3, t.getQuantityPages());
+		prepar.setInt(4, t.getPrice());
+		
+
 	}
 
 }

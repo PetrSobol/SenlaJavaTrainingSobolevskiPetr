@@ -45,8 +45,8 @@ public class OrderService implements IOrderService {
 		try {
 			connection.setAutoCommit(false);
 			savepoint = connection.setSavepoint();
-			orderdao.delete(connection, t);
-			bookdao.update(connection, t.getBook());
+			orderdao.deleteOrder(connection, t);
+			bookdao.updateBook(connection, t.getBook());
 			connection.commit();
 			connection.setAutoCommit(true);
 		} catch (SQLException e) {
@@ -61,7 +61,7 @@ public class OrderService implements IOrderService {
 	}
 
 	public void update(IOrder t) {
-		orderdao.update(connection, t);
+		orderdao.updateOrder(connection, t);
 	}
 
 	public void add(IOrder t) {
@@ -69,8 +69,8 @@ public class OrderService implements IOrderService {
 		try {
 			connection.setAutoCommit(false);
 			savepoint = connection.setSavepoint();
-			orderdao.addNew(connection, t);
-			bookdao.update(connection, t.getBook());
+			orderdao.addNewOrder(connection, t);
+			bookdao.updateBook(connection, t.getBook());
 			connection.commit();
 			connection.setAutoCommit(true);
 

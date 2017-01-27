@@ -27,33 +27,41 @@ public class CustomerService implements ICustomerService {
 	}
 
 	public void delete(Integer id) {
-		customerdao.delete(connection,id);
+		customerdao.deleteCustomer(connection, id);
 
 	}
 
 	public void update(ICustomer t) {
-		customerdao.update(connection,t);
+		customerdao.updateCustomer(connection, t);
 
 	}
 
 	public void add(ICustomer t) {
-		customerdao.addNew(connection,t);
+		try {
+			customerdao.addNewCustomer(connection, t);
+		} catch (SQLException e) {
+			log.error(e);
+		}
 
 	}
 
 	public List<ICustomer> getAll(String date) {
-		List<ICustomer> listcustomer=null;
-		if(date!=null){
-			listcustomer = customerdao.getReadAllTable(connection,date);
-		}else{
-			 listcustomer = customerdao.getReadAllTable(connection,null);
+		List<ICustomer> listcustomer = null;
+		if (date != null) {
+			listcustomer = customerdao.getReadAllTable(connection, date);
+		} else {
+			listcustomer = customerdao.getReadAllTable(connection, null);
 		}
 		return listcustomer;
 	}
 
 	public ICustomer getCustomer(Integer idcustomer) {
-		ICustomer customer = customerdao.getCustomer(connection,idcustomer);
-		return customer;
+		List<ICustomer> listcustomer = customerdao.getReadAllTable(connection, null);
+		for (ICustomer customer : listcustomer) {
+			if (idcustomer.equals(customer.getIdCustomer())) {
+				return customer;
+			}
+		}
+		return null;
 	}
-
 }

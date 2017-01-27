@@ -15,6 +15,7 @@ public class BookService implements IBookService {
 	private BookDao bookdao;
 	private Connection connection;
 	private static Logger log = Logger.getLogger(BookService.class.getName());
+
 	public BookService() {
 		super();
 		this.bookdao = new BookDao();
@@ -37,7 +38,7 @@ public class BookService implements IBookService {
 	}
 
 	public IBook findbook(IBook bookfind) {
-		List<IBook> listbook = bookdao.getReadAllTable(connection,null);
+		List<IBook> listbook = bookdao.getReadAllTable(connection, null);
 		for (IBook book : listbook) {
 			if (!bookfind.getNameBook().equals(book.getNameBook())
 					|| bookfind.getWriter().getIdWriter().equals(book.getWriter().getIdWriter())) {
@@ -48,42 +49,46 @@ public class BookService implements IBookService {
 	}
 
 	public IBook getBook(Integer idBook) {
-		IBook book = bookdao.getBook(connection,idBook);
-		return book;
+		List<IBook> listbook = bookdao.getReadAllTable(connection, null);
+		for (IBook book : listbook) {
+			if (idBook.equals(book.getIdBook())) {
+				return book;
+			}
+		}
+		return null;
 	}
-
-
 
 	public void delete(Integer idbook) {
-		bookdao.delete(connection,idbook);
+		bookdao.deleteBook(connection, idbook);
 
 	}
-
 
 	public void update(IBook t) {
 		try {
-			bookdao.update(connection,t);
+			bookdao.updateBook(connection, t);
 		} catch (SQLException e) {
 			log.error(e);
 		}
 
 	}
 
-
 	public void add(IBook t) {
-		bookdao.addNew(connection,t);
+		try {
+			bookdao.addNewBook(connection, t);
+		} catch (SQLException e) {
+		log.error(e);
+		}
 
 	}
 
-
 	public List<IBook> getAll(String date) {
-		List<IBook> listbook=null;
-		if(date!=null){
-			listbook = bookdao.getReadAllTable(connection,date);
-		}else{
-			listbook = bookdao.getReadAllTable(connection,null);
+		List<IBook> listbook = null;
+		if (date != null) {
+			listbook = bookdao.getReadAllTable(connection, date);
+		} else {
+			listbook = bookdao.getReadAllTable(connection, null);
 		}
-		
+
 		return listbook;
 	}
 
