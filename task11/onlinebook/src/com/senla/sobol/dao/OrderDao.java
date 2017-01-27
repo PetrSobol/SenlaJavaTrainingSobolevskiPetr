@@ -45,15 +45,8 @@ public class OrderDao extends ACommonDAO<IOrder> {
 		super();
 	}
 
-	public void addNew(Connection connection, IOrder t) throws SQLException {
-		PreparedStatement statement = null;
-		statement = connection
-				.prepareStatement(INSERT_INTO_MYDB_ORDER_ID_CUSTOMER_D_BOOK_DATE_ORDER_VALUES);
-		statement.setInt(1, t.getCustomer().getIdCustomer());
-		statement.setInt(2, t.getBook().getIdBook());
-		statement.setString(3, simpledate.format(t.getDateOrder()));
-		statement.executeUpdate();
-		statement.close();
+	public void addNewOrder(Connection connection, IOrder t) throws SQLException {
+		addNew(connection, t);
 
 	}
 
@@ -159,7 +152,7 @@ public class OrderDao extends ACommonDAO<IOrder> {
 		} finally {
 			try {
 				statement.close();
-				} catch (SQLException e) {
+			} catch (SQLException e) {
 				log.error(e);
 			}
 
@@ -168,7 +161,7 @@ public class OrderDao extends ACommonDAO<IOrder> {
 		return listorder;
 	}
 
-	public void delete(Connection connection, IOrder t) {
+	public void deleteOrder(Connection connection, IOrder t) {
 		PreparedStatement statement = null;
 
 		try {
@@ -176,7 +169,7 @@ public class OrderDao extends ACommonDAO<IOrder> {
 			statement.setInt(1, t.getCustomer().getIdCustomer());
 			statement.setInt(2, t.getBook().getIdBook());
 			statement.setString(3, simpledate.format(t.getDateOrder()));
-			delete(statement);
+			statement.executeUpdate();
 
 		} catch (SQLException e) {
 			log.error(e);
@@ -192,27 +185,51 @@ public class OrderDao extends ACommonDAO<IOrder> {
 
 	}
 
-	public void update(Connection connection, IOrder t) {
+	public void updateOrder(Connection connection, IOrder t) {
+		update(connection, t);
+	}
 
-		PreparedStatement statement = null;
+	@Override
+	public String getInsertSql() {
+		return INSERT_INTO_MYDB_ORDER_ID_CUSTOMER_D_BOOK_DATE_ORDER_VALUES;
+	}
 
-		try {
-			statement = connection.prepareStatement(
-					UPDATE_MYDB_ORDER_SET_ID_CUSTOMER_D_BOOK_DATE_ORDER_WHERE_ID_CUSTOMER_AND_D_BOOK_DATE_ORDER);
+	@Override
+	public String getUpdateSql() {
+		return UPDATE_MYDB_ORDER_SET_ID_CUSTOMER_D_BOOK_DATE_ORDER_WHERE_ID_CUSTOMER_AND_D_BOOK_DATE_ORDER;
+	}
 
-			update(statement);
+	@Override
+	public String getDeletSql() {
+		return DELETE_FROM_MYDB_ORDER_WHERE_ID_CUSTOMER_AND_D_BOOK_AND_DATE_ORDER;
+	}
 
-		} catch (SQLException e) {
-			log.error(e);
-		} finally {
-			try {
-				statement.close();
+	@Override
+	public void prepareStatemantOnInsert(PreparedStatement prepar, IOrder t) throws SQLException {
+		prepar.setInt(1, t.getCustomer().getIdCustomer());
+		prepar.setInt(2, t.getBook().getIdBook());
+		prepar.setString(3, simpledate.format(t.getDateOrder()));
 
-			} catch (SQLException e) {
-				log.error(e);
-			}
+	}
 
-		}
+	@Override
+	public void prepareStatemantOnDelete(PreparedStatement prepar, Integer t) throws SQLException {
+
+		// problemm delete by Integer
+
+		/*
+		 * prepar.setInt(1, t.getCustomer().getIdCustomer()); prepar.setInt(2,
+		 * t.getBook().getIdBook()); prepar.setString(3,
+		 * simpledate.format(t.getDateOrder()));
+		 */
+
+	}
+
+	@Override
+	public void prepareStatemantOnUpdate(PreparedStatement prepar, IOrder t) throws SQLException {
+		prepar.setInt(1, t.getCustomer().getIdCustomer());
+		prepar.setInt(2, t.getBook().getIdBook());
+		prepar.setString(3, simpledate.format(t.getDateOrder()));
 
 	}
 

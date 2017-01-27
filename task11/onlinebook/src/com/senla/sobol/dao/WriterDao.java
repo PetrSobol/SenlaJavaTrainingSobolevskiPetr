@@ -31,51 +31,24 @@ public class WriterDao extends ACommonDAO<IWriter> {
 		super();
 	}
 
-	public IWriter getWriter(Connection connection, Integer id) {
-		List<IWriter> listwriter = getReadAllTable(connection,null);
-		for (IWriter writer : listwriter) {
-			if (id.equals(writer.getIdWriter())) {
-				return writer;
-			}
-		}
-		return null;
-	}
-
-	public void addNew(Connection connection, IWriter t) {
-		PreparedStatement statement = null;
-		try {
-			statement = connection.prepareStatement(
-					INSERT_INTO_MYDB_WRITER_LASTNAME_WRITER_FIRSTNAME_WRITER_YEAR_OF_BIRTHDAY_DIED_YEAR_VALUES);
-			statement.setString(1, t.getLastname());
-			statement.setString(2, t.getFirstname());
-			statement.setString(3, simpledate.format(t.getStartYear()));
-			statement.setString(4, simpledate.format(t.getDiedYear()));
-			statement.executeUpdate();
-		} catch (SQLException e) {
-			log.error(e);
-		} finally {
-			try {
-				statement.close();
-			} catch (SQLException e) {
-				log.error(e);
-			}
-		}
+	public void addNewWriter(Connection connection, IWriter t) throws SQLException {
+		addNew(connection, t);
 	}
 
 	@Override
-	public List<IWriter> getReadAllTable(Connection connection,String date) {
+	public List<IWriter> getReadAllTable(Connection connection, String date) {
 		PreparedStatement statement = null;
 		ResultSet set = null;
 		Writer writer = null;
 		List<IWriter> listwriter = new ArrayList<IWriter>();
 		try {
-			if(date!=null){
+			if (date != null) {
 				statement = connection.prepareStatement(SELECT_FROM_MYDB_WRITER_ORDER_BY);
 				statement.setString(1, date);
-			}else{
+			} else {
 				statement = connection.prepareStatement(SELECT_FROM_MYDB_WRITER);
 			}
-			
+
 			set = statement.executeQuery();
 			while (set.next()) {
 				writer = new Writer();
@@ -99,46 +72,53 @@ public class WriterDao extends ACommonDAO<IWriter> {
 		return listwriter;
 	}
 
-	public void delete(Connection connection, Integer idwriter) {
-		PreparedStatement statement = null;
-		try {
-			statement = connection.prepareStatement(DELETE_FROM_MYDB_WRITER_WHERE_ID_WRITER);
-			statement.setInt(1, idwriter);
-			delete(statement);
-		} catch (SQLException e) {
-			log.error(e);
-		} finally {
-			try {
-				statement.close();
-			} catch (SQLException e) {
-				log.error(e);
-			}
-
-		}
+	public void deleteWriter(Connection connection, Integer idwriter) {
+		delete(connection, idwriter);
 
 	}
 
-	public void update(Connection connection, IWriter t) {
-		PreparedStatement statement = null;
-		try {
-			statement = connection.prepareStatement(
-					UPDATE_MYDB_WRITER_SET_LASTNAME_WRITER_FIRSTNAME_WRITER_YEAR_OF_BIRTHDAY_DIED_YEAR_WHERE_ID_WRITER);
-			statement.setString(1, t.getLastname());
-			statement.setString(2, t.getFirstname());
-			statement.setString(3, simpledate.format(t.getStartYear()));
-			statement.setString(4, simpledate.format(t.getDiedYear()));
-			statement.setInt(5, t.getIdWriter());
-			update(statement);
-		} catch (SQLException e) {
-			log.error(e);
-		} finally {
-			try {
-				statement.close();
-			} catch (SQLException e) {
-				log.error(e);
-			}
+	public void updateWriter(Connection connection, IWriter t) {
+		update(connection, t);
 
-		}
+	}
+
+	@Override
+	public String getInsertSql() {
+		return INSERT_INTO_MYDB_WRITER_LASTNAME_WRITER_FIRSTNAME_WRITER_YEAR_OF_BIRTHDAY_DIED_YEAR_VALUES;
+	}
+
+	@Override
+	public String getUpdateSql() {
+		return UPDATE_MYDB_WRITER_SET_LASTNAME_WRITER_FIRSTNAME_WRITER_YEAR_OF_BIRTHDAY_DIED_YEAR_WHERE_ID_WRITER;
+	}
+
+	@Override
+	public String getDeletSql() {
+		return DELETE_FROM_MYDB_WRITER_WHERE_ID_WRITER;
+	}
+
+	@Override
+	public void prepareStatemantOnInsert(PreparedStatement prepar, IWriter t) throws SQLException {
+		prepar.setString(1, t.getLastname());
+		prepar.setString(2, t.getFirstname());
+		prepar.setString(3, simpledate.format(t.getStartYear()));
+		prepar.setString(4, simpledate.format(t.getDiedYear()));
+
+	}
+
+	@Override
+	public void prepareStatemantOnDelete(PreparedStatement prepar, Integer t) throws SQLException {
+		prepar.setInt(1, t);
+
+	}
+
+	@Override
+	public void prepareStatemantOnUpdate(PreparedStatement prepar, IWriter t) throws SQLException {
+		prepar.setString(1, t.getLastname());
+		prepar.setString(2, t.getFirstname());
+		prepar.setString(3, simpledate.format(t.getStartYear()));
+		prepar.setString(4, simpledate.format(t.getDiedYear()));
+		prepar.setInt(5, t.getIdWriter());
 
 	}
 

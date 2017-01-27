@@ -25,37 +25,42 @@ public class WriterService implements IWriterService {
 		}
 	}
 
-	public void delete(Integer  idWriter) {
-		writerdao.delete(connection,idWriter);
+	public void delete(Integer idWriter) {
+		writerdao.deleteWriter(connection, idWriter);
 
 	}
 
 	public void update(IWriter t) {
-		writerdao.update(connection,t);
-
+		writerdao.updateWriter(connection, t);
 	}
 
-	
 	public void add(IWriter t) {
-		writerdao.addNew(connection,t);
+		try {
+			writerdao.addNewWriter(connection, t);
+		} catch (SQLException e) {
+			log.error(e);
+		}
 
 	}
 
-	
 	public List<IWriter> getAll(String date) {
-		List<IWriter> listwriter=null;
-		if(date!=null){
-			listwriter = writerdao.getReadAllTable(connection,date);
-		}else{
-			listwriter = writerdao.getReadAllTable(connection,null);
+		List<IWriter> listwriter = null;
+		if (date != null) {
+			listwriter = writerdao.getReadAllTable(connection, date);
+		} else {
+			listwriter = writerdao.getReadAllTable(connection, null);
 		}
-		
+
 		return listwriter;
 	}
 
 	public IWriter getWriter(Integer id) {
-		IWriter writer = writerdao.getWriter(connection,id);
-		return writer;
-
+		List<IWriter> listwriter = writerdao.getReadAllTable(connection, null);
+		for (IWriter writer : listwriter) {
+			if (id.equals(writer.getIdWriter())) {
+				return writer;
+			}
+		}
+		return null;
 	}
 }

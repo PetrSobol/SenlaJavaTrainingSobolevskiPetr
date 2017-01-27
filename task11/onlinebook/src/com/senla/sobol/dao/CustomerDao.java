@@ -27,52 +27,22 @@ public class CustomerDao extends ACommonDAO<ICustomer> {
 		super();
 	}
 
-	public ICustomer getCustomer(Connection connection, Integer idcustomer) {
-		List<ICustomer> listcustomer = getReadAllTable(connection,null);
-		for (ICustomer customer : listcustomer) {
-			if (idcustomer.equals(customer.getIdCustomer())) {
-				return customer;
-			}
-		}
-		return null;
-	}
-
-	public void addNew(Connection connection, ICustomer t) {
-		PreparedStatement statement = null;
-
-		try {
-			statement = connection.prepareStatement(
-					INSERT_INTO_MYDB_CUSTOMER_LASTNAME_CUSTOMER_FIRSTNAME_CUSTOMER_PHONE_VALUES);
-			statement.setString(1, t.getFirstname());
-			statement.setString(2, t.getLastname());
-			statement.setInt(3, t.getPhone());
-			statement.executeUpdate();
-
-		} catch (SQLException e) {
-			log.error(e);
-		} finally {
-			try {
-				statement.close();
-
-			} catch (SQLException e) {
-				log.error(e);
-			}
-
-		}
+	public void addNewCustomer(Connection connection, ICustomer t) throws SQLException {
+		addNew(connection, t);
 
 	}
 
 	@Override
-	public List<ICustomer> getReadAllTable(Connection connection,String date) {
+	public List<ICustomer> getReadAllTable(Connection connection, String date) {
 		PreparedStatement statement = null;
 		ResultSet set = null;
 		Customer cust = null;
 		List<ICustomer> listcustomer = new ArrayList<ICustomer>();
 		try {
-			if(date!=null){
+			if (date != null) {
 				statement = connection.prepareStatement(SELECT_FROM_MYDB_CUSTOMER_ORDER_BY);
 				statement.setString(1, date);
-			}else{
+			} else {
 				statement = connection.prepareStatement(SELECT_FROM_MYDB_CUSTOMER);
 			}
 			set = statement.executeQuery();
@@ -99,51 +69,50 @@ public class CustomerDao extends ACommonDAO<ICustomer> {
 		return listcustomer;
 	}
 
-	public void delete(Connection connection, Integer idcustomer) {
-		PreparedStatement statement = null;
+	public void deleteCustomer(Connection connection, Integer idcustomer) {
 
-		try {
-			statement = connection.prepareStatement(DELETE_FROM_MYDB_CUSTOMER_WHERE_ID_CUSTOMER);
-			statement.setInt(1, idcustomer);
+		delete(connection, idcustomer);
+	}
 
-			delete(statement);
+	public void updateCustomer(Connection connection, ICustomer t) {
+		update(connection, t);
+	}
 
-		} catch (SQLException e) {
-			log.error(e);
-		} finally {
-			try {
-				statement.close();
+	@Override
+	public String getInsertSql() {
+		return INSERT_INTO_MYDB_CUSTOMER_LASTNAME_CUSTOMER_FIRSTNAME_CUSTOMER_PHONE_VALUES;
+	}
 
-			} catch (SQLException e) {
-				log.error(e);
-			}
+	@Override
+	public String getUpdateSql() {
+		return UPDATE_MYDB_CUSTOMER_SET_LASTNAME_CUSTOMER_FIRSTNAME_CUSTOMER_PHONE_WHERE_ID_CUSTOMER;
+	}
 
-		}
+	@Override
+	public String getDeletSql() {
+		return DELETE_FROM_MYDB_CUSTOMER_WHERE_ID_CUSTOMER;
+	}
+
+	@Override
+	public void prepareStatemantOnInsert(PreparedStatement prepar, ICustomer t) throws SQLException {
+		prepar.setString(1, t.getFirstname());
+		prepar.setString(2, t.getLastname());
+		prepar.setInt(3, t.getPhone());
 
 	}
 
-	public void update(Connection connection, ICustomer t) {
-		PreparedStatement statement = null;
+	@Override
+	public void prepareStatemantOnDelete(PreparedStatement prepar, Integer t) throws SQLException {
+		prepar.setInt(1, t);
 
-		try {
-			statement = connection.prepareStatement(
-					UPDATE_MYDB_CUSTOMER_SET_LASTNAME_CUSTOMER_FIRSTNAME_CUSTOMER_PHONE_WHERE_ID_CUSTOMER);
-			statement.setString(1, t.getLastname());
-			statement.setString(2, t.getFirstname());
-			statement.setInt(3, t.getPhone());
-			statement.setInt(4, t.getIdCustomer());
-			update(statement);
+	}
 
-		} catch (SQLException e) {
-			log.error(e);
-		} finally {
-			try {
-				statement.close();
+	@Override
+	public void prepareStatemantOnUpdate(PreparedStatement prepar, ICustomer t) throws SQLException {
+		prepar.setString(1, t.getLastname());
+		prepar.setString(2, t.getFirstname());
+		prepar.setInt(3, t.getPhone());
+		prepar.setInt(4, t.getIdCustomer());
 
-			} catch (SQLException e) {
-				log.error(e);
-			}
-
-		}
 	}
 }
