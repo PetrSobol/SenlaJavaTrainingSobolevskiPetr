@@ -55,13 +55,7 @@ public class BookService implements IBookService {
 	}
 
 	public List<IBook> getAll(String date) {
-		List<IBook> listbook = null;
-		if (date != null) {
-			listbook = bookdao.getReadAllTable(connection, date);
-		} else {
-			listbook = bookdao.getReadAllTable(connection, null);
-		}
-
+		List<IBook> listbook = bookdao.getReadAllTable(connection, date);
 		return listbook;
 	}
 
