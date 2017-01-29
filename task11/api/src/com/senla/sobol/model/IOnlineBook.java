@@ -3,6 +3,7 @@ package com.senla.sobol.model;
 import java.util.List;
 
 public interface IOnlineBook {
+
 	public List<IBook> getListBook();
 
 	public List<IOrder> getListOrder();
@@ -39,7 +40,7 @@ public interface IOnlineBook {
 
 	public List<IWriter> getSortWriterName();
 
-	public void deleteOrder(Integer idCustomer, Integer idBook, String date);
+	public void deleteOrder(Integer id);
 
 	public void deleteWriter(Integer idWriter);
 

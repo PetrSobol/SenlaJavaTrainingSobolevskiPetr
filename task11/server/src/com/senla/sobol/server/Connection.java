@@ -55,6 +55,7 @@ public class Connection extends Thread {
 			while (true) {
 				EssenceCommon essence = (EssenceCommon) objectinput.readObject();
 				if (!essence.getNameMetod().equals("EXIT")) {
+					onlineBook.closeDBConnector();
 					EssenceCommon essenseserver = function.getEssenceDate(onlineBook, essence);
 					objectoutput.writeObject(essenseserver);
 					objectoutput.flush();

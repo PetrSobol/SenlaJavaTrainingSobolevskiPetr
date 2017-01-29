@@ -12,10 +12,12 @@ import org.apache.log4j.Logger;
 import com.senla.sobol.interfaces.ACommonDAO;
 import com.senla.sobol.model.Book;
 import com.senla.sobol.model.IBook;
+import com.senla.sobol.model.IWriter;
 import com.senla.sobol.model.Writer;
 
 public class BookDao extends ACommonDAO<IBook> {
-	private static final String SELECT_FROM_MYDB_BOOK_JOIN_MYDB_WRITER_ON_MYDB_BOOK_ID_WRITER_MYDB_WRITER_ID_WRITER_ORDER_BY = "select * from mydb.book  join mydb.writer   on mydb.book.idWriter=mydb.writer.idWriter order by ?";
+	private static final String GET_ID_BOOK = "where mydb.book.idBook=?";
+	private static final String SELECT_GET_ORDER_SORT = " order by ";
 	private static final String PRICE = "price";
 	private static final String QUANTITY_BOOK = "quantityBook";
 	private static final String NAME_BOOK = "nameBook";
@@ -25,10 +27,10 @@ public class BookDao extends ACommonDAO<IBook> {
 	private static final String LASTNAME_WRITER = "lastnameWriter";
 	private static final String ID_WRITER = "idWriter";
 	private static final String ID_BOOK = "idBook";
-	private static final String UPDATE_MYDB_BOOK_SET_ID_WRITER_NAME_BOOK_QUANTITY_BOOK_PRICE_WHERE_ID_BOOK = "UPDATE `mydb`.`book` SET `idWriter`=?, `nameBook`=?, `quantityBook`=?, `price`=? WHERE `idBook`=?";
-	private static final String DELETE_FROM_MYDB_BOOK_WHERE_ID_BOOK = "DELETE FROM `mydb`.`book` WHERE `idBook`=?";
-	private static final String SELECT_FROM_MYDB_BOOK_JOIN_MYDB_WRITER_ON_MYDB_BOOK_ID_WRITER_MYDB_WRITER_ID_WRITER = "select * from mydb.book  join mydb.writer   on mydb.book.idWriter=mydb.writer.idWriter  ";
-	private static final String INSERT_INTO_MYDB_BOOK_ID_WRITER_NAME_BOOK_QUANTITY_BOOK_PRICE_VALUES = "INSERT INTO `mydb`.`book` (`idWriter`, `nameBook`, `quantityBook`, `price`) VALUES (?, ?, ?, ?)";
+	private static final String UPDATE = "UPDATE `mydb`.`book` SET `idWriter`=?, `nameBook`=?, `quantityBook`=?, `price`=? WHERE `idBook`=?";
+	private static final String DELETE = "DELETE FROM `mydb`.`book` WHERE `idBook`=?";
+	private static final String SELECT_GET_ORDER = "select * from mydb.book  join mydb.writer   on mydb.book.idWriter=mydb.writer.idWriter  ";
+	private static final String INSERT = "INSERT INTO `mydb`.`book` (`idWriter`, `nameBook`, `quantityBook`, `price`) VALUES (?, ?, ?, ?)";
 	private static Logger log = Logger.getLogger(BookDao.class.getName());
 	private SimpleDateFormat simpledate = new SimpleDateFormat("dd.MM.yyyy");
 
@@ -44,36 +46,19 @@ public class BookDao extends ACommonDAO<IBook> {
 	public List<IBook> getReadAllTable(Connection connection, String date) {
 		PreparedStatement statement = null;
 		ResultSet set = null;
-		Book book = null;
-		Writer writer = null;
 		List<IBook> listbook = new ArrayList<IBook>();
 		try {
 			if (date != null) {
-				statement = connection.prepareStatement(
-						SELECT_FROM_MYDB_BOOK_JOIN_MYDB_WRITER_ON_MYDB_BOOK_ID_WRITER_MYDB_WRITER_ID_WRITER_ORDER_BY);
-				statement.setString(1, date);
+				statement = connection.prepareStatement(SELECT_GET_ORDER + SELECT_GET_ORDER_SORT + date);
 			} else {
-				statement = connection.prepareStatement(
-						SELECT_FROM_MYDB_BOOK_JOIN_MYDB_WRITER_ON_MYDB_BOOK_ID_WRITER_MYDB_WRITER_ID_WRITER);
+				statement = connection.prepareStatement(SELECT_GET_ORDER);
 			}
 
 			set = statement.executeQuery();
 			while (set.next()) {
-				book = new Book();
-				writer = new Writer();
-				book.setIdBook(set.getInt(ID_BOOK));
-				writer.setIdWriter(set.getInt(ID_WRITER));
-				writer.setLastname(set.getString(LASTNAME_WRITER));
-				writer.setFirstname(set.getString(FIRSTNAME_WRITER));
-				writer.setStartYear(simpledate.parse(set.getString(YEAR_OF_BIRTHDAY)));
-				writer.setDiedYear(simpledate.parse(set.getString(DIED_YEAR)));
-				book.setWriter(writer);
-				book.setNameBook(set.getString(NAME_BOOK));
-				book.setQuantityPages(set.getInt(QUANTITY_BOOK));
-				book.setPrice(set.getInt(PRICE));
-				listbook.add(book);
+				listbook.add(getResultSetId(set));
 			}
-		} catch (SQLException | ParseException e) {
+		} catch (SQLException e) {
 			log.error(e);
 		} finally {
 			try {
@@ -93,19 +78,25 @@ public class BookDao extends ACommonDAO<IBook> {
 		update(connection, t);
 	}
 
+	public IBook getIdBook(Connection connection,Integer id){
+		IBook book=getID(connection, id);
+		return book;
+	}
+	
+	
 	@Override
 	public String getInsertSql() {
-		return INSERT_INTO_MYDB_BOOK_ID_WRITER_NAME_BOOK_QUANTITY_BOOK_PRICE_VALUES;
+		return INSERT;
 	}
 
 	@Override
 	public String getUpdateSql() {
-		return UPDATE_MYDB_BOOK_SET_ID_WRITER_NAME_BOOK_QUANTITY_BOOK_PRICE_WHERE_ID_BOOK;
+		return UPDATE;
 	}
 
 	@Override
 	public String getDeletSql() {
-		return DELETE_FROM_MYDB_BOOK_WHERE_ID_BOOK;
+		return DELETE;
 	}
 
 	@Override
@@ -130,8 +121,41 @@ public class BookDao extends ACommonDAO<IBook> {
 		prepar.setString(2, t.getNameBook());
 		prepar.setInt(3, t.getQuantityPages());
 		prepar.setInt(4, t.getPrice());
-		
 
+	}
+
+	@Override
+	public String getId() {
+		return SELECT_GET_ORDER + GET_ID_BOOK;
+	}
+
+	@Override
+	public IBook getResultSetId(ResultSet result) throws SQLException {
+		IBook book = new Book();
+		IWriter writer = new Writer();
+		book.setIdBook(result.getInt(ID_BOOK));
+		writer.setIdWriter(result.getInt(ID_WRITER));
+		writer.setLastname(result.getString(LASTNAME_WRITER));
+		writer.setFirstname(result.getString(FIRSTNAME_WRITER));
+		try {
+			writer.setStartYear(simpledate.parse(result.getString(YEAR_OF_BIRTHDAY)));
+			String numersdied = result.getString(DIED_YEAR);
+			writer.setStartYear(simpledate.parse(result.getString(YEAR_OF_BIRTHDAY)));
+			if (numersdied != null) {
+				writer.setDiedYear(simpledate.parse(numersdied));
+			} else {
+				writer.setDiedYear(null);
+			}
+			book.setWriter(writer);
+			book.setNameBook(result.getString(NAME_BOOK));
+			book.setQuantityPages(result.getInt(QUANTITY_BOOK));
+			book.setPrice(result.getInt(PRICE));
+			return book;
+		} catch (ParseException e) {
+			log.error(e);
+		}
+
+		return null;
 	}
 
 }

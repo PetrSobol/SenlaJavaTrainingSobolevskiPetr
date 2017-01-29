@@ -12,15 +12,16 @@ import com.senla.sobol.model.Customer;
 import com.senla.sobol.model.ICustomer;
 
 public class CustomerDao extends ACommonDAO<ICustomer> {
+	private static final String GET_ID_CUSTOMER = "where  mydb.customer.idCustomer=?";
 	private static final String PHONE = "phone";
 	private static final String FIRSTNAME_CUSTOMER = "firstnameCustomer";
 	private static final String LASTNAME_CUSTOMER = "lastnameCustomer";
 	private static final String ID_CUSTOMER = "idCustomer";
-	private static final String SELECT_FROM_MYDB_CUSTOMER_ORDER_BY = "SELECT * from mydb.customer  order by ? ";
-	private static final String UPDATE_MYDB_CUSTOMER_SET_LASTNAME_CUSTOMER_FIRSTNAME_CUSTOMER_PHONE_WHERE_ID_CUSTOMER = "UPDATE `mydb`.`customer` SET `lastnameCustomer`=?, `firstnameCustomer`=?, `phone`=? WHERE `idCustomer`=?";
-	private static final String DELETE_FROM_MYDB_CUSTOMER_WHERE_ID_CUSTOMER = "DELETE FROM `mydb`.`customer` WHERE `idCustomer`=?";
+	private static final String SELECT_ORDER_BY = " order by  ";
+	private static final String UPDATE = "UPDATE `mydb`.`customer` SET `lastnameCustomer`=?, `firstnameCustomer`=?, `phone`=? WHERE `idCustomer`=?";
+	private static final String DELETE = "DELETE FROM `mydb`.`customer` WHERE `idCustomer`=?";
 	private static final String SELECT_FROM_MYDB_CUSTOMER = "SELECT * from mydb.customer ";
-	private static final String INSERT_INTO_MYDB_CUSTOMER_LASTNAME_CUSTOMER_FIRSTNAME_CUSTOMER_PHONE_VALUES = "INSERT INTO `mydb`.`customer` (`lastnameCustomer`, `firstnameCustomer`, `phone`) VALUES (?, ?, ?)";
+	private static final String INSERT = "INSERT INTO `mydb`.`customer` (`lastnameCustomer`, `firstnameCustomer`, `phone`) VALUES (?, ?, ?)";
 	private static Logger log = Logger.getLogger(CustomerDao.class.getName());
 
 	public CustomerDao() {
@@ -36,23 +37,16 @@ public class CustomerDao extends ACommonDAO<ICustomer> {
 	public List<ICustomer> getReadAllTable(Connection connection, String date) {
 		PreparedStatement statement = null;
 		ResultSet set = null;
-		Customer cust = null;
 		List<ICustomer> listcustomer = new ArrayList<ICustomer>();
 		try {
 			if (date != null) {
-				statement = connection.prepareStatement(SELECT_FROM_MYDB_CUSTOMER_ORDER_BY);
-				statement.setString(1, date);
+				statement = connection.prepareStatement(SELECT_FROM_MYDB_CUSTOMER + SELECT_ORDER_BY + date);
 			} else {
 				statement = connection.prepareStatement(SELECT_FROM_MYDB_CUSTOMER);
 			}
 			set = statement.executeQuery();
 			while (set.next()) {
-				cust = new Customer();
-				cust.setIdCustomer(set.getInt(ID_CUSTOMER));
-				cust.setFirstname(set.getString(LASTNAME_CUSTOMER));
-				cust.setLastname(set.getString(FIRSTNAME_CUSTOMER));
-				cust.setPhone(set.getInt(PHONE));
-				listcustomer.add(cust);
+				listcustomer.add(getResultSetId(set));
 			}
 
 		} catch (SQLException e) {
@@ -78,19 +72,24 @@ public class CustomerDao extends ACommonDAO<ICustomer> {
 		update(connection, t);
 	}
 
+	public ICustomer getIDCustomer(Connection connection, Integer id) {
+		ICustomer customer = getID(connection, id);
+		return customer;
+	}
+
 	@Override
 	public String getInsertSql() {
-		return INSERT_INTO_MYDB_CUSTOMER_LASTNAME_CUSTOMER_FIRSTNAME_CUSTOMER_PHONE_VALUES;
+		return INSERT;
 	}
 
 	@Override
 	public String getUpdateSql() {
-		return UPDATE_MYDB_CUSTOMER_SET_LASTNAME_CUSTOMER_FIRSTNAME_CUSTOMER_PHONE_WHERE_ID_CUSTOMER;
+		return UPDATE;
 	}
 
 	@Override
 	public String getDeletSql() {
-		return DELETE_FROM_MYDB_CUSTOMER_WHERE_ID_CUSTOMER;
+		return DELETE;
 	}
 
 	@Override
@@ -114,5 +113,20 @@ public class CustomerDao extends ACommonDAO<ICustomer> {
 		prepar.setInt(3, t.getPhone());
 		prepar.setInt(4, t.getIdCustomer());
 
+	}
+
+	@Override
+	public String getId() {
+		return SELECT_FROM_MYDB_CUSTOMER + GET_ID_CUSTOMER;
+	}
+
+	@Override
+	public ICustomer getResultSetId(ResultSet result) throws SQLException {
+		ICustomer cust = new Customer();
+		cust.setIdCustomer(result.getInt(ID_CUSTOMER));
+		cust.setFirstname(result.getString(LASTNAME_CUSTOMER));
+		cust.setLastname(result.getString(FIRSTNAME_CUSTOMER));
+		cust.setPhone(result.getInt(PHONE));
+		return cust;
 	}
 }

@@ -18,6 +18,13 @@ public class Writer implements IWriter,Serializable {
 		super();
 	}
 
+	public Writer(String lastname, String firstname, Date startYear) {
+		super();
+		this.lastname = lastname;
+		this.firstname = firstname;
+		this.startYear = startYear;
+	}
+
 	public Writer(String lastname, String firstname, Date startYear, Date diedYear) {
 		super();
 		this.lastname = lastname;

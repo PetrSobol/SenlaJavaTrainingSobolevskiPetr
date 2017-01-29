@@ -14,4 +14,8 @@ public interface IOrder {
 	public Date getDateOrder();
 
 	public void setDateOrder(Date dateOrder);
+
+	public void setIdOrder(Integer idOrder);
+
+	public Integer getIdOrder();
 }

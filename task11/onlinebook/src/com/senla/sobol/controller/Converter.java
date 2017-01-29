@@ -6,7 +6,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
 import com.senla.sobol.model.Book;
 import com.senla.sobol.model.Customer;
 import com.senla.sobol.model.IBook;
@@ -14,9 +13,6 @@ import com.senla.sobol.model.ICustomer;
 import com.senla.sobol.model.IOrder;
 import com.senla.sobol.model.IWriter;
 import com.senla.sobol.model.Writer;
-
-
-
 
 public class Converter {
 	private SimpleDateFormat simpledate = new SimpleDateFormat("dd.MM.yyyy");

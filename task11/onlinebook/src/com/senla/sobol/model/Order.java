@@ -10,8 +10,9 @@ import com.sobol.senla.anotation.PrintableObject;
 
 @PrintableObject(name = "Order")
 public class Order implements Serializable, IOrder {
-    private IBook book;
-    private ICustomer customer;
+	private Integer idOrder;
+	private IBook book;
+	private ICustomer customer;
 	private Date dateOrder;
 
 	public Order() {
@@ -25,31 +26,29 @@ public class Order implements Serializable, IOrder {
 		this.dateOrder = dateOrder;
 	}
 
+	public Integer getIdOrder() {
+		return idOrder;
+	}
 
+	public void setIdOrder(Integer idOrder) {
+		this.idOrder = idOrder;
+	}
 
 	public IBook getBook() {
 		return book;
 	}
 
-
-
 	public void setBook(IBook book) {
 		this.book = book;
 	}
-
-
 
 	public ICustomer getCustomer() {
 		return customer;
 	}
 
-
-
 	public void setCustomer(ICustomer customer) {
 		this.customer = customer;
 	}
-
-
 
 	public Date getDateOrder() {
 		return dateOrder;

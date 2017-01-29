@@ -46,22 +46,14 @@ public class CustomerService implements ICustomerService {
 	}
 
 	public List<ICustomer> getAll(String date) {
-		List<ICustomer> listcustomer = null;
-		if (date != null) {
-			listcustomer = customerdao.getReadAllTable(connection, date);
-		} else {
-			listcustomer = customerdao.getReadAllTable(connection, null);
-		}
+
+		List<ICustomer> listcustomer = customerdao.getReadAllTable(connection, date);
+
 		return listcustomer;
 	}
 
 	public ICustomer getCustomer(Integer idcustomer) {
-		List<ICustomer> listcustomer = customerdao.getReadAllTable(connection, null);
-		for (ICustomer customer : listcustomer) {
-			if (idcustomer.equals(customer.getIdCustomer())) {
-				return customer;
-			}
-		}
-		return null;
+		ICustomer customer = customerdao.getIDCustomer(connection, idcustomer);
+		return customer;
 	}
 }

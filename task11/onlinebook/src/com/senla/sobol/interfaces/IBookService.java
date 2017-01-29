@@ -5,11 +5,7 @@ import java.util.List;
 import com.senla.sobol.model.IBook;
 
 public interface IBookService {
-	public IBook findbook(IBook bookfind);
-
-	public IBook getBook(Integer idBook);
-
-	public Boolean searchIdWriter(Integer idWriter);
+	public IBook getBookId(Integer idBook);
 
 	public void delete(Integer idbook);
 
