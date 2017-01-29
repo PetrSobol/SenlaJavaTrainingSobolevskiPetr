@@ -2,6 +2,7 @@ package com.senla.sobol.interfaces;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -16,13 +17,42 @@ public abstract class ACommonDAO<T> {
 
 	public abstract String getDeletSql();
 
+	public abstract String getId();
+
 	public abstract void prepareStatemantOnInsert(PreparedStatement prepar, T t) throws SQLException;
 
 	public abstract void prepareStatemantOnDelete(PreparedStatement prepar, Integer t) throws SQLException;
 
 	public abstract void prepareStatemantOnUpdate(PreparedStatement prepar, T t) throws SQLException;
 
+	public abstract T getResultSetId(ResultSet result) throws SQLException;
+
 	public abstract List<T> getReadAllTable(Connection conection, String date);
+
+	public T getID(Connection connection, Integer id) {
+		PreparedStatement prepar = null;
+		ResultSet result = null;
+		T t = null;
+		try {
+			prepar = connection.prepareStatement(getId());
+			prepareStatemantOnDelete(prepar, id);
+			result = prepar.executeQuery();
+			while (result.next()) {
+				t = getResultSetId(result);
+				return t;
+			}
+
+		} catch (SQLException e) {
+			log.error(e);
+		} finally {
+			try {
+				prepar.close();
+			} catch (SQLException e) {
+				log.error(e);
+			}
+		}
+		return null;
+	}
 
 	public void addNew(Connection connection, T t) throws SQLException {
 		PreparedStatement prepar = null;
@@ -30,7 +60,7 @@ public abstract class ACommonDAO<T> {
 			prepar = connection.prepareStatement(getInsertSql());
 			prepareStatemantOnInsert(prepar, t);
 			prepar.executeUpdate();
-			}  finally {
+		} finally {
 			try {
 				prepar.close();
 			} catch (SQLException e) {

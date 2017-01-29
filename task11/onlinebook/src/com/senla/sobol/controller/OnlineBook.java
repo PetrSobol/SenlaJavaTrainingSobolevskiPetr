@@ -134,7 +134,7 @@ public class OnlineBook implements IOnlineBook {
 
 	public void addNewOrder(Integer idCustomer, Integer idBook) {
 		ICustomer customer = custonerservice.getCustomer(idCustomer);
-		IBook book = bookservice.getBook(idBook);
+		IBook book = bookservice.getBookId(idBook);
 		if (customer != null && book != null) {
 			Integer quantitybook = book.getQuantityPages();
 			if (quantitybook != 0) {
@@ -158,7 +158,13 @@ public class OnlineBook implements IOnlineBook {
 	public void addNewWriter(String lastname, String firstname, String dateStart, String Dieddate) {
 		SimpleDateFormat simpledate = new SimpleDateFormat(DD_MM_YYYY);
 		try {
-			writerservice.add(new Writer(lastname, firstname, simpledate.parse(dateStart), simpledate.parse(Dieddate)));
+			if (Dieddate != null) {
+				writerservice
+						.add(new Writer(lastname, firstname, simpledate.parse(dateStart), simpledate.parse(Dieddate)));
+			} else {
+				writerservice.add(new Writer(lastname, firstname, simpledate.parse(dateStart)));
+			}
+
 		} catch (ParseException e) {
 			log.error(e);
 		}
@@ -198,27 +204,19 @@ public class OnlineBook implements IOnlineBook {
 		return listwriter;
 	}
 
-	public void deleteOrder(Integer idCustomer, Integer idBook, String date) {
-		SimpleDateFormat simpledate = new SimpleDateFormat(DD_MM_YYYY);
-		try {
-			IOrder order = orderservice.getOrder(idCustomer, idBook, simpledate.parse(date));
-			if (order != null) {
-				IBook book = order.getBook();
-				Integer quantity = book.getQuantityPages();
-				book.setQuantityPages(++quantity);
-				orderservice.delete(order);
-			}
-		} catch (ParseException e) {
-			log.error(e);
+	public void deleteOrder(Integer id) {
+		IOrder order = orderservice.getOrderId(id);
+		if (order != null) {
+			IBook book = order.getBook();
+			Integer quantity = book.getQuantityPages();
+			book.setQuantityPages(++quantity);
+			orderservice.delete(order);
 		}
 
 	}
 
 	public void deleteWriter(Integer idWriter) {
-		if (!bookservice.searchIdWriter(idWriter)) {
-			writerservice.delete(idWriter);
-		}
-
+		writerservice.delete(idWriter);
 	}
 
 	public void deleteCustomer(Integer idCustomer) {
@@ -229,10 +227,7 @@ public class OnlineBook implements IOnlineBook {
 	}
 
 	public void deleteBook(Integer idBook) {
-		IBook book = bookservice.getBook(idBook);
-		if (book != null && !orderservice.searchIdBook(idBook)) {
-			bookservice.delete(idBook);
-		}
+		bookservice.delete(idBook);
 	}
 
 	public void closeDBConnector() {

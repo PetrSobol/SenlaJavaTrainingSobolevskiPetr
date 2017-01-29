@@ -3,7 +3,6 @@ package com.senla.sobol.service;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Savepoint;
-import java.util.Date;
 import java.util.List;
 import org.apache.log4j.Logger;
 import com.senla.sobol.controller.DBConnector;
@@ -30,22 +29,12 @@ public class OrderService implements IOrderService {
 		}
 	}
 
-	public Boolean searchIdBook(Integer idbook) {
-		List<IOrder> listorder = getAll(null);
-		for (IOrder order : listorder) {
-			if (order.getBook().getIdBook().equals(idbook)) {
-				return true;
-			}
-		}
-		return false;
-	}
-
 	public void delete(IOrder t) {
 		Savepoint savepoint = null;
 		try {
 			connection.setAutoCommit(false);
 			savepoint = connection.setSavepoint();
-			orderdao.deleteOrder(connection, t);
+			orderdao.deleteOrder(connection, t.getIdOrder());
 			bookdao.updateBook(connection, t.getBook());
 			connection.commit();
 			connection.setAutoCommit(true);
@@ -85,25 +74,13 @@ public class OrderService implements IOrderService {
 
 	}
 
-	public IOrder getOrder(Integer idcustomer, Integer idbook, Date date) {
-		List<IOrder> listorder = orderdao.getReadAllTable(connection,null);
-		for (IOrder order : listorder) {
-			if (idcustomer.equals(order.getCustomer().getIdCustomer()) && idbook.equals(order.getBook().getIdBook())
-					&& date.equals(order.getDateOrder())) {
-				return order;
-			}
-		}
-		return null;
+	public IOrder getOrderId(Integer id) {
+		IOrder order=orderdao.getOrderById(connection, id);
+		return order;
 	}
 
 	public List<IOrder> getAll(String date) {
-		List<IOrder> listorder=null;
-		if(date!=null){
-			listorder = orderdao.getReadAllTable(connection,date);
-		}else{
-			listorder = orderdao.getReadAllTable(connection,null);
-		}
-		 
+		List<IOrder> listorder = orderdao.getReadAllTable(connection, date);
 		return listorder;
 	}
 

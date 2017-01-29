@@ -44,23 +44,12 @@ public class WriterService implements IWriterService {
 	}
 
 	public List<IWriter> getAll(String date) {
-		List<IWriter> listwriter = null;
-		if (date != null) {
-			listwriter = writerdao.getReadAllTable(connection, date);
-		} else {
-			listwriter = writerdao.getReadAllTable(connection, null);
-		}
-
+		List<IWriter> listwriter = writerdao.getReadAllTable(connection, date);
 		return listwriter;
 	}
 
 	public IWriter getWriter(Integer id) {
-		List<IWriter> listwriter = writerdao.getReadAllTable(connection, null);
-		for (IWriter writer : listwriter) {
-			if (id.equals(writer.getIdWriter())) {
-				return writer;
-			}
-		}
-		return null;
+		IWriter writer=writerdao.getIdWriter(connection, id);
+		return writer;
 	}
 }

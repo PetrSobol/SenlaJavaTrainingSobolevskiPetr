@@ -26,36 +26,9 @@ public class BookService implements IBookService {
 		}
 	}
 
-	public Boolean searchIdWriter(Integer idWriter) {
-		List<IBook> listbook = getAll(null);
-		for (IBook book : listbook) {
-			if (book.getWriter().getIdWriter().equals(idWriter)) {
-				return true;
-			}
-		}
-		return false;
-
-	}
-
-	public IBook findbook(IBook bookfind) {
-		List<IBook> listbook = bookdao.getReadAllTable(connection, null);
-		for (IBook book : listbook) {
-			if (!bookfind.getNameBook().equals(book.getNameBook())
-					|| bookfind.getWriter().getIdWriter().equals(book.getWriter().getIdWriter())) {
-				return book;
-			}
-		}
-		return null;
-	}
-
-	public IBook getBook(Integer idBook) {
-		List<IBook> listbook = bookdao.getReadAllTable(connection, null);
-		for (IBook book : listbook) {
-			if (idBook.equals(book.getIdBook())) {
-				return book;
-			}
-		}
-		return null;
+	public IBook getBookId(Integer idBook) {
+		IBook book = bookdao.getIdBook(connection, idBook);
+		return book;
 	}
 
 	public void delete(Integer idbook) {
@@ -76,7 +49,7 @@ public class BookService implements IBookService {
 		try {
 			bookdao.addNewBook(connection, t);
 		} catch (SQLException e) {
-		log.error(e);
+			log.error(e);
 		}
 
 	}
