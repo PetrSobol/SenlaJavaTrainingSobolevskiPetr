@@ -4,7 +4,7 @@ bin/
 lib/
 tmp/
 target/
-.settings/
+/.settings/*
 *.tmp
 *.bak
 *.swp
