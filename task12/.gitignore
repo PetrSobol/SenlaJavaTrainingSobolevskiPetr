@@ -8,7 +8,8 @@ target/*
 *.bak
 *.swp
 *.class
-
+*.log
+*.properties
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
