@@ -1,0 +1,490 @@
+2016-10-29 16:54:16 INFO  Runner:64 - dsfgsfdlgmf;ldksgk;lsfdk
+2016-10-29 16:54:34 INFO  Runner:64 - java.text.ParseException
+2016-10-29 16:57:38 ERROR Runner:63 - java.text.ParseException
+2016-10-29 17:03:03 INFO  WriteLoger:63 - java.text.ParseException
+2016-10-29 17:16:52 INFO  Runner:63 - java.text.ParseException
+2016-10-29 17:17:54 INFO  Runner:60 - java.text.ParseException
+2016-10-29 18:05:32 INFO  Runner:63 - java.text.ParseException
+2016-10-29 18:18:26 INFO  Runner:63 - java.text.ParseException
+2016-11-01 09:04:41 INFO  Runner:62 - java.text.ParseException
+2016-11-01 09:33:55 INFO  Runner:62 - java.text.ParseException
+2016-11-01 09:48:43 INFO  Runner:64 - java.text.ParseException
+2016-11-01 09:49:14 INFO  Runner:64 - java.text.ParseException
+2016-11-01 09:49:42 ERROR Runner:64 - java.text.ParseException
+2016-11-01 09:50:06 ERROR Runner:64 - java.text.ParseException
+2016-11-02 10:33:10 ERROR Runner:16 - java.text.ParseException
+2016-11-02 11:00:30 INFO  OnlineBook:50 - success
+2016-11-02 11:01:06 INFO  OnlineBook:50 - success
+2016-11-02 11:01:14 INFO  OnlineBook:50 - success
+2016-11-09 12:54:40 ERROR PropertiesOnlineBook:23 - java.io.FileNotFoundException: resources\roat.properties (Не удается найти указанный файл)
+2016-11-09 12:54:40 ERROR OnlineBook:70 - java.lang.NullPointerException
+2016-11-09 12:54:40 ERROR OnlineBook:82 - java.lang.NullPointerException
+2016-11-09 12:56:06 ERROR PropertiesOnlineBook:23 - java.io.FileNotFoundException: resources\roat.properties (Не удается найти указанный файл)
+2016-11-09 16:37:25 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:39:58 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:40:18 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:42:47 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:45:31 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -1998355820590834409
+2016-11-09 16:46:02 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:46:32 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:46:32 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:47:04 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:47:04 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:47:17 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:47:17 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:47:35 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:47:35 ERROR Seriazeble:28 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:54:20 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-09 16:55:47 ERROR Seriazeble:27 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-11 09:29:24 ERROR Seriazeble:30 - java.lang.NumberFormatException: null
+2016-11-11 09:32:30 ERROR Seriazeble:30 - java.lang.NumberFormatException: null
+2016-11-11 09:35:40 ERROR Seriazeble:31 - java.lang.NumberFormatException: null
+2016-11-11 09:37:10 ERROR Seriazeble:30 - java.io.InvalidClassException: model.Order; local class incompatible: stream classdesc serialVersionUID = -2163731575786390735, local class serialVersionUID = -6486483913387594762
+2016-11-13 15:51:06 ERROR Seriazeble:30 - java.io.InvalidClassException: model.Book; local class incompatible: stream classdesc serialVersionUID = 7035448861061198656, local class serialVersionUID = 7023638879688777786
+2016-11-23 16:22:39 ERROR Seriazeble:31 - java.io.InvalidClassException: model.Book; local class incompatible: stream classdesc serialVersionUID = 7035448861061198656, local class serialVersionUID = -7602109397831358528
+2016-11-23 16:24:51 ERROR Seriazeble:31 - java.io.InvalidClassException: model.Book; local class incompatible: stream classdesc serialVersionUID = 7035448861061198656, local class serialVersionUID = -7602109397831358528
+2016-11-23 21:12:20 ERROR Connection:62 - java.net.SocketException: Connection reset
+2016-11-23 21:13:35 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-23 21:13:40 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-23 21:14:25 ERROR Connection:62 - java.net.SocketException: Connection reset
+2016-11-23 21:40:47 ERROR Connection:62 - java.net.SocketException: Connection reset
+2016-11-23 21:41:36 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-23 21:43:42 ERROR Connection:62 - java.net.SocketException: Connection reset
+2016-11-23 21:43:50 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-23 21:45:15 ERROR Connection:62 - java.net.SocketException: Connection reset
+2016-11-23 21:45:21 ERROR Connection:62 - java.net.SocketException: Connection reset
+2016-11-23 21:47:37 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-24 09:06:07 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-24 09:23:21 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-24 09:56:28 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-24 09:58:46 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-24 10:23:39 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-24 10:23:54 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-24 10:24:37 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-24 10:28:16 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-24 10:35:21 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-24 11:06:35 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-24 11:10:11 ERROR Connection:74 - java.net.SocketException: Connection reset
+2016-11-24 11:16:55 ERROR Connection:74 - java.io.EOFException
+2016-11-24 11:23:29 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-24 11:26:13 ERROR Server:28 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-25 10:40:49 ERROR Connection:101 - java.net.SocketException: Connection reset
+2016-11-25 10:43:41 ERROR Connection:101 - java.net.SocketException: Connection reset
+2016-11-25 11:02:29 ERROR Server:37 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-25 11:03:09 ERROR Connection:116 - java.net.SocketException: Connection reset
+2016-11-25 12:28:41 ERROR Connection:143 - java.net.SocketException: Connection reset
+2016-11-25 12:30:20 ERROR Connection:143 - java.net.SocketException: Connection reset
+2016-11-25 12:30:39 ERROR Connection:143 - java.net.SocketException: Connection reset
+2016-11-25 13:59:57 ERROR Connection:143 - java.net.SocketException: Connection reset
+2016-11-25 14:06:05 ERROR Connection:143 - java.net.SocketException: Connection reset
+2016-11-25 14:09:46 ERROR Server:37 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-25 14:10:20 ERROR Connection:143 - java.net.SocketException: Connection reset
+2016-11-26 11:25:23 ERROR Connection:149 - java.net.SocketException: Connection reset
+2016-11-26 11:42:03 ERROR Connection:153 - java.net.SocketException: Connection reset
+2016-11-26 15:43:52 ERROR Server:37 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-26 15:44:18 ERROR Connection:183 - java.net.SocketException: Connection reset
+2016-11-26 15:44:41 ERROR Connection:183 - java.net.SocketException: Connection reset
+2016-11-26 15:48:56 ERROR Connection:183 - java.net.SocketException: Connection reset
+2016-11-26 15:52:59 ERROR Connection:183 - java.net.SocketException: Connection reset
+2016-11-26 15:53:13 ERROR Connection:183 - java.net.SocketException: Connection reset
+2016-11-26 15:58:09 ERROR Connection:183 - java.net.SocketException: Connection reset
+2016-11-26 15:58:09 ERROR Connection:183 - java.net.SocketException: Connection reset
+2016-11-26 15:58:09 ERROR Connection:183 - java.net.SocketException: Connection reset
+2016-11-26 16:02:27 ERROR Connection:183 - java.net.SocketException: Connection reset
+2016-11-26 16:02:27 ERROR Connection:183 - java.net.SocketException: Connection reset
+2016-11-26 16:02:27 ERROR Connection:183 - java.net.SocketException: Connection reset
+2016-11-26 16:02:27 ERROR Connection:183 - java.net.SocketException: Connection reset
+2016-11-26 16:02:27 ERROR Connection:183 - java.net.SocketException: Connection reset
+2016-11-26 16:04:05 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:08 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:20 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:25 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:26 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:27 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:39 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:40 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:42 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:54 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:55 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:56 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:56 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:57 ERROR Connection:183 - java.io.EOFException
+2016-11-26 16:04:58 ERROR Connection:183 - java.io.EOFException
+2016-11-26 17:00:07 ERROR Server:41 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-26 17:00:29 ERROR Connection:183 - java.io.EOFException
+2016-11-26 17:00:30 ERROR Connection:183 - java.io.EOFException
+2016-11-26 17:00:32 ERROR Connection:183 - java.io.EOFException
+2016-11-26 17:00:32 ERROR Connection:183 - java.io.EOFException
+2016-11-26 17:00:33 ERROR Connection:183 - java.io.EOFException
+2016-11-26 17:00:34 ERROR Connection:183 - java.io.EOFException
+2016-11-26 17:00:35 ERROR Connection:183 - java.io.EOFException
+2016-11-26 17:00:36 ERROR Connection:183 - java.io.EOFException
+2016-11-26 17:00:39 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:09:15 ERROR Server:38 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-26 22:11:40 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:11:43 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:11:45 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:11:47 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:11:48 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:12:20 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:12:26 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:12:38 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:13:24 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:13:25 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:14:09 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:14:14 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:14:34 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:16:29 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:16:33 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:16:35 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:16:36 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:16:36 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:16:51 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:16:55 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:24:53 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:24:54 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:24:55 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:24:56 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:24:57 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:24:59 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:08 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:08 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:09 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:09 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:10 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:19 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:20 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:21 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:22 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:24 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:25 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:26 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:26 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:27 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:28 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:29 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:37 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:37 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:38 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:38 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:39 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:39 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:39 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:39 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:40 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:40 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:41 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:41 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:42 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:43 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:43 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:43 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:44 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:44 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:46 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:25:46 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:27:49 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:29:02 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:02 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:08 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:08 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:09 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:09 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:10 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:10 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:12 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:12 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:14 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:14 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:15 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:15 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:29 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:29 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:30 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:30 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:31 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:31 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:33 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:29:33 ERROR Connection:184 - java.io.EOFException
+2016-11-26 22:34:27 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:34:30 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:39:42 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:53:11 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:53:13 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:53:23 ERROR Connection:183 - java.io.EOFException
+2016-11-26 22:53:26 ERROR Connection:183 - java.io.EOFException
+2016-11-27 21:40:05 ERROR Server:37 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-27 21:45:14 ERROR Server:37 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-27 21:45:37 ERROR Connection:180 - java.net.SocketException: Connection reset
+2016-11-27 21:48:54 ERROR Connection:180 - java.net.SocketException: Connection reset
+2016-11-27 21:56:21 ERROR Connection:180 - java.net.SocketException: Connection reset
+2016-11-27 21:58:44 ERROR Connection:181 - java.net.SocketException: Software caused connection abort: socket write error
+2016-11-27 21:58:44 ERROR Connection:196 - java.net.SocketException: Socket closed
+2016-11-27 22:01:53 ERROR Connection:181 - java.net.SocketException: Software caused connection abort: socket write error
+2016-11-27 22:01:53 ERROR Connection:196 - java.net.SocketException: Socket closed
+2016-11-27 22:04:27 ERROR Connection:181 - java.net.SocketException: Software caused connection abort: socket write error
+2016-11-27 22:04:27 ERROR Connection:196 - java.net.SocketException: Socket closed
+2016-11-27 22:18:55 ERROR Connection:178 - java.net.SocketException: Software caused connection abort: socket write error
+2016-11-27 22:18:55 ERROR Connection:193 - java.net.SocketException: Socket closed
+2016-11-27 22:32:49 ERROR Connection:165 - java.net.SocketException: Software caused connection abort: socket write error
+2016-11-27 22:32:49 ERROR Connection:179 - java.net.SocketException: Socket closed
+2016-11-27 22:34:12 ERROR Connection:165 - java.net.SocketException: Software caused connection abort: socket write error
+2016-11-27 22:34:12 ERROR Connection:179 - java.net.SocketException: Socket closed
+2016-11-27 22:35:35 ERROR Connection:165 - java.net.SocketException: Software caused connection abort: socket write error
+2016-11-27 22:35:35 ERROR Connection:179 - java.net.SocketException: Socket closed
+2016-11-28 10:37:04 ERROR Connection:163 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 10:37:04 ERROR Connection:176 - java.net.SocketException: Socket closed
+2016-11-28 10:37:55 ERROR Connection:163 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 10:37:55 ERROR Connection:176 - java.net.SocketException: Socket closed
+2016-11-28 11:04:32 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:04:32 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:05:34 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:05:34 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:167 - java.net.SocketException: Connection reset by peer: socket write error
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:07:07 ERROR Connection:180 - java.net.SocketException: Socket closed
+2016-11-28 11:08:01 ERROR Connection:168 - java.net.SocketException: Connection reset
+2016-11-28 11:08:01 ERROR Connection:168 - java.net.SocketException: Connection reset
+2016-11-28 11:08:01 ERROR Connection:168 - java.net.SocketException: Connection reset
+2016-11-28 11:08:01 ERROR Connection:168 - java.net.SocketException: Connection reset
+2016-11-28 11:08:01 ERROR Connection:168 - java.net.SocketException: Connection reset
+2016-11-28 11:08:01 ERROR Connection:168 - java.net.SocketException: Connection reset
+2016-11-28 11:08:01 ERROR Connection:168 - java.net.SocketException: Connection reset
+2016-11-28 11:08:01 ERROR Connection:168 - java.net.SocketException: Unrecognized Windows Sockets error: 0: recv failed
+2016-11-28 11:11:25 ERROR Server:33 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-28 11:13:07 ERROR Connection:168 - java.net.SocketException: Connection reset
+2016-11-28 11:13:10 ERROR Server:33 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-28 11:14:34 ERROR Connection:173 - java.net.SocketException: Connection reset
+2016-11-28 11:18:53 ERROR Server:38 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-28 11:46:07 ERROR Server:38 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-28 11:48:35 ERROR Connection:158 - java.net.SocketException: Connection reset
+2016-11-28 11:58:56 ERROR Connection:158 - java.net.SocketException: Connection reset
+2016-11-28 11:59:02 ERROR Connection:158 - java.net.SocketException: Connection reset
+2016-11-28 11:59:06 ERROR Connection:158 - java.net.SocketException: Connection reset
+2016-11-28 12:03:46 ERROR Connection:158 - java.net.SocketException: Connection reset
+2016-11-28 12:04:38 ERROR Connection:158 - java.net.SocketException: Connection reset
+2016-11-28 12:14:14 ERROR Server:38 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-28 12:16:57 ERROR Connection:158 - java.net.SocketException: Connection reset
+2016-11-28 12:17:03 ERROR Connection:158 - java.net.SocketException: Connection reset
+2016-11-28 12:24:48 ERROR Connection:158 - java.net.SocketException: Connection reset
+2016-11-28 12:25:23 ERROR Connection:164 - java.net.SocketException: Connection reset
+2016-11-28 12:26:14 ERROR Server:38 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-28 13:29:07 ERROR Server:38 - java.net.BindException: Address already in use: JVM_Bind
+2016-11-28 13:30:36 ERROR Connection:162 - java.net.SocketException: Connection reset
+2016-11-28 14:21:02 ERROR Connection:162 - java.net.SocketException: Connection reset
+2016-11-28 14:24:52 ERROR Connection:161 - java.net.SocketException: Connection reset
+2016-11-28 14:25:08 ERROR Connection:161 - java.net.SocketException: Connection reset
+2016-11-28 14:25:30 ERROR Connection:161 - java.net.SocketException: Connection reset
+2016-11-28 14:27:13 ERROR Connection:161 - java.net.SocketException: Connection reset
+2016-11-28 14:27:40 ERROR Connection:161 - java.net.SocketException: Connection reset
+2016-11-29 12:20:54 ERROR Client:65 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:21:08 ERROR Client:65 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:21:09 ERROR Client:65 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:21:10 ERROR Client:65 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:21:12 ERROR Client:65 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:21:27 ERROR Client:65 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:24:05 ERROR Client:65 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:24:06 ERROR Client:65 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:24:07 ERROR Client:65 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:24:37 ERROR Client:65 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:26:08 ERROR Client:65 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:35:43 ERROR Client:101 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:35:57 ERROR Client:101 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:35:59 ERROR Client:101 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:36:00 ERROR Client:101 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:36:01 ERROR Client:101 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:36:02 ERROR Client:101 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:43:45 ERROR Client:65 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:48:50 ERROR Client:65 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:49:52 ERROR Client:67 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:50:18 ERROR Client:67 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:50:19 ERROR Client:67 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:50:32 ERROR Client:67 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:50:33 ERROR Client:67 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:50:34 ERROR Client:67 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:50:35 ERROR Client:67 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:50:36 ERROR Client:67 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:50:37 ERROR Client:67 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:50:38 ERROR Client:67 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:50:39 ERROR Client:67 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:52:45 ERROR Client:103 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:52:47 ERROR Client:103 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:52:48 ERROR Client:103 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:52:48 ERROR Client:103 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 12:52:49 ERROR Client:103 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 13:12:59 ERROR Client:103 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 13:21:02 ERROR Client:103 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 13:22:49 ERROR Client:103 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 13:22:51 ERROR Client:103 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 13:22:52 ERROR Client:103 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 13:22:53 ERROR Client:103 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 13:22:54 ERROR Client:103 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 13:22:54 ERROR Client:103 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 13:22:55 ERROR Client:103 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 13:22:56 ERROR Client:103 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 13:22:58 ERROR Client:103 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 13:28:44 ERROR Client:103 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 13:29:48 ERROR Client:103 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 13:35:49 ERROR Client:68 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 14:02:45 ERROR Client:68 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 14:02:54 ERROR Client:68 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 14:11:36 ERROR Client:70 - java.io.WriteAbortedException: writing aborted; java.io.NotSerializableException: java.lang.Object
+2016-11-29 14:31:24 ERROR Client:68 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 14:32:51 ERROR Client:68 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 14:33:05 ERROR Client:68 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 14:33:57 ERROR Client:68 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 14:34:57 ERROR Client:68 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 14:35:19 ERROR Client:68 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 14:37:09 ERROR Client:68 - java.lang.ClassNotFoundException: model.Book
+2016-11-29 15:02:59 ERROR Client:70 - java.io.WriteAbortedException: writing aborted; java.io.NotSerializableException: java.lang.reflect.Method
+2016-11-29 15:04:02 ERROR Client:70 - java.io.WriteAbortedException: writing aborted; java.io.NotSerializableException: java.lang.reflect.Method
+2016-11-29 15:16:00 ERROR Client:70 - java.io.WriteAbortedException: writing aborted; java.io.NotSerializableException: java.lang.reflect.Method
+2016-11-29 15:54:56 ERROR Client:70 - java.net.SocketException: Connection reset
+2016-11-29 15:54:56 ERROR Client:70 - java.net.SocketException: Connection reset
+2016-11-29 15:54:56 ERROR Client:70 - java.net.SocketException: Connection reset
+2016-11-29 15:54:56 ERROR Client:70 - java.net.SocketException: Connection reset
+2016-11-29 15:54:56 ERROR Client:70 - java.net.SocketException: Connection reset
+2016-11-29 15:54:56 ERROR Client:70 - java.net.SocketException: Connection reset
+2016-11-29 16:29:03 ERROR Client:53 - java.net.SocketException: Software caused connection abort: recv failed
+2016-11-29 16:34:02 ERROR Client:53 - java.net.SocketException: Connection reset
+2016-11-29 16:34:02 ERROR Client:53 - java.net.SocketException: Connection reset
+2016-11-29 16:34:02 ERROR Client:53 - java.net.SocketException: Connection reset
+2016-11-29 16:34:02 ERROR Client:53 - java.net.SocketException: Connection reset
+2016-11-29 16:34:02 ERROR Client:53 - java.net.SocketException: Connection reset
+2016-12-02 08:49:49 ERROR Client:33 - java.net.SocketException: Connection reset
+2016-12-02 08:49:49 ERROR Client:33 - java.net.SocketException: Connection reset
+2016-12-02 08:49:49 ERROR Client:33 - java.net.SocketException: Connection reset
+2016-12-02 08:49:59 ERROR Client:33 - java.net.ConnectException: Connection refused: connect
+2016-12-02 08:50:22 ERROR Client:33 - java.net.ConnectException: Connection refused: connect
+2016-12-02 08:51:14 ERROR Client:33 - java.net.ConnectException: Connection refused: connect
+2016-12-02 08:51:18 ERROR Client:33 - java.net.ConnectException: Connection refused: connect
+2016-12-02 08:51:21 ERROR Client:33 - java.net.ConnectException: Connection refused: connect
+2016-12-02 08:51:24 ERROR Client:33 - java.net.ConnectException: Connection refused: connect
+2016-12-02 08:51:28 ERROR Client:33 - java.net.ConnectException: Connection refused: connect
+2016-12-02 08:51:58 ERROR Client:33 - java.net.ConnectException: Connection refused: connect
+2016-12-02 08:52:01 ERROR Client:33 - java.net.ConnectException: Connection refused: connect
+2016-12-02 08:52:04 ERROR Client:33 - java.net.ConnectException: Connection refused: connect
+2016-12-02 08:52:41 ERROR Client:30 - java.net.ConnectException: Connection refused: connect
+2016-12-02 08:53:25 ERROR Client:30 - java.net.ConnectException: Connection refused: connect
+2016-12-02 09:04:14 ERROR Client:30 - java.net.ConnectException: Connection refused: connect
+2016-12-02 09:05:21 ERROR Client:30 - java.net.ConnectException: Connection refused: connect
+2016-12-02 09:05:48 ERROR Client:31 - java.net.ConnectException: Connection refused: connect
+2016-12-02 09:07:05 ERROR Client:32 - java.net.SocketException: Connection reset
+2016-12-02 09:07:44 ERROR Client:32 - java.net.ConnectException: Connection refused: connect
+2016-12-02 09:12:50 ERROR Client:36 - java.net.ConnectException: Connection refused: connect
+2016-12-02 10:08:28 ERROR Client:29 - java.net.ConnectException: Connection refused: connect
+2016-12-02 10:09:41 ERROR Client:29 - java.net.ConnectException: Connection refused: connect
+2016-12-02 10:34:26 ERROR Client:26 - java.net.ConnectException: Connection refused: connect
+2016-12-02 10:43:19 ERROR SupportClient:50 - java.io.EOFException
+2016-12-02 10:48:49 ERROR SupportClient:50 - java.io.EOFException
+2016-12-02 10:49:51 ERROR SupportClient:50 - java.io.EOFException
+2016-12-02 10:52:28 ERROR SupportClient:50 - java.io.EOFException
+2016-12-02 10:54:25 ERROR SupportClient:50 - java.net.SocketException: Socket is closed
+2016-12-02 11:38:44 ERROR SupportClient:50 - java.net.SocketException: Socket is closed
+2016-12-02 11:39:24 ERROR SupportClient:50 - java.net.SocketException: Socket is closed
+2016-12-02 11:40:44 ERROR Client:26 - java.net.ConnectException: Connection refused: connect
+2016-12-02 11:40:57 ERROR SupportClient:51 - java.net.SocketException: Socket is closed
+2016-12-02 11:41:59 ERROR Client:26 - java.net.ConnectException: Connection refused: connect
+2016-12-02 11:42:09 ERROR SupportClient:51 - java.net.SocketException: Socket is closed
+2016-12-02 11:45:06 ERROR SupportClient:51 - java.net.SocketException: Socket is closed
+2016-12-02 11:45:08 ERROR SupportClient:51 - java.net.SocketException: Socket is closed
+2016-12-02 11:45:33 ERROR SupportClient:51 - java.net.SocketException: Socket is closed
+2016-12-02 11:49:54 ERROR SupportClient:40 - java.net.SocketException: Socket is closed
+2016-12-02 11:53:52 ERROR Client:26 - java.net.ConnectException: Connection refused: connect
+2016-12-02 11:54:57 ERROR SupportClient:40 - java.net.SocketException: Socket is closed
+2016-12-02 12:12:43 ERROR SupportClient:51 - java.io.IOException: mark/reset not supported
+2016-12-02 12:58:46 ERROR SupportClient:75 - java.io.EOFException
+2016-12-02 13:04:52 ERROR SupportClient:41 - java.io.EOFException
+2016-12-02 13:20:38 ERROR Client:26 - java.net.ConnectException: Connection refused: connect
+2016-12-02 13:25:20 ERROR Client:26 - java.net.ConnectException: Connection refused: connect
+2016-12-02 13:25:44 ERROR Client:26 - java.net.ConnectException: Connection refused: connect
+2016-12-02 13:28:14 ERROR SupportClient:49 - java.net.SocketException: Connection reset
+2016-12-02 13:28:52 ERROR Client:26 - java.net.ConnectException: Connection refused: connect
+2016-12-02 13:29:32 ERROR Client:26 - java.net.ConnectException: Connection refused: connect
+2016-12-02 14:02:21 ERROR Navigator:65 - java.util.InputMismatchException
+2016-12-02 14:04:00 ERROR Client:26 - java.net.ConnectException: Connection refused: connect
+2016-12-02 14:04:12 ERROR SupportClient:49 - java.net.SocketException: Software caused connection abort: recv failed
+2016-12-02 14:07:14 ERROR SupportClient:49 - java.net.SocketException: Software caused connection abort: socket write error
+2016-12-03 14:49:00 ERROR Client:24 - java.net.ConnectException: Connection refused: connect
+2016-12-03 14:49:08 ERROR Client:24 - java.net.ConnectException: Connection refused: connect
+2016-12-03 15:57:10 ERROR ScannerBox:40 - java.util.InputMismatchException
+2016-12-03 15:57:11 ERROR ScannerBox:40 - java.util.InputMismatchException
+2016-12-03 15:57:14 ERROR Navigator:65 - java.util.InputMismatchException
+2016-12-04 10:26:57 ERROR SupportClient:36 - java.io.EOFException
+2016-12-04 11:11:49 ERROR SupportClient:36 - java.io.EOFException
+2016-12-04 11:12:17 ERROR SupportClient:36 - java.io.EOFException
+2016-12-04 11:29:37 ERROR SupportClient:36 - java.io.EOFException
+2016-12-04 11:49:01 ERROR Client:24 - java.net.ConnectException: Connection refused: connect
+2016-12-04 11:49:46 ERROR SupportClient:36 - java.io.EOFException
+2016-12-04 11:50:10 ERROR SupportClient:36 - java.io.EOFException
+2017-01-22 16:11:19 ERROR Client:24 - java.net.ConnectException: Connection refused: connect
+2017-01-22 16:13:59 ERROR Navigator:69 - java.util.InputMismatchException
+2017-01-22 16:14:30 ERROR SupportClient:36 - java.io.EOFException
+2017-01-22 16:27:06 ERROR SupportClient:36 - java.io.EOFException
+2017-01-23 11:21:02 ERROR SupportClient:36 - java.io.EOFException
+2017-01-23 11:29:50 ERROR SupportClient:36 - java.io.EOFException
+2017-01-23 11:31:07 ERROR SupportClient:22 - java.net.SocketException: Connection reset
+2017-01-23 11:33:18 ERROR SupportClient:22 - java.net.SocketException: Connection reset
+2017-01-23 11:35:11 ERROR SupportClient:22 - java.net.SocketException: Connection reset
+2017-01-23 11:35:17 ERROR SupportClient:36 - java.net.SocketException: Connection reset by peer: socket write error
+2017-01-23 11:35:28 ERROR Client:24 - java.net.ConnectException: Connection refused: connect
+2017-01-23 11:35:41 ERROR Client:24 - java.net.ConnectException: Connection refused: connect
+2017-01-23 11:36:07 ERROR SupportClient:22 - java.net.SocketException: Connection reset
+2017-01-23 11:36:11 ERROR SupportClient:36 - java.net.SocketException: Connection reset by peer: socket write error
+2017-01-23 12:03:03 ERROR SupportClient:34 - java.lang.ClassNotFoundException: model.Book
+2017-01-23 12:03:47 ERROR SupportClient:34 - java.lang.ClassNotFoundException: model.Order
+2017-01-23 12:04:27 ERROR ScannerBox:40 - java.util.InputMismatchException
+2017-01-23 12:04:33 ERROR ScannerBox:40 - java.util.InputMismatchException
+2017-01-23 12:04:33 ERROR ScannerBox:40 - java.util.InputMismatchException
+2017-01-23 12:04:56 ERROR SupportClient:34 - java.lang.ClassNotFoundException: model.Book
+2017-01-23 12:08:29 ERROR SupportClient:34 - java.lang.ClassNotFoundException: model.Book
+2017-01-23 12:08:55 ERROR SupportClient:34 - java.lang.ClassNotFoundException: model.Book
+2017-01-23 12:34:03 ERROR SupportClient:34 - java.lang.ClassNotFoundException: model.Book
+2017-01-23 12:35:39 ERROR SupportClient:34 - java.lang.ClassNotFoundException: model.Book
+2017-01-23 12:37:17 ERROR SupportClient:34 - java.lang.ClassNotFoundException: model.Book
+2017-01-30 09:30:43 ERROR SupportClient:36 - java.io.EOFException
+2017-01-30 09:32:21 ERROR SupportClient:36 - java.io.EOFException
+2017-01-30 09:36:10 ERROR SupportClient:36 - java.io.EOFException
+2017-01-30 09:36:22 ERROR SupportClient:36 - java.io.EOFException
+2017-01-30 09:37:47 ERROR SupportClient:34 - java.lang.ClassNotFoundException: com.senla.sobol.model.Book
+2017-01-30 09:39:08 ERROR SupportClient:34 - java.lang.ClassNotFoundException: com.senla.sobol.model.Book
+2017-01-30 09:39:36 ERROR SupportClient:34 - java.lang.ClassNotFoundException: com.senla.sobol.model.Book
+2017-01-30 09:40:26 ERROR SupportClient:34 - java.lang.ClassNotFoundException: com.senla.sobol.model.Book
+2017-01-30 09:40:27 ERROR SupportClient:34 - java.lang.ClassNotFoundException: com.senla.sobol.model.Book
+2017-01-30 09:40:28 ERROR SupportClient:34 - java.lang.ClassNotFoundException: com.senla.sobol.model.Book
+2017-01-30 09:40:28 ERROR SupportClient:34 - java.lang.ClassNotFoundException: com.senla.sobol.model.Book
+2017-01-30 09:40:29 ERROR SupportClient:34 - java.lang.ClassNotFoundException: com.senla.sobol.model.Book
+2017-01-30 09:45:17 ERROR SupportClient:36 - java.io.EOFException
