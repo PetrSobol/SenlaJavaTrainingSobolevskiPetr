@@ -1,10 +1,10 @@
-test/
+test/*
 .metadata
-bin/
+bin/*
 lib/
 tmp/
-target/
-/.settings/*
+target/*
+.settings/*
 *.tmp
 *.bak
 *.swp
