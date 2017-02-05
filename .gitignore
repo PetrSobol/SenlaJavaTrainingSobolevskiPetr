@@ -2,7 +2,7 @@
 bin/
 lib/
 tmp/
-target/
+/target/*
 *.tmp
 *.bak
 *.swp
