@@ -2,6 +2,7 @@
 bin/
 lib/
 tmp/
+target/
 *.tmp
 *.bak
 *.swp
@@ -12,7 +13,6 @@ local.properties
 .recommenders
 *.log
 *.class
-*.log
 *.properties
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
