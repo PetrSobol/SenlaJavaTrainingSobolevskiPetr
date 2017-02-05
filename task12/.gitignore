@@ -1,7 +1,6 @@
 test/*
 .metadata
 bin/*
-lib/
 tmp/
 target/*
 .settings/*
