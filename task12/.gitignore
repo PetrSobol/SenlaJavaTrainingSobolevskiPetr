@@ -1,9 +1,8 @@
-test/*
-.metadata
-bin/*
-tmp/
-target/*
-.settings/*
+**/bin/
+**/lib/
+**/logs/
+**/target/
+**/.settings/
 *.tmp
 *.bak
 *.swp
