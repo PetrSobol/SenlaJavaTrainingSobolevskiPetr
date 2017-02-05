@@ -1,3 +1,11 @@
+bin/
+lib/
+tmp/
+target/
+.settings/
+*.tmp
+*.bak
+*.swp
 *.class
 
 # Mobile Tools for Java (J2ME)
