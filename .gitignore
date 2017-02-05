@@ -1,6 +1,5 @@
 .metadata
 bin/
-/target
 *.tmp
 *.bak
 *.swp
