@@ -9,6 +9,11 @@ target/
 *.bak
 *.swp
 *~.nib
+<<<<<<< HEAD
+=======
+.settings/
+.loadpath
+>>>>>>> 1b3239374e459bd3869bcf1c188cdfc6b5539323
 *.log
 *.class
 *.properties
