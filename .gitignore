@@ -1,19 +1,17 @@
-.metadata
 bin/
+lib/
+logs/
+target/
+.settings/
+.factorypath
+.classpath
 *.tmp
 *.bak
 *.swp
 *~.nib
-.settings/
-.loadpath
-.recommenders
 *.log
 *.class
 *.properties
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
 Runner.java
 *.war
 *.ear
