@@ -1,6 +1,5 @@
 package com.senla.sobol.model;
 
-import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -13,18 +12,19 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.senla.sobol.intarfaces.AEntity;
 import com.sobol.senla.anotation.PrintableObject;
 
 @Entity
 @Table(name = "book")
 @PrintableObject(name = "Book")
-public class Book implements Serializable {
+public class Book extends AEntity {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "idBook")
 	private Integer idBook;
 	@ManyToOne
-	@JoinColumn(name="idWriter")
+	@JoinColumn(name = "idWriter")
 	private Writer writer;
 	@Column(name = "nameBook")
 	private String nameBook;
@@ -32,7 +32,7 @@ public class Book implements Serializable {
 	private Integer quantityPages;
 	@Column(name = "price")
 	private Integer price;
-	@OneToMany(mappedBy="book")
+	@OneToMany(mappedBy = "book")
 	private List<Orders> listorder;
 
 	public Book() {
@@ -46,7 +46,6 @@ public class Book implements Serializable {
 		this.quantityPages = quantityPages;
 		this.price = price;
 	}
-	
 
 	public Writer getWriter() {
 		return writer;

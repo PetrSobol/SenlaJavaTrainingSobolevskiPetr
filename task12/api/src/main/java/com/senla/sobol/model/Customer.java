@@ -1,6 +1,5 @@
 package com.senla.sobol.model;
 
-import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -11,11 +10,13 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.senla.sobol.intarfaces.AEntity;
+
 @Entity
 @Table(name = "customer")
-public class Customer implements Serializable {
+public class Customer extends AEntity {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "idCustomer")
 	private Integer idCustomer;
 	@Column(name = "lastnameCustomer")
@@ -24,7 +25,7 @@ public class Customer implements Serializable {
 	private String firstname;
 	@Column(name = "phone")
 	private Integer phone;
-	@OneToMany(mappedBy="customer")
+	@OneToMany(mappedBy = "customer")
 	private List<Orders> listorder;
 
 	public Customer() {

@@ -15,12 +15,13 @@ public class AddNewBookAction implements IAction {
 	private static final String YEAR_YYYY = "Quantity books";
 	private Print print = new Print();
 	private ScannerBox scanerbox = new ScannerBox();
-	private EssenceCommon essence = new EssenceCommon();
+	private EssenceCommon essence = null;
 
 	/**
 	 * add new book in databases
 	 */
 	public void process(SupportClient supportaction) {
+		essence = new EssenceCommon();
 		print.printMessage(WRITER_BOOK);
 		Integer idWriter = scanerbox.getNumber();
 		print.printMessage(NAME_BOOK2);

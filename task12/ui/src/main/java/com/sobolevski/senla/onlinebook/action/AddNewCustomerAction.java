@@ -13,12 +13,13 @@ public class AddNewCustomerAction implements IAction{
 	private static final String NAMEMETOD = "addNewCustomer";
 	private ScannerBox scanerbox = new ScannerBox();
 	private Print print = new Print();
-	private EssenceCommon essence = new EssenceCommon();
+	private EssenceCommon essence = null;
 	/**
 	 * add new order in databases
 	 */
 
 	public void process(SupportClient supportaction) {
+		essence=new EssenceCommon();
 		print.printMessage(YOUR_LASTNAME);
 		String lastname=scanerbox.getWord();
 		print.printMessage(YOUR_FIRSTNAME);

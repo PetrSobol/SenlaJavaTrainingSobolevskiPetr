@@ -11,12 +11,13 @@ public class AddNewOrderAction implements IAction {
 	private static final String NAMEMETOD = "addNewOrder";
 	private ScannerBox scanerbox = new ScannerBox();
 	private Print print = new Print();
-	private EssenceCommon essence = new EssenceCommon();
+	private EssenceCommon essence = null;
 	/**
 	 * add new order in databases
 	 */
 
 	public void process(SupportClient supportaction) {
+		essence=new EssenceCommon();
 		print.printMessage(ID_CUSTOMER);
 		Integer idcustomer=scanerbox.getNumber();
 		print.printMessage(ID_BOOK);

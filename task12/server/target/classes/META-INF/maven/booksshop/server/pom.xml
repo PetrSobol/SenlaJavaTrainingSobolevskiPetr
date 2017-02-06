@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>booksshop</groupId>
 		<artifactId>onlinebookshop</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>${global.version}</version>
 	</parent>
 	<artifactId>server</artifactId>
 	<packaging>jar</packaging>
@@ -16,7 +16,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
-	<dependency>
+		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.6</version>
@@ -31,20 +31,20 @@
 			<artifactId>hibernate-core</artifactId>
 			<version>5.2.1.Final</version>
 		</dependency>
-				<dependency>
+		<dependency>
 			<groupId>booksshop</groupId>
 			<artifactId>anotation</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${global.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>booksshop</groupId>
 			<artifactId>api</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${global.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>booksshop</groupId>
 			<artifactId>onlinebook</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${global.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>

@@ -1,12 +1,11 @@
 package com.senla.sobol.controller;
 
 import java.sql.SQLException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-
 import org.apache.log4j.Logger;
-
 import com.senla.sobol.di.DI;
 import com.senla.sobol.di.PropertyInstance;
 import com.senla.sobol.intarfaces.IOnlineBook;
@@ -130,14 +129,13 @@ public class OnlineBook implements IOnlineBook {
 	}
 
 	public void addNewOrder(Integer idCustomer, Integer idBook) {
-		SimpleDateFormat simpledate = new SimpleDateFormat(DD_MM_YYYY);
 		Customer customer = custonerservice.getCustomer(idCustomer);
 		Book book = bookservice.getBookId(idBook);
 		if (customer != null && book != null) {
 			Integer quantitybook = book.getQuantityPages();
 			if (quantitybook != 0) {
 				book.setQuantityPages(--quantitybook);
-				orderservice.add(new Orders(book, customer, simpledate.format(new Date())));
+				orderservice.add(new Orders(book, customer, new Date()));
 			}
 		}
 
@@ -152,10 +150,16 @@ public class OnlineBook implements IOnlineBook {
 	}
 
 	public void addNewWriter(String lastname, String firstname, String dateStart, String Dieddate) {
-		if (Dieddate != null) {
-			writerservice.add(new Writer(lastname, firstname, dateStart, Dieddate));
-		} else {
-			writerservice.add(new Writer(lastname, firstname, dateStart));
+		SimpleDateFormat simpledate = new SimpleDateFormat(DD_MM_YYYY);
+		try {
+			if (Dieddate != null) {
+				writerservice
+						.add(new Writer(lastname, firstname, simpledate.parse(dateStart), simpledate.parse(Dieddate)));
+			} else {
+				writerservice.add(new Writer(lastname, firstname, simpledate.parse(dateStart)));
+			}
+		} catch (ParseException e) {
+			log.error(e);
 		}
 
 	}
@@ -201,7 +205,7 @@ public class OnlineBook implements IOnlineBook {
 			Integer quantity = book.getQuantityPages();
 			book.setQuantityPages(++quantity);
 			orderservice.delete(order);
-			}
+		}
 
 	}
 

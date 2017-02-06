@@ -9,15 +9,16 @@ import com.sobolevski.senla.onlinebook.operationmenu.Print;
 public class PrintWriterAllAction implements IAction {
 	private static final String NAMEMETOD = "getListWriter";
 	private Print print = new Print();
-	private EssenceCommon essence = new EssenceCommon();
+	private EssenceCommon essence = null;
+
 	/**
 	 * print list all books
 	 */
 	public void process(SupportClient supportaction) {
+		essence = new EssenceCommon();
 		essence.setNameMetod(NAMEMETOD);
-		EssenceCommon essenceCommon=supportaction.getEssennce(essence);
-			print.printListWriter((List<?>) essenceCommon.getCurront());
-		
-	
+		EssenceCommon essenceCommon = supportaction.getEssennce(essence);
+		print.printListWriter((List<?>) essenceCommon.getCurront());
+
 	}
 }

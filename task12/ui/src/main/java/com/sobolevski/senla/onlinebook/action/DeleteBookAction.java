@@ -10,11 +10,12 @@ public class DeleteBookAction implements IAction {
 	private static final String NAME_BOOK2 = "Id book?";
 	private Print print = new Print();
 	private ScannerBox scanerbox = new ScannerBox();
-	private EssenceCommon essence = new EssenceCommon();
+	private EssenceCommon essence = null;
 	/**
 	 * delete book
 	 */
 	public void process(SupportClient supportaction) {
+		essence=new EssenceCommon();
 		print.printMessage(NAME_BOOK2);
 		Integer idbook=scanerbox.getNumber();
 		essence.setNameMetod(NAMEMETOD);

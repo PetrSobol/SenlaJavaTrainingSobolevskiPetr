@@ -6,9 +6,6 @@ import com.senla.sobol.interfaces.ACommonDAO;
 import com.senla.sobol.model.Writer;
 
 public class WriterDao extends ACommonDAO<Writer> {
-
-	private static final String ID_WRITER = "idWriter";
-
 	public WriterDao() {
 		super(Writer.class);
 	}
@@ -18,7 +15,7 @@ public class WriterDao extends ACommonDAO<Writer> {
 	}
 
 	public List<Writer> getReadAllTable(Session session, String date) {
-		List<Writer> listwriter = getAll(session,date);
+		List<Writer> listwriter = getAll(session, date);
 		return listwriter;
 	}
 
@@ -34,11 +31,6 @@ public class WriterDao extends ACommonDAO<Writer> {
 		Writer writer = getID(session, id);
 		return writer;
 
-	}
-
-	@Override
-	public String getIdSearch() {
-		return ID_WRITER;
 	}
 
 }

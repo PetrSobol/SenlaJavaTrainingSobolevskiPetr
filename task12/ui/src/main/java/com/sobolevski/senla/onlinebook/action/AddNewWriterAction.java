@@ -14,13 +14,14 @@ public class AddNewWriterAction implements IAction {
 	private static final String NAMEMETOD = "addNewWriter";
 	private ScannerBox scanerbox = new ScannerBox();
 	private Print print = new Print();
-	private EssenceCommon essence = new EssenceCommon();
+	private EssenceCommon essence = null;
 
 	/**
 	 * add new order in databases
 	 */
 
 	public void process(SupportClient supportaction) {
+		essence = new EssenceCommon();
 		print.printMessage(YOUR_LASTNAME);
 		String lastname = scanerbox.getWord();
 		print.printMessage(YOUR_FIRSTNAME);
@@ -35,7 +36,7 @@ public class AddNewWriterAction implements IAction {
 			Object[] a = { lastname, firatname, date1, date2 };
 			essence.setObjects(a);
 			supportaction.getEssennce(essence);
-		}else{
+		} else {
 			print.printMessage(DONT_NO_FOTMAT_DATE);
 		}
 

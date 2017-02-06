@@ -7,7 +7,7 @@
 
 		<groupId>booksshop</groupId>
 		<artifactId>onlinebookshop</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>${global.version}</version>
 	</parent>
 	<artifactId>anotation</artifactId>
 	<packaging>jar</packaging>

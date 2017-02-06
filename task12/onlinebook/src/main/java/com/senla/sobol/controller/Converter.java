@@ -1,15 +1,30 @@
 package com.senla.sobol.controller;
 
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
-
 import com.senla.sobol.model.Book;
 import com.senla.sobol.model.Customer;
 import com.senla.sobol.model.Orders;
 import com.senla.sobol.model.Writer;
 
 public class Converter {
+	private SimpleDateFormat simpledate = new SimpleDateFormat("dd.MM.yyyy");
+
+	/**
+	 * convert string to date
+	 * 
+	 * @param datestring
+	 * @return
+	 * @throws ParseException
+	 */
+	private Date convertStringToDate(String datestring) throws ParseException {
+		Date date = simpledate.parse(datestring);
+		return date;
+	}
+
 	/**
 	 * convert string to integer
 	 * 
@@ -21,6 +36,7 @@ public class Converter {
 		Integer numberInteger = Integer.parseInt(withoutProbellov);
 		return numberInteger;
 	}
+
 	/**
 	 * convert list Orders to string array
 	 * 
@@ -37,7 +53,7 @@ public class Converter {
 			string.append(",");
 			string.append(order.getBook().getIdBook());
 			string.append(",");
-		    string.append(order.getDateOrder());
+			string.append(simpledate.format(order.getDateOrder()));
 			array[index] = string.toString();
 			index++;
 		}
@@ -102,9 +118,12 @@ public class Converter {
 			string.append(",");
 			string.append(writer.getLastname());
 			string.append(",");
-			string.append(writer.getStartYear());
-			string.append(",");
-			string.append(writer.getDiedYear());
+			string.append(simpledate.format(writer.getStartYear()));
+			if (writer.getDiedYear() != null) {
+				string.append(",");
+				string.append(simpledate.format(writer.getDiedYear()));
+			}
+
 			array[index] = string.toString();
 			index++;
 		}
@@ -155,9 +174,9 @@ public class Converter {
 				} else if (j == 2) {
 					writer.setFirstname(wordString[j]);
 				} else if (j == 3) {
-				 writer.setStartYear(wordString[j]);
+					writer.setStartYear(convertStringToDate(wordString[j]));
 				} else if (j == 4) {
-				 writer.setDiedYear(wordString[j]);
+					writer.setDiedYear(convertStringToDate(wordString[j]));
 				}
 				listwriter.add(writer);
 			}
@@ -187,6 +206,5 @@ public class Converter {
 		}
 		return listcustomer;
 	}
-
 
 }

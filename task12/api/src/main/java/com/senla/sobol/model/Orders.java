@@ -1,39 +1,40 @@
 package com.senla.sobol.model;
 
-import java.io.Serializable;
-
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
+import com.senla.sobol.intarfaces.AEntity;
 import com.sobol.senla.anotation.PrintableObject;
+
 @Entity
 @Table(name = "orders")
 @PrintableObject(name = "Order")
-public class Orders implements Serializable {
+public class Orders extends AEntity {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "idOrder")
 	private Integer idOrder;
 	@ManyToOne
-	@JoinColumn(name="idCustomer")
+	@JoinColumn(name = "idCustomer")
 	private Customer customer;
 	@ManyToOne
-	@JoinColumn(name="idBook")
+	@JoinColumn(name = "idBook")
 	private Book book;
 	@Column(name = "dateOrder")
-	private String dateOrder;
+	private Date dateOrder;
 
 	public Orders() {
 		super();
 	}
 
-	public Orders(Book book, Customer customer, String dateOrder) {
+	public Orders(Book book, Customer customer, Date dateOrder) {
 		super();
 		this.book = book;
 		this.customer = customer;
@@ -64,11 +65,11 @@ public class Orders implements Serializable {
 		this.customer = customer;
 	}
 
-	public String getDateOrder() {
+	public Date getDateOrder() {
 		return dateOrder;
 	}
 
-	public void setDateOrder(String dateOrder) {
+	public void setDateOrder(Date dateOrder) {
 		this.dateOrder = dateOrder;
 	}
 

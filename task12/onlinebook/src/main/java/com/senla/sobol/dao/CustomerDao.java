@@ -8,8 +8,6 @@ import com.senla.sobol.interfaces.ACommonDAO;
 import com.senla.sobol.model.Customer;
 
 public class CustomerDao extends ACommonDAO<Customer> {
-	private static final String ID_CUSTOMER = "idCustomer";
-
 	public CustomerDao() {
 		super(Customer.class);
 	}
@@ -35,10 +33,4 @@ public class CustomerDao extends ACommonDAO<Customer> {
 		Customer customer = getID(session, id);
 		return customer;
 	}
-
-	@Override
-	public String getIdSearch() {
-		return ID_CUSTOMER;
-	}
-
 }

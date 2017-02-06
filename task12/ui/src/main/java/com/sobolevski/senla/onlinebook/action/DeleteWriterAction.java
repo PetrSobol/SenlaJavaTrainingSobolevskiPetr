@@ -10,13 +10,15 @@ public class DeleteWriterAction implements IAction {
 	private static final String NAME_BOOK2 = "Id writer?";
 	private Print print = new Print();
 	private ScannerBox scanerbox = new ScannerBox();
-	private EssenceCommon essence = new EssenceCommon();
+	private EssenceCommon essence = null;
+
 	/**
 	 * delete book
 	 */
 	public void process(SupportClient supportaction) {
+		essence = new EssenceCommon();
 		print.printMessage(NAME_BOOK2);
-		Integer idbook=scanerbox.getNumber();
+		Integer idbook = scanerbox.getNumber();
 		essence.setNameMetod(NAMEMETOD);
 		Object[] array = { idbook };
 		essence.setObjects(array);

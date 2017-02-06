@@ -8,8 +8,6 @@ import com.senla.sobol.interfaces.ACommonDAO;
 import com.senla.sobol.model.Book;
 
 public class BookDao extends ACommonDAO<Book> {
-	private static final String ID_BOOK = "idBook";
-
 	public BookDao() {
 		super(Book.class);
 	}
@@ -34,11 +32,6 @@ public class BookDao extends ACommonDAO<Book> {
 	public Book getIdBook(Session session, Integer id) {
 		Book book = getID(session, id);
 		return book;
-	}
-
-	@Override
-	public String getIdSearch() {
-		return ID_BOOK;
 	}
 
 }

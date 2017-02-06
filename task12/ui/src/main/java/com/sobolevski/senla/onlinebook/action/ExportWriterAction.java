@@ -5,12 +5,13 @@ import com.senla.sobol.api.SupportClient;
 
 public class ExportWriterAction implements IAction {
 	private static final String NAMEMETOD = "exportWriterCSV";
-	private EssenceCommon essence = new EssenceCommon();
+	private EssenceCommon essence = null;
 
 	/**
 	 * import list books in CSV
 	 */
 	public void process(SupportClient supportaction) {
+		essence = new EssenceCommon();
 		essence.setNameMetod(NAMEMETOD);
 		supportaction.getEssennce(essence);
 	}

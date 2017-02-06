@@ -9,14 +9,16 @@ import com.sobolevski.senla.onlinebook.operationmenu.Print;
 public class PrintCustomerAllAction implements IAction {
 	private static final String NAMEMETOD = "getListCustomer";
 	private Print print = new Print();
-	private EssenceCommon essence = new EssenceCommon();
+	private EssenceCommon essence = null;
+
 	/**
 	 * print list all books
 	 */
 	public void process(SupportClient supportaction) {
+		essence = new EssenceCommon();
 		essence.setNameMetod(NAMEMETOD);
-		EssenceCommon essenceCommon=supportaction.getEssennce(essence);
+		EssenceCommon essenceCommon = supportaction.getEssennce(essence);
 		print.printListCustomer((List<?>) essenceCommon.getCurront());
-	
+
 	}
 }

@@ -15,9 +15,6 @@ import com.senla.sobol.model.Orders;
 
 public class OrderDao extends ACommonDAO<Orders> {
 	private Logger log = Logger.getLogger(OrderDao.class.getName());
-
-	private static final String ID_ORDER = "idOrder";
-
 	public OrderDao() {
 		super(Orders.class);
 	}
@@ -43,11 +40,6 @@ public class OrderDao extends ACommonDAO<Orders> {
 
 	public void updateOrder(Session session, Orders t) {
 		update(session, t);
-	}
-
-	@Override
-	public String getIdSearch() {
-		return ID_ORDER;
 	}
 
 	public List<Orders> getOrderByDateAndId(Session session, Integer idcustomer) {
