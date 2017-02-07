@@ -1,3 +1,10 @@
+bin/
+lib/
+logs/
+target/
+.settings/
+.factorypath
+.classpath
 *.class
 
 # Mobile Tools for Java (J2ME)
