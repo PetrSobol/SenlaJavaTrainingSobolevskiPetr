@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -23,7 +24,7 @@ public class Book extends AEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "idBook")
 	private Integer idBook;
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name = "idWriter")
 	private Writer writer;
 	@Column(name = "nameBook")
@@ -32,7 +33,7 @@ public class Book extends AEntity {
 	private Integer quantityPages;
 	@Column(name = "price")
 	private Integer price;
-	@OneToMany(mappedBy = "book")
+	@OneToMany(mappedBy = "book",fetch=FetchType.LAZY)
 	private List<Orders> listorder;
 
 	public Book() {

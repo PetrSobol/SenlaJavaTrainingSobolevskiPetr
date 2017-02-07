@@ -21,10 +21,10 @@ public class Orders extends AEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "idOrder")
 	private Integer idOrder;
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name = "idCustomer")
 	private Customer customer;
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name = "idBook")
 	private Book book;
 	@Column(name = "dateOrder")
