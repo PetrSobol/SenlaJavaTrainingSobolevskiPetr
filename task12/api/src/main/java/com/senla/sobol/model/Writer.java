@@ -16,6 +16,10 @@ import com.senla.sobol.intarfaces.AEntity;
 @Entity
 @Table(name = "writer")
 public class Writer extends AEntity {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "idWriter")

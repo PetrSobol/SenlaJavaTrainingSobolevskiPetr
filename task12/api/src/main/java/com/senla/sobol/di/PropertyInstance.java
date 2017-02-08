@@ -13,7 +13,7 @@ public class PropertyInstance {
 
 	public PropertyInstance() {
 		
-		try (FileInputStream file = new FileInputStream("resources/roat.properties")) {
+		try (FileInputStream file = new FileInputStream("src/main/resources/roat.properties")) {
 			property.load(file);
 
 		} catch (FileNotFoundException e) {

@@ -22,6 +22,16 @@
 			<version>1.0.0.Final</version>
 		</dependency>
 		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.2.1.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.6</version>
+		</dependency>
+		<dependency>
 			<groupId>booksshop</groupId>
 			<artifactId>anotation</artifactId>
 			<version>${global.version}</version>

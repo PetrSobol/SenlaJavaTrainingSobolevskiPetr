@@ -59,6 +59,8 @@ public class Connection extends Thread {
 					objectoutput.writeObject(essenseserver);
 					objectoutput.flush();
 				} else {
+					objectoutput.writeObject(essence);
+					objectoutput.flush();
 					onlineBook.closeDBConnector();
 					break;
 				}

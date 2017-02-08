@@ -20,7 +20,6 @@ public class SupportClient {
 			objectoutput = new ObjectOutputStream(socket.getOutputStream());
 			objectinput = new ObjectInputStream(socket.getInputStream());
 		
-			
 		} catch (IOException e) {
 			loger.error(e);
 		}

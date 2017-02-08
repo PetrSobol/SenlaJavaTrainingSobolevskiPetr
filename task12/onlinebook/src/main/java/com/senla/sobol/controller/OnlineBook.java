@@ -5,7 +5,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+
 import org.apache.log4j.Logger;
+
 import com.senla.sobol.di.DI;
 import com.senla.sobol.di.PropertyInstance;
 import com.senla.sobol.intarfaces.IOnlineBook;

@@ -20,6 +20,10 @@ import com.sobol.senla.anotation.PrintableObject;
 @Table(name = "book")
 @PrintableObject(name = "Book")
 public class Book extends AEntity {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "idBook")
