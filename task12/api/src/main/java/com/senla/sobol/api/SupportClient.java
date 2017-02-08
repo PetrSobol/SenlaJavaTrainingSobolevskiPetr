@@ -33,10 +33,8 @@ public class SupportClient {
 			objectoutput.flush();
 			essenceclient = (EssenceCommon) objectinput.readObject();
 		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
 			loger.error(e);
 		} catch (IOException e) {
-			e.printStackTrace();
 			loger.error(e);
 		}
 		return essenceclient;
