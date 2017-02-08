@@ -3,8 +3,6 @@ lib/
 logs/
 target/
 .settings/
-.factorypath
-.classpath
 *.tmp
 *.bak
 *.swp
@@ -12,6 +10,5 @@ target/
 *.log
 *.class
 *.properties
-Runner.java
 *.war
 *.ear
