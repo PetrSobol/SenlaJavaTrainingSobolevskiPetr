@@ -38,9 +38,59 @@
 	</servlet>
 	<servlet>
 		<servlet-name>OrderByIdCustomer</servlet-name>
-		<display-name>OrderByIdCustomer</display-name>
-		<description></description>
 		<servlet-class>com.senla.sobol.servlets.OrderByIdCustomer</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeletBook</servlet-name>
+		<servlet-class>com.senla.sobol.servlets.DeletBook</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeletWriter</servlet-name>
+		<servlet-class>com.senla.sobol.servlets.DeletWriter</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeleteCustomer</servlet-name>
+		<servlet-class>com.senla.sobol.servlets.DeleteCustomer</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeleteOrder</servlet-name>
+		<servlet-class>com.senla.sobol.servlets.DeleteOrder</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ImportBook</servlet-name>
+		<display-name>ImportBook</display-name>
+		<description></description>
+		<servlet-class>com.senla.sobol.servlets.ImportBook</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ImportWriter</servlet-name>
+		<display-name>ImportWriter</display-name>
+		<description></description>
+		<servlet-class>com.senla.sobol.servlets.ImportWriter</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ExportWriter</servlet-name>
+		<display-name>ExportWriter</display-name>
+		<description></description>
+		<servlet-class>com.senla.sobol.servlets.ExportWriter</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ExportCustomer</servlet-name>
+		<display-name>ExportCustomer</display-name>
+		<description></description>
+		<servlet-class>com.senla.sobol.servlets.ExportCustomer</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ExportOrder</servlet-name>
+		<display-name>ExportOrder</display-name>
+		<description></description>
+		<servlet-class>com.senla.sobol.servlets.ExportOrder</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ExportBook</servlet-name>
+		<display-name>ExportBook</display-name>
+		<description></description>
+		<servlet-class>com.senla.sobol.servlets.ExportBook</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>GetBooks</servlet-name>
@@ -77,5 +127,45 @@
 	<servlet-mapping>
 		<servlet-name>OrderByIdCustomer</servlet-name>
 		<url-pattern>/OrderByIdCustomer</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeletBook</servlet-name>
+		<url-pattern>/DeletBook</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeletWriter</servlet-name>
+		<url-pattern>/DeletWriter</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteCustomer</servlet-name>
+		<url-pattern>/DeleteCustomer</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteOrder</servlet-name>
+		<url-pattern>/DeleteOrder</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ImportBook</servlet-name>
+		<url-pattern>/ImportBook</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ImportWriter</servlet-name>
+		<url-pattern>/ImportWriter</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ExportWriter</servlet-name>
+		<url-pattern>/ExportWriter</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ExportCustomer</servlet-name>
+		<url-pattern>/ExportCustomer</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ExportOrder</servlet-name>
+		<url-pattern>/ExportOrder</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ExportBook</servlet-name>
+		<url-pattern>/ExportBook</url-pattern>
 	</servlet-mapping>
 </web-app>
