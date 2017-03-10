@@ -1,0 +1,17 @@
+bin/
+lib/
+logs/
+target/
+tmp/
+.settings/
+*.tmp
+*.bak
+*.swp
+*~.nib
+*.log
+*.class
+*.properties
+*.war
+*.ear
+
+.metadata
