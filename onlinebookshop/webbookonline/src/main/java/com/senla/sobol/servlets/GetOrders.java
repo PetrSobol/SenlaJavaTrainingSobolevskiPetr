@@ -2,7 +2,6 @@ package com.senla.sobol.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -12,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
 import org.json.simple.JSONObject;
 
-import com.senla.sobol.controller.OnlineBook;
+import com.senla.sobol.di.DI;
 import com.senla.sobol.intarfaces.IOnlineBook;
 import com.senla.sobol.model.Orders;
 
@@ -37,7 +36,7 @@ public class GetOrders extends HttpServlet {
 		PrintWriter out = response.getWriter();
 
 		try {
-			for (Orders orders : ((IOnlineBook)OnlineBook.getInstance()).getListOrder()) {
+			for (Orders orders : ((IOnlineBook)DI.load(IOnlineBook.class)).getListOrder()) {
 				JSONObject json = new JSONObject();
 				json.put(NAME_BOOK, orders.getBook().getNameBook());
 				json.put(FIRSTNAME_ORDERS, orders.getCustomer().getFirstname());
@@ -46,7 +45,7 @@ public class GetOrders extends HttpServlet {
 				out.print("<br>");
 
 			}
-		} catch (  SQLException e) {
+		} catch (   InstantiationException | IllegalAccessException | ClassNotFoundException e) {
 			log.error(e);
 		}
 	}

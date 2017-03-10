@@ -5,24 +5,23 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+
 import org.apache.log4j.Logger;
+
+import com.senla.sobol.di.DI;
 import com.senla.sobol.di.PropertyInstance;
+import com.senla.sobol.intarfaces.IOnlineBook;
 import com.senla.sobol.interfaces.IBookService;
 import com.senla.sobol.interfaces.ICustomerService;
-import com.senla.sobol.intarfaces.IOnlineBook;
+import com.senla.sobol.interfaces.IImportExport;
 import com.senla.sobol.interfaces.IOrderService;
 import com.senla.sobol.interfaces.IWriterService;
 import com.senla.sobol.model.Book;
 import com.senla.sobol.model.Customer;
 import com.senla.sobol.model.Orders;
 import com.senla.sobol.model.Writer;
-import com.senla.sobol.service.BookService;
-import com.senla.sobol.service.CustomerService;
-import com.senla.sobol.service.OrderService;
-import com.senla.sobol.service.WriterService;
 
 public class OnlineBook implements IOnlineBook {
-	private static IOnlineBook onlineBook;
 	private static final String DBEXPORTIMPORT = "dbexportimport";
 	private static final String DATE_ORDER = "dateOrder";
 	private static final String NAME_BOOK = "nameBook";
@@ -39,16 +38,8 @@ public class OnlineBook implements IOnlineBook {
 	private ImportExport importexport;
 	private PropertyInstance propetyinstance;
 
-	private OnlineBook() throws SQLException {
-		bookservice = new BookService();
-		orderservice = new OrderService();
-		writerservice = new WriterService();
-		custonerservice =new CustomerService();
-		importexport = new ImportExport();
-		propetyinstance = new PropertyInstance();
-		
-		
-		/*try {
+	public OnlineBook() throws SQLException {
+		try {
 			bookservice = (IBookService) DI.load(IBookService.class);
 			orderservice = (IOrderService) DI.load(IOrderService.class);
 			writerservice = (IWriterService) DI.load(IWriterService.class);
@@ -57,19 +48,9 @@ public class OnlineBook implements IOnlineBook {
 			propetyinstance = (PropertyInstance) DI.load(PropertyInstance.class);
 		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
 			log.error(e);
-		}*/
+		}
 	}
 
-	public static IOnlineBook getInstance() throws SQLException{
-		if(onlineBook==null){
-			onlineBook=new OnlineBook();
-		}
-		return onlineBook;
-	}
-	
-	
-	
-	
 	public List<Book> getListBook() {
 		List<Book> listbook = bookservice.getAll(null);
 		return listbook;

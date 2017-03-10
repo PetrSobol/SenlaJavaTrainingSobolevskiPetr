@@ -1,8 +1,8 @@
 package com.senla.sobol.di;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
@@ -12,9 +12,9 @@ public class PropertyInstance {
 	private Properties property = new Properties();
 
 	public PropertyInstance() {
-		
-		try (FileInputStream file = new FileInputStream("src/main/resources/roat.properties")) {
-			property.load(file);
+		try {
+			InputStream is = getClass().getClassLoader().getResourceAsStream("roat.properties");
+			property.load(is);
 
 		} catch (FileNotFoundException e) {
 			log.error(e);

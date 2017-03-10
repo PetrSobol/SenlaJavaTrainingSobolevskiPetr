@@ -2,7 +2,6 @@ package com.senla.sobol.servlets;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.sql.SQLException;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,7 +12,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import com.senla.sobol.controller.OnlineBook;
+import com.senla.sobol.di.DI;
 import com.senla.sobol.intarfaces.IOnlineBook;
 
 /**
@@ -44,10 +43,10 @@ public class AddNewWriter extends HttpServlet {
 			}
 			JSONParser parser = new JSONParser();
 			JSONObject jsonObject = (JSONObject) parser.parse(stringbuilder.toString());
-			((IOnlineBook)OnlineBook.getInstance()).addNewWriter((String) jsonObject.get(FIRSTNAME), (String) jsonObject.get(LASTNAME),
+			((IOnlineBook)DI.load(IOnlineBook.class)).addNewWriter((String) jsonObject.get(FIRSTNAME), (String) jsonObject.get(LASTNAME),
 					(String) jsonObject.get(STARTDATE), (String) jsonObject.get(DIEDDATE));
 
-		} catch (IOException | ParseException | SQLException e1) {
+		} catch (IOException | ParseException | InstantiationException | IllegalAccessException | ClassNotFoundException e1) {
 			log.error(e1);
 		}
 	}

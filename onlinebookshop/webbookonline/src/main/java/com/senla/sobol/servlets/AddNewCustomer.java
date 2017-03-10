@@ -2,7 +2,6 @@ package com.senla.sobol.servlets;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -14,7 +13,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import com.senla.sobol.controller.OnlineBook;
+import com.senla.sobol.di.DI;
 import com.senla.sobol.intarfaces.IOnlineBook;
 
 /**
@@ -48,9 +47,9 @@ public class AddNewCustomer extends HttpServlet {
 			}
 			JSONParser parser = new JSONParser();
 			JSONObject jsonObject = (JSONObject) parser.parse(stringbuilder.toString());
-			((IOnlineBook)OnlineBook.getInstance()).addNewCustomer((String) jsonObject.get(FIRSTNAME), (String) jsonObject.get(LASTNAME),
+			((IOnlineBook)DI.load(IOnlineBook.class)).addNewCustomer((String) jsonObject.get(FIRSTNAME), (String) jsonObject.get(LASTNAME),
 					Integer.valueOf((String) jsonObject.get(PHONE)));
-		} catch (IOException | ParseException | NumberFormatException | SQLException  e1) {
+		} catch (IOException | ParseException | NumberFormatException |  InstantiationException | IllegalAccessException | ClassNotFoundException  e1) {
 			log.error(e1);
 		}
 

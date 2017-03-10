@@ -2,7 +2,6 @@ package com.senla.sobol.servlets;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.sql.SQLException;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,7 +12,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import com.senla.sobol.controller.OnlineBook;
+import com.senla.sobol.di.DI;
 import com.senla.sobol.intarfaces.IOnlineBook;
 
 /**
@@ -44,10 +43,10 @@ public class AddBooks extends HttpServlet {
 			JSONParser parser = new JSONParser();
 			reader = request.getReader();
 			JSONObject jsonObject = (JSONObject) parser.parse(stringbuilder.toString());
-			((IOnlineBook)OnlineBook.getInstance()).addNewBook(Integer.valueOf((String) jsonObject.get(ID_WRITER)),
+			((IOnlineBook)DI.load(IOnlineBook.class)).addNewBook(Integer.valueOf((String) jsonObject.get(ID_WRITER)),
 					(String) jsonObject.get(NAME_BOOK), Integer.valueOf((String) jsonObject.get(QUANTITY_PAGES)),
 					Integer.valueOf((String) jsonObject.get(PRICE)));
-		} catch (IOException | ParseException | NumberFormatException | SQLException e1) {
+		} catch (IOException | ParseException | NumberFormatException | InstantiationException | IllegalAccessException | ClassNotFoundException e1) {
 			log.error(e1);
 		}
 

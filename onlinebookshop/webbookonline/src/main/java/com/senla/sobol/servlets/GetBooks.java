@@ -2,7 +2,6 @@ package com.senla.sobol.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.SQLException;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -11,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
 import org.json.simple.JSONObject;
 
-import com.senla.sobol.controller.OnlineBook;
+import com.senla.sobol.di.DI;
 import com.senla.sobol.intarfaces.IOnlineBook;
 import com.senla.sobol.model.Book;
 
@@ -27,12 +26,11 @@ public class GetBooks extends HttpServlet {
 	private Logger log = Logger.getLogger(GetBooks.class.getName());
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) {
-			
 		response.setContentType(APPLICATION_JSON_CHARSET_UTF_8);
 		PrintWriter out;
 		try {
 			out = response.getWriter();
-			for (Book book : ((IOnlineBook)OnlineBook.getInstance()).getListBook()) {
+			for (Book book : ((IOnlineBook)DI.load(IOnlineBook.class)).getListBook()) {
 				JSONObject json = new JSONObject();
 				json.put(ID_BOOK, book.getIdBook());
 				json.put(NAME_BOOK, book.getNameBook());
@@ -42,7 +40,7 @@ public class GetBooks extends HttpServlet {
 
 			}
 			out.flush();
-		} catch (IOException |   SQLException e) {
+		} catch (IOException | InstantiationException | IllegalAccessException | ClassNotFoundException e) {
 			log.error(e);
 		}
 
