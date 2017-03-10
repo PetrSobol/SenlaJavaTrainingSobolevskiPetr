@@ -58,38 +58,26 @@
 	</servlet>
 	<servlet>
 		<servlet-name>ImportBook</servlet-name>
-		<display-name>ImportBook</display-name>
-		<description></description>
 		<servlet-class>com.senla.sobol.servlets.ImportBook</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>ImportWriter</servlet-name>
-		<display-name>ImportWriter</display-name>
-		<description></description>
 		<servlet-class>com.senla.sobol.servlets.ImportWriter</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>ExportWriter</servlet-name>
-		<display-name>ExportWriter</display-name>
-		<description></description>
 		<servlet-class>com.senla.sobol.servlets.ExportWriter</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>ExportCustomer</servlet-name>
-		<display-name>ExportCustomer</display-name>
-		<description></description>
 		<servlet-class>com.senla.sobol.servlets.ExportCustomer</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>ExportOrder</servlet-name>
-		<display-name>ExportOrder</display-name>
-		<description></description>
 		<servlet-class>com.senla.sobol.servlets.ExportOrder</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>ExportBook</servlet-name>
-		<display-name>ExportBook</display-name>
-		<description></description>
 		<servlet-class>com.senla.sobol.servlets.ExportBook</servlet-class>
 	</servlet>
 	<servlet-mapping>
