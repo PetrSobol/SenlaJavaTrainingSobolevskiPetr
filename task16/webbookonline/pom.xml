@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>booksshop</groupId>
+		<artifactId>onlinebookshop</artifactId>
+		<version>${global.version}</version>
+	</parent>
+	<artifactId>webbookonline</artifactId>
+	<packaging>war</packaging>
+	<name>webbookonline Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>angularjs</artifactId>
+			<version>2.0.0-alpha.22</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>booksshop</groupId>
+			<artifactId>api</artifactId>
+			<version>${global.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>booksshop</groupId>
+			<artifactId>anotation</artifactId>
+			<version>${global.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>booksshop</groupId>
+			<artifactId>onlinebook</artifactId>
+			<version>${global.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>webbookonline</finalName>
+	</build>
+</project>
