@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app='onlinebooksshop'>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/standart.css" type="text/css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+</script>
+<script src="../js/controllers.js"></script>
+</head>
+<body>
+	<div ng-controller="HttpGetController">
+		<button ng-click="GetAllBook()">Get All Data</button>
+		|
+		<hr />
+		<table>
+			<h3>List all books in databases</h3>
+			<tr ng-repeat="d in books | orderBy:'price'">
+				<td>{{d.idBook}}</td>
+				<td>{{d.nameBook}}</td>
+				<td>{{d.price}}</td>
+				<td>{{d.quantityPages}}</td>
+			</tr>
+		</table>
+		<h3>Write idBook whose you want to delte</h3>
+		<p>
+			id Book: <input type="text" name="idBook" ng-model="idBook" required />
+		</p>
+		<button ng-click="DeleteBook()">Delete book</button>
+		<hr />
+
+		<h3>Write inpute date Book add in databases</h3>
+		<p>
+			idWriter: <input type="text" name="idWriter" ng-model="idWriter " />
+		</p>
+		<p>
+			nameBook: <input type="text" name="nameBook" ng-model="nameBook" />
+		</p>
+		<p>
+			quantityPages: <input type="text" name="quantityPages"
+				ng-model="quantityPages" />
+		</p>
+		<p>
+			price: <input type="text" name="price" ng-model="price" />
+		</p>
+		<button ng-click="AddBook()">Add book</button>
+		<a download="ExportBook.csv"
+			ng-href="http://localhost:8080/webbookonline/ExportBook">Export
+			Book in csv</a>
+
+	</div>
+	<ul>
+		<li><a href="../index.html">Назад</a></li>
+	</ul>
+</body>
+</html>
