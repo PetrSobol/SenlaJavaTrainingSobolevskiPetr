@@ -1,0 +1,50 @@
+
+<div>
+	<button type="button" class="btn btn-primary" ng-click="GetAllBook()">Get
+		All Data</button>
+	Search by namebook<input type="text" ng-model="nameBook " />
+	<hr />
+	<table class="table">
+		<h3>List all books in databases</h3>
+		<tr>
+			<th>Id</th>
+			<th>Name writer</th>
+			<th>Name book</th>
+			<th>Price ($)</th>
+			<th>Quantity</th>
+		</tr>
+		<tr ng-repeat="d in books  | filter:nameBook  ">
+			<td>{{d.idBook}}</td>
+			<td>{{d.NameWriter}}</td>
+			<td>{{d.nameBook}}</td>
+			<td>{{d.price}}</td>
+			<td>{{d.quantityPages}}</td>
+		</tr>
+	</table>
+	<h3>Write idBook whose you want to delte</h3>
+	<p>
+		id Book: <input type="text" name="idBook" ng-model="idBook" required />
+	</p>
+	<button type="button" class="btn btn-primary" ng-click="DeleteBook()">Delete
+		book</button>
+	<hr />
+
+	<h3>Write inpute date Book add in databases</h3>
+	<p>
+		idWriter: <input type="text" name="idWriter" ng-model="idWriter " />
+	</p>
+	<p>
+		nameBook: <input type="text" name="nameBook" ng-model="nameBook" />
+	</p>
+	<p>
+		quantityPages: <input type="text" name="quantityPages"
+			ng-model="quantityPages" />
+	</p>
+	<p>
+		price: <input type="text" name="price" ng-model="price" />
+	</p>
+	<button type="button" class="btn btn-primary" ng-click="AddBook()">Add
+		book</button>
+	<a download={{exportbook}} ng-href={{url}}>Export Book in csv</a>
+
+</div>

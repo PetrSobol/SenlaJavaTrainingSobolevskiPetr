@@ -21,6 +21,10 @@ import com.senla.sobol.model.Writer;
 
 public abstract class AbstractServletes extends HttpServlet {
 
+	private static final String NAME_WRITER = "NameWriter";
+	private static final String PRICE_BOOK = "priceBook";
+	private static final String LASTNAME_CUSTOMER = "lastnameCustomer";
+	private static final String ID_ORDER = "idOrder";
 	/**
 	 * 
 	 */
@@ -100,8 +104,11 @@ public abstract class AbstractServletes extends HttpServlet {
 		JSONArray jsonArray = new JSONArray();
 		for (Orders orders : getListOrder) {
 			JSONObject json = new JSONObject();
+			json.put(ID_ORDER, orders.getIdOrder());
 			json.put(NAME_BOOK, orders.getBook().getNameBook());
 			json.put(FIRSTNAME_ORDERS, orders.getCustomer().getFirstname());
+			json.put(LASTNAME_CUSTOMER, orders.getCustomer().getLastname());
+			json.put(PRICE_BOOK, orders.getBook().getPrice());
 			json.put(DATE_ORDER, dateformat.format(orders.getDateOrder()));
 			jsonArray.add(json);
 		}
@@ -113,6 +120,7 @@ public abstract class AbstractServletes extends HttpServlet {
 		for (Book book : getListBook) {
 			JSONObject json = new JSONObject();
 			json.put(ID_BOOK, book.getIdBook());
+			json.put(NAME_WRITER, book.getWriter().getLastname());
 			json.put(NAME_BOOK, book.getNameBook());
 			json.put(PRICE, book.getPrice());
 			json.put(QUANTITY_PAGES, book.getQuantityPages());

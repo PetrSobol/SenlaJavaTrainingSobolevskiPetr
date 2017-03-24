@@ -35,5 +35,6 @@
 		<module>anotation</module>
 		<module>api</module>
     <module>webbookonline</module>
+    <module>front</module>
   </modules>
 </project>

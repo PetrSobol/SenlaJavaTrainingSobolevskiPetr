@@ -1,0 +1,74 @@
+
+<div>
+	<button type="button" class="btn btn-primary" ng-click="GetAllOrder()">Get
+		All orders</button>
+
+	<hr />
+	<table class="table">
+		<h3>List all orders in databases</h3>
+		<tr>
+			<th>Id</th>
+			<th>Firstname customer</th>
+			<th>Lastname customer</th>
+			<th>Name book</th>
+			<th>Price ($)</th>
+			<th>Date order</th>
+		</tr>
+		<tr ng-repeat="d in orders | orderBy:'Firstname'">
+			<td>{{d.idOrder}}</td>
+			<td>{{d.FirstnameOrders}}</td>
+			<td>{{d.lastnameCustomer}}</td>
+			<td>{{d.nameBook}}</td>
+			<td>{{d.priceBook}}</td>
+			<td>{{d.Dateorder}}</td>
+		</tr>
+	</table>
+	<h3>Write idOrder whose you want to delte</h3>
+	<p>
+		idOrder: <input type="text" name="idOrder" ng-model="idOrder" required />
+	</p>
+	<button type="button" class="btn btn-primary" ng-click="DeleteOrder()">Delete
+		orders</button>
+	<hr />
+
+	<h3>Write inpute date Order add in databases</h3>
+	<p>
+		idBook: <input type="text" name="idBook" ng-model="idBook" />
+	</p>
+	<p>
+		idCustomer : <input type="text" name="idCustomer"
+			ng-model="idCustomer" />
+	</p>
+
+	<button type="button" class="btn btn-primary" ng-click="AddOrder()">Add
+		orders</button>
+
+	<hr />
+	<button type="button" class="btn btn-primary"
+		ng-click="AddOrderByCustomer()">Get All orders by idCustomer</button>
+	<p>
+		idCustomerByOrders : <input type="text" name="idCustomerTwo"
+			ng-model="idCustomerTwo" />
+	</p>
+
+	<table class="table">
+		<h3>List all orders by id customer in databases</h3>
+		<tr>
+			<th>Id</th>
+			<th>Firstname customer</th>
+			<th>Lastname customer</th>
+			<th>Name book</th>
+			<th>Price ($)</th>
+			<th>Date order</th>
+		</tr>
+		<tr ng-repeat="s in ordersById | orderBy:'Firstname'">
+			<td>{{s.idOrder}}</td>
+			<td>{{s.FirstnameOrders}}</td>
+			<td>{{s.lastnameCustomer}}</td>
+			<td>{{s.nameBook}}</td>
+			<td>{{s.priceBook}}</td>
+			<td>{{s.Dateorder}}</td>
+		</tr>
+	</table>
+	<a download={{exportorders}} ng-href={{url}}>Export Orders in csv</a>
+</div>

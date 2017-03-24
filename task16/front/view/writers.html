@@ -1,0 +1,54 @@
+
+<div>
+
+	<button type="button" class="btn btn-primary" ng-click="GetAllWriter()">Get
+		All Writer</button>
+	Search by firstname writer<input type="text" ng-model="Firstname " />
+	<hr />
+	<table class="table">
+		<h3>List all writers in databases</h3>
+		<tr>
+			<th>Id</th>
+			<th>Firstname</th>
+			<th>Lastname</th>
+			<th>Start year</th>
+			<th>Died year</th>
+		</tr>
+		<tr ng-repeat="s in writers | filter:Firstname">
+			<td>{{s.idWriter}}</td>
+			<td>{{s.Firstname}}</td>
+			<td>{{s.LastNAme}}</td>
+			<td>{{s.Startyear}}</td>
+			<td>{{s.Diedyear}}</td>
+		</tr>
+	</table>
+
+	<h3>Write idWriter whose you want to delte</h3>
+	<p>
+		id Writer: <input type="text" name="idWriter" ng-model="idWriter"
+			required />
+	</p>
+	<button type="button" class="btn btn-primary" ng-click="DeleteWriter()">Delete
+		writers</button>
+	<hr />
+
+	<h3>Write inpute date Writer add in databases</h3>
+	<p>
+		firstname: <input type="text" name="firstname" ng-model="firstname" />
+	</p>
+	<p>
+		lastname : <input type="text" name="lastname" ng-model="lastname" />
+	</p>
+	<p>
+		startdate(#dd.MM.yyyy#): <input type="text" name="startdate"
+			ng-model="startdate" />
+	</p>
+	<p>
+		dieddate(#dd.MM.yyyy#) : <input type="text" name="dieddate"
+			ng-model="dieddate" />
+	</p>
+	<button type="button" class="btn btn-primary" ng-click="AddWriter()">Add
+		writer</button>
+	<a download={{exportwriters}} ng-href={{url}}>Export Writer in csv</a>
+</div>
+

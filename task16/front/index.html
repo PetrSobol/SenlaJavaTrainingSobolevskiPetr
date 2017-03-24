@@ -1,0 +1,43 @@
+<html ng-app="onlinebooksshop">
+<head>
+<script src="lib/angular.min.js"></script>
+<script src="lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+<script src="lib/angular-ui-router.js"></script>
+<script src="js/app.js"></script>
+<script src="js/services/constantsApp.js"></script>
+<script src="js/services/BookServices.js"></script>
+<script src="js/services/CustomerServices.js"></script>
+<script src="js/services/OrdersService.js"></script>
+<script src="js/services/WriterService.js"></script>
+<script src="js/controllers/BookCtrl.js"></script>
+<script src="js/controllers/CustomerCtrl.js"></script>
+<script src="js/controllers/OrdersCtrl.js"></script>
+<script src="js/controllers/WriterCtrl.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<h4>OnlineBookShop</h4>
+			<ul class="nav navbar-nav navbar-right ">
+
+				<li><a ui-sref="book">Book</a></li>
+				<li><a ui-sref="writers">Writers</a></li>
+				<li><a ui-sref="customer">Customer</a></li>
+				<li><a ui-sref="orders">Orders</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div align="center">
+		<ui-view></ui-view>
+	</div>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<ul class="nav navbar-nav ">
+				<li><h4>Sobolevski Petr 2017</h4></li>
+			</ul>
+		</div>
+	</nav>
+</body>
+</html>
