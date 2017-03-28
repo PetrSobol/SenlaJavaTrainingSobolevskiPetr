@@ -4,9 +4,24 @@ angular.module('onlinebooksshop').controller(
 				'$scope',
 				'HttpCustomerService',
 				'CONSTANT',
-				function($scope, HttpCustomerService, CONSTANT) {
+				'$uibModal',
+				function($scope, HttpCustomerService, CONSTANT, $uibModal) {
 					$scope.exportcustomer = CONSTANT.EXPORTCSVCUSTOMER;
 					$scope.url = CONSTANT.URL + CONSTANT.EXPORTCUSTOMER;
+
+					$scope.openAddCustomer = function() {
+						var uibModalInstance = $uibModal.open({
+							templateUrl : 'view/addCustomer.html',
+							controller : 'CloseCtrl'
+						});
+					}
+					$scope.deleteCustomerView = function() {
+						var uibModalInstance = $uibModal.open({
+							templateUrl : 'view/deleteCustomer.html',
+							controller : 'CloseCtrl'
+						});
+					}
+
 					$scope.GetAllCustomer = function() {
 						HttpCustomerService.getHttpAll().then(
 								function successCallback(response) {

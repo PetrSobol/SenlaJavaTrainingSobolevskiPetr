@@ -1,6 +1,10 @@
 
 <div>
 	<button type="button" class="btn btn-primary"
+		ng-click="deleteCustomerView()">Delete customer</button>
+	<button type="button" class="btn btn-primary"
+		ng-click="openAddCustomer()">Add new customer</button>
+	<button type="button" class="btn btn-primary"
 		ng-click="GetAllCustomer()">Get All customer</button>
 	Search by firstname customer<input type="text" ng-model="Firstname " />
 
@@ -8,10 +12,10 @@
 	<table class="table">
 		<h3>List all customer in databases</h3>
 		<tr>
-			<th>Id </th>
-			<th>Firstname </th>
-			<th>Lastname </th>
-			<th>Phone </th>
+			<th>Id</th>
+			<th>Firstname</th>
+			<th>Lastname</th>
+			<th>Phone</th>
 		</tr>
 		<tr ng-repeat="d in customers | filter:Firstname">
 			<td>{{d.idCustomer}}</td>
@@ -20,28 +24,6 @@
 			<td>{{d.Phone}}</td>
 		</tr>
 	</table>
-	<h3>Write idCustomer whose you want to delte</h3>
-	<p>
-		id Customer: <input type="text" name="idCustomer"
-			ng-model="idCustomer" required />
-	</p>
-	<button type="button" class="btn btn-primary"
-		ng-click="DeleteCustomer()">Delete customer</button>
-	<hr />
-
-	<h3>Write inpute date Customer add in databases</h3>
-	<p>
-		firstname: <input type="text" name="firstname" ng-model="firstname" />
-	</p>
-	<p>
-		lastname : <input type="text" name="lastname" ng-model="lastname" />
-	</p>
-	<p>
-		phone : <input type="text" name="phone" ng-model="phone" />
-	</p>
-
-	<button type="button" class="btn btn-primary" ng-click="AddCustomer()">Add
-		customer</button>
 	<a download={{exportcustomer}} ng-href={{url}}>Export Customer in
 		csv</a>
 

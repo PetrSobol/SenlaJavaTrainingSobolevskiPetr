@@ -4,9 +4,23 @@ angular.module('onlinebooksshop').controller(
 				'$scope',
 				'HttpOrdersService',
 				'CONSTANT',
-				function($scope, HttpOrdersService, CONSTANT) {
+				'$uibModal',
+				function($scope, HttpOrdersService, CONSTANT, $uibModal) {
 					$scope.exportorders = CONSTANT.EXPORTCSVORDERS;
 					$scope.url = CONSTANT.URL + CONSTANT.EXPORTORDERS;
+					$scope.openAddOrders = function() {
+						var uibModalInstance = $uibModal.open({
+							templateUrl : 'view/addOrder.html',
+							controller : 'CloseCtrl'
+						});
+					}
+					$scope.deleteOrdersView = function() {
+						var uibModalInstance = $uibModal.open({
+							templateUrl : 'view/deleteOrder.html',
+							controller : 'CloseCtrl'
+						});
+					}
+
 					$scope.GetAllOrder = function() {
 						HttpOrdersService.getHttpAll().then(
 								function successCallback(response) {
@@ -51,5 +65,5 @@ angular.module('onlinebooksshop').controller(
 								});
 
 					}
-				
+
 				} ]);
