@@ -1,5 +1,9 @@
 
 <div>
+	<button type="button" class="btn btn-primary"
+		ng-click="deleteBookView()">Delete Book</button>
+	<button type="button" class="btn btn-primary" ng-click="openAddBook()">
+		Add new book</button>
 	<button type="button" class="btn btn-primary" ng-click="GetAllBook()">Get
 		All Data</button>
 	Search by namebook<input type="text" ng-model="nameBook " />
@@ -13,7 +17,8 @@
 			<th>Price ($)</th>
 			<th>Quantity</th>
 		</tr>
-		<tr ng-repeat="d in books  | filter:nameBook  ">
+		<tr
+			ng-repeat="d in books.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage)) | filter:nameBook  ">
 			<td>{{d.idBook}}</td>
 			<td>{{d.NameWriter}}</td>
 			<td>{{d.nameBook}}</td>
@@ -21,30 +26,19 @@
 			<td>{{d.quantityPages}}</td>
 		</tr>
 	</table>
-	<h3>Write idBook whose you want to delte</h3>
-	<p>
-		id Book: <input type="text" name="idBook" ng-model="idBook" required />
-	</p>
-	<button type="button" class="btn btn-primary" ng-click="DeleteBook()">Delete
-		book</button>
-	<hr />
+	View <select ng-model="viewby" ng-change="setItemsPerPage(viewby)"><option>3</option>
+		<option>5</option>
+		<option>10</option>
+		<option>20</option>
+		<option>30</option>
+		<option>40</option>
+		<option>50</option></select> records at a time.
 
-	<h3>Write inpute date Book add in databases</h3>
-	<p>
-		idWriter: <input type="text" name="idWriter" ng-model="idWriter " />
-	</p>
-	<p>
-		nameBook: <input type="text" name="nameBook" ng-model="nameBook" />
-	</p>
-	<p>
-		quantityPages: <input type="text" name="quantityPages"
-			ng-model="quantityPages" />
-	</p>
-	<p>
-		price: <input type="text" name="price" ng-model="price" />
-	</p>
-	<button type="button" class="btn btn-primary" ng-click="AddBook()">Add
-		book</button>
-	<a download={{exportbook}} ng-href={{url}}>Export Book in csv</a>
+	<pagination total-items="totalItems" ng-model="currentPage"
+		class="pagination-sm" items-per-page="itemsPerPage"></pagination>
+</div>
+
+<hr />
+<a download={{exportbook}} ng-href={{url}}>Export Book in csv</a>
 
 </div>

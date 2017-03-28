@@ -4,9 +4,24 @@ angular.module('onlinebooksshop').controller(
 				'$scope',
 				'HttpWriterService',
 				'CONSTANT',
-				function($scope, HttpWriterService, CONSTANT) {
+				'$uibModal',
+				function($scope, HttpWriterService, CONSTANT, $uibModal) {
 					$scope.exportwriters = CONSTANT.EXPORTCSVWRITER;
 					$scope.url = CONSTANT.URL + CONSTANT.EXPORTWRITER;
+
+					$scope.openAddWriter = function() {
+						var uibModalInstance = $uibModal.open({
+							templateUrl : 'view/addWriter.html',
+							controller : 'CloseCtrl'
+						});
+					}
+					$scope.deleteWriterView = function() {
+						var uibModalInstance = $uibModal.open({
+							templateUrl : 'view/deleteWriter.html',
+							controller : 'CloseCtrl'
+						});
+					}
+
 					$scope.GetAllWriter = function() {
 						HttpWriterService.getHttpAll().then(
 								function successCallback(response) {

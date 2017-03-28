@@ -1,0 +1,23 @@
+<div class="modal-header">
+	<h3 class="modal-title">Write idCustomer whose you want to delete</h3>
+</div>
+<div class="modal-body">
+	<div ng-controller="HttpCustomerController">
+
+		<table class="table">
+			<tr>
+				<th>id Customer:</th>
+				<th><input type="text" name="idCustomer" ng-model="idCustomer"
+					required /></th>
+			</tr>
+
+			<tr>
+				<th><button type="button" class="btn btn-primary"
+						ng-click="DeleteCustomer()">Delete customer</button></th>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-warning" type="button" ng-click="close()">Cancel</button>
+</div>

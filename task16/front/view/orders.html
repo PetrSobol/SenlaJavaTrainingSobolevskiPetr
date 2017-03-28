@@ -1,5 +1,9 @@
 
 <div>
+	<button type="button" class="btn btn-primary"
+		ng-click="deleteOrdersView()">Delete order</button>
+	<button type="button" class="btn btn-primary"
+		ng-click="openAddOrders()">Add new order</button>
 	<button type="button" class="btn btn-primary" ng-click="GetAllOrder()">Get
 		All orders</button>
 
@@ -23,26 +27,6 @@
 			<td>{{d.Dateorder}}</td>
 		</tr>
 	</table>
-	<h3>Write idOrder whose you want to delte</h3>
-	<p>
-		idOrder: <input type="text" name="idOrder" ng-model="idOrder" required />
-	</p>
-	<button type="button" class="btn btn-primary" ng-click="DeleteOrder()">Delete
-		orders</button>
-	<hr />
-
-	<h3>Write inpute date Order add in databases</h3>
-	<p>
-		idBook: <input type="text" name="idBook" ng-model="idBook" />
-	</p>
-	<p>
-		idCustomer : <input type="text" name="idCustomer"
-			ng-model="idCustomer" />
-	</p>
-
-	<button type="button" class="btn btn-primary" ng-click="AddOrder()">Add
-		orders</button>
-
 	<hr />
 	<button type="button" class="btn btn-primary"
 		ng-click="AddOrderByCustomer()">Get All orders by idCustomer</button>

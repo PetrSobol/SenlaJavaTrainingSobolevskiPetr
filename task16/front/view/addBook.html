@@ -1,0 +1,34 @@
+<div class="modal-header">
+	<h3 class="modal-title">Write inpute date Book add in databases</h3>
+</div>
+<div class="modal-body">
+	<div ng-controller="HttpBookController">
+
+		<table class="table">
+			<tr>
+				<th>idWriter:</th>
+				<th><input type="number" name="idWriter" ng-model="idWriter " /></th>
+			</tr>
+			<tr>
+				<th>nameBook:</th>
+				<th><input type="text" name="namebook" ng-model="namebook" /></th>
+			</tr>
+			<tr>
+				<th>quantityPages:</th>
+				<th><input type="number" name="quantityPages"
+					ng-model="quantityPages" /></th>
+			</tr>
+			<tr>
+				<th>price:</th>
+				<th><input type="number" name="price" ng-model="price" /></th>
+			</tr>
+			<tr>
+				<th><button type="button" class="btn btn-warning"
+						ng-click="AddBook()">Add book</button></th>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-warning" type="button" ng-click="close()">Cancel</button>
+</div>

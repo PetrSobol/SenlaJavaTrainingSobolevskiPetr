@@ -1,0 +1,23 @@
+<div class="modal-header">
+	<h3 class="modal-title">Write idBook whose you want to delete</h3>
+</div>
+<div class="modal-body">
+	<div ng-controller="HttpBookController">
+
+		<table class="table">
+			<tr>
+				<th>id Book:</th>
+				<th><input type="number" name="idBook" ng-model="idBook"
+					required /></th>
+			</tr>
+
+			<tr>
+				<th><button type="button" class="btn btn-primary"
+						ng-click="DeleteBook()">Delete book</button></th>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-warning" type="button" ng-click="close()">Cancel</button>
+</div>
